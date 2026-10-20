@@ -1,7 +1,7 @@
-<!doctype html>
+g<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mandarim — Do Zero à Fluência</title>
 <style>
-:root{--ink:#10285f;--muted:#506d9d;--line:#dce7fa;--purple:#5b50e8;--green:#22a77b}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:75px}body{margin:0;color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:#fff}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.top{height:62px;display:flex;align-items:center;gap:25px;padding:0 3.5%;position:sticky;top:0;z-index:9;background:#ffffffed;border-bottom:1px solid #e5edfb}.brand{display:flex;align-items:center;gap:9px;min-width:200px;font-size:18px;font-weight:850;line-height:1.05}.brand i{font-style:normal;font-size:28px}.brand small{display:block;font-size:10px}.nav{display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,26px);flex:1;font-size:12px;white-space:nowrap}.nav a{height:62px;display:flex;align-items:center;border-bottom:2px solid transparent}.nav a:hover{border-color:var(--purple)}.tools{display:flex;gap:8px}.tools button{border:0;border-radius:12px;padding:9px 12px;background:#eff1ff;color:#4448d7}.tools .menu{background:var(--purple);color:white;display:none}.hero{padding:30px 3.5%;min-height:220px;position:relative;overflow:hidden;background:linear-gradient(105deg,#edf3ff,#f4f7ff 55%,#e6f1ff)}.hero:after{content:"🌸";position:absolute;right:clamp(18px,5vw,72px);top:24px;font-size:38px;z-index:1}.hero-copy{position:relative;z-index:1;max-width:670px}.tag{display:inline-block;padding:4px 10px;border:1px solid #abbaff;border-radius:20px;background:#eff1ff;color:#2a47b8;font-size:11px;font-weight:800}.hero h1{font-size:clamp(28px,3.4vw,38px);line-height:1.15;letter-spacing:-1px;margin:9px 0}.hero p{max-width:590px;color:var(--muted);margin:0}.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}.pills span{background:#ffffffd9;border:1px solid #edf2ff;border-radius:24px;padding:9px 12px;font-size:10px;color:#3e5a8b}.calligraphy{position:absolute;right:clamp(70px,12vw,180px);top:42px;font-size:25px;font-weight:850;text-align:center;min-width:150px}.calligraphy small{display:block;font-size:15px;margin-top:5px}.switch{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:16px 3%;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fbfcff}.switch button{border:0;border-right:1px solid var(--line);padding:13px 8px;background:transparent;color:var(--ink);font-weight:750}.switch button:last-child{border:0}.switch button.active{background:linear-gradient(100deg,#5548e7,#7656dd);color:#fff}.wrap{width:min(1440px,94%);margin:auto}.section{padding:8px 0 23px;border-bottom:1px solid #e3ebf9;scroll-margin-top:75px}.heading{display:flex;align-items:center;gap:13px;margin:5px 0 20px}.bigicon{font-size:30px;color:#4f5fe7}.heading h2,.monthly h2{font-size:20px;margin:0 0 4px}.heading p,.monthly p{font-size:12px;color:var(--muted);margin:0}.spacer{flex:1}.prog{width:33%;min-width:220px;color:var(--muted);font-size:11px}.prog label{display:flex;justify-content:space-between;margin-bottom:6px}.track{height:11px;background:#e9f0fc;border-radius:20px;overflow:hidden}.track span{display:block;height:100%;width:43%;background:linear-gradient(90deg,#5148e5,#5a83ef);border-radius:20px}.pct{background:#eef0ff;color:#3e43ca;padding:7px 10px;border-radius:20px;font-weight:800}.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}.day{border:1px solid #dce8f6;border-radius:9px;overflow:hidden;min-width:0}.day.done{border-color:#b8eadb}.day.current{border-color:#bad7ff}.daytop{display:flex;gap:7px;padding:10px 8px;min-height:47px;background:#effaf6}.day:nth-child(n+4) .daytop{background:#f5f8fd}.day.current .daytop{background:#eef5ff}.dayname{font-size:12px;font-weight:800}.date{font-size:9px;color:#667da0}.tasks{padding:10px 8px 4px;display:grid;gap:10px}.task{display:flex;align-items:flex-start;gap:6px;font-size:11px;line-height:1.4;color:#344f7e}.task input{appearance:none;width:12px;height:12px;flex:0 0 12px;margin:0;border:1.5px solid #8295b5;border-radius:3px}.task input:checked{background:#299b7a;border-color:#299b7a}.task input:checked:after{content:"✓";display:block;color:#fff;font-size:9px;text-align:center}.status{margin:10px 8px 8px;padding:8px 6px;border-radius:8px;background:#f0f4f9;font-size:10px;display:flex;gap:7px;align-items:center;color:#456084}.done .status{background:#e8faf3;color:#087750}.monthly{padding-top:8px}.monthhead{display:flex;align-items:center;gap:13px;margin-bottom:20px}.monthhead .bigicon{font-size:30px}.outline{margin-left:auto;border:1px solid #a9b1ff;color:#343fc9;background:white;border-radius:13px;padding:10px 14px;font-size:11px;font-weight:750}.months{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.monthcard{border:1px solid var(--tone);border-radius:9px;overflow:hidden;min-width:0}.monthtop{padding:12px;background:var(--tint);display:flex;align-items:center;gap:10px;font-size:11px;color:var(--tone);font-weight:800}.num{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--tone);color:white;box-shadow:inset 0 0 0 4px #ffffff45}.mbody{padding:12px}.mbody h3{font-size:13px;margin:0 0 8px}.mbody p{font:12px/1.5 Georgia,serif;min-height:43px;margin:0 0 14px;color:#3e5d91}.mprogress{display:flex;justify-content:space-between;font-size:9px;color:var(--muted);margin-bottom:7px}.months .track{height:10px}.monthcard .track span{width:0}.contentgrid{display:grid;grid-template-columns:1.45fr 1fr;gap:22px;width:100%;min-width:0}.panel{border:1px solid #e0eaff;border-radius:10px;background:#f7faff;overflow:hidden}.panelhead{padding:10px 14px;background:#f0f5ff}.panelhead h3{font-size:13px;margin:0 0 4px}.panelhead p{font-size:11px;color:var(--muted);margin:0}.tones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:9px 12px 12px}.tone{border:1px solid var(--tone);border-radius:10px;overflow:hidden;text-align:center;background:white;min-width:0}.tonemain{padding:9px 3px 7px;background:var(--tint)}.tonemain strong{display:block;color:var(--tone);font-size:18px}.tonemain small{display:block;font-size:9px;color:var(--tone);margin-top:3px}.tonemain svg{width:90%;height:35px;margin-top:7px}.hanzi{font-size:21px;margin-top:5px}.translation{font-size:10px;padding:0 3px 9px}.chars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:10px 12px}.char{text-align:center;border:1px solid #dbe8fb;border-radius:9px;background:white;padding:9px 3px}.char strong{display:block;font-size:12px;margin:4px}.char .hanzi{font-size:27px;color:var(--c);font-weight:800}.char small{font-size:10px}.tip{margin:5px 12px 10px;padding:10px;background:#eef5ff;border:1px solid #e0eaff;border-radius:9px;font-size:10px;color:#42618f;line-height:1.5}.ytgrid{display:grid;grid-template-columns:2fr .85fr;gap:16px}.teachers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.teacher{border:1px solid #dce8fa;border-radius:10px;padding:13px;display:grid;grid-template-columns:52px 1fr;gap:10px;min-width:0}.avatar{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#f6c18e,#e6a67e);display:grid;place-items:center;font-size:25px}.teacher h3{font-size:12px;margin:0 0 3px}.teacher p{font-size:10px;color:var(--muted);margin:0 0 8px}.teacher ul{margin:0;padding-left:13px;color:#2758bd;font-size:10px;line-height:1.7}.teacher .desc{font-size:9px;color:#58739e;margin-top:8px}.tips{background:#f5f3ff;border:1px solid #e4e0ff;border-radius:10px;padding:14px}.tips h3{font-size:12px;color:#3439be;margin:0 0 12px}.tips p{font-size:10px;line-height:1.55;color:#405b8c}.footer{text-align:center;padding:18px 10px 28px;background:linear-gradient(#fff,#f1f7ff);color:#2b4b8a}.footer strong{font-family:Georgia,serif;letter-spacing:3px}.footer p{font:11px Georgia,serif;color:#5875a6;margin:6px 0 0}
+:root{--ink:#10285f;--muted:#506d9d;--line:#dce7fa;--purple:#5b50e8;--green:#22a77b}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:75px}body{margin:0;color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:#fff}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.top{height:62px;display:flex;align-items:center;gap:25px;padding:0 3.5%;position:sticky;top:0;z-index:9;background:#ffffffed;border-bottom:1px solid #e5edfb}.brand{display:flex;align-items:center;gap:9px;min-width:200px;font-size:18px;font-weight:850;line-height:1.05}.brand i{font-style:normal;font-size:28px}.brand small{display:block;font-size:10px}.nav{display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,26px);flex:1;font-size:12px;white-space:nowrap}.nav a{height:62px;display:flex;align-items:center;border-bottom:2px solid transparent}.nav a:hover{border-color:var(--purple)}.tools{display:flex;gap:8px}.tools button{border:0;border-radius:12px;padding:9px 12px;background:#eff1ff;color:#4448d7}.tools .menu{background:var(--purple);color:white;display:none}.hero{padding:30px 3.5%;min-height:220px;position:relative;overflow:hidden;background:linear-gradient(105deg,#edf3ff,#f4f7ff 55%,#e6f1ff)}.hero:after{content:"🌸";position:absolute;right:clamp(18px,5vw,72px);top:24px;font-size:38px;z-index:1}.hero-copy{position:relative;z-index:1;max-width:670px}.tag{display:inline-block;padding:4px 10px;border:1px solid #abbaff;border-radius:20px;background:#eff1ff;color:#2a47b8;font-size:11px;font-weight:800}.hero h1{font-size:clamp(28px,3.4vw,38px);line-height:1.15;letter-spacing:-1px;margin:9px 0}.hero p{max-width:590px;color:var(--muted);margin:0}.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}.pills span{background:#ffffffd9;border:1px solid #edf2ff;border-radius:24px;padding:9px 12px;font-size:10px;color:#3e5a8b}.calligraphy{position:absolute;right:clamp(70px,12vw,180px);top:42px;font-size:25px;font-weight:850;text-align:center;min-width:150px}.calligraphy small{display:block;font-size:15px;margin-top:5px}.switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:16px 3%;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fbfcff}.switch button{border:0;border-right:1px solid var(--line);padding:13px 8px;background:transparent;color:var(--ink);font-weight:750}.switch button:last-child{border:0}.switch button.active{background:linear-gradient(100deg,#5548e7,#7656dd);color:#fff}.wrap{width:min(1440px,94%);margin:auto}.section{padding:8px 0 23px;border-bottom:1px solid #e3ebf9;scroll-margin-top:75px}.heading{display:flex;align-items:center;gap:13px;margin:5px 0 20px}.bigicon{font-size:30px;color:#4f5fe7}.heading h2,.monthly h2{font-size:20px;margin:0 0 4px}.heading p,.monthly p{font-size:12px;color:var(--muted);margin:0}.spacer{flex:1}.prog{width:33%;min-width:220px;color:var(--muted);font-size:11px}.prog label{display:flex;justify-content:space-between;margin-bottom:6px}.track{height:11px;background:#e9f0fc;border-radius:20px;overflow:hidden}.track span{display:block;height:100%;width:43%;background:linear-gradient(90deg,#5148e5,#5a83ef);border-radius:20px}.pct{background:#eef0ff;color:#3e43ca;padding:7px 10px;border-radius:20px;font-weight:800}.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}.day{border:1px solid #dce8f6;border-radius:9px;overflow:hidden;min-width:0}.day.done{border-color:#b8eadb}.day.current{border-color:#bad7ff}.daytop{display:flex;gap:7px;padding:10px 8px;min-height:47px;background:#effaf6}.day:nth-child(n+4) .daytop{background:#f5f8fd}.day.current .daytop{background:#eef5ff}.dayname{font-size:12px;font-weight:800}.date{font-size:9px;color:#667da0}.tasks{padding:10px 8px 4px;display:grid;gap:10px}.task{display:flex;align-items:flex-start;gap:6px;font-size:11px;line-height:1.4;color:#344f7e}.task input{appearance:none;width:12px;height:12px;flex:0 0 12px;margin:0;border:1.5px solid #8295b5;border-radius:3px}.task input:checked{background:#299b7a;border-color:#299b7a}.task input:checked:after{content:"✓";display:block;color:#fff;font-size:9px;text-align:center}.status{margin:10px 8px 8px;padding:8px 6px;border-radius:8px;background:#f0f4f9;font-size:10px;display:flex;gap:7px;align-items:center;color:#456084}.done .status{background:#e8faf3;color:#087750}.monthly{padding-top:8px}.monthhead{display:flex;align-items:center;gap:13px;margin-bottom:20px}.monthhead .bigicon{font-size:30px}.outline{margin-left:auto;border:1px solid #a9b1ff;color:#343fc9;background:white;border-radius:13px;padding:10px 14px;font-size:11px;font-weight:750}.months{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.monthcard{border:1px solid var(--tone);border-radius:9px;overflow:hidden;min-width:0}.monthtop{padding:12px;background:var(--tint);display:flex;align-items:center;gap:10px;font-size:11px;color:var(--tone);font-weight:800}.num{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--tone);color:white;box-shadow:inset 0 0 0 4px #ffffff45}.mbody{padding:12px}.mbody h3{font-size:13px;margin:0 0 8px}.mbody p{font:12px/1.5 Georgia,serif;min-height:43px;margin:0 0 14px;color:#3e5d91}.mprogress{display:flex;justify-content:space-between;font-size:9px;color:var(--muted);margin-bottom:7px}.months .track{height:10px}.monthcard .track span{width:0}.contentgrid{display:grid;grid-template-columns:1.45fr 1fr;gap:22px;width:100%;min-width:0}.panel{border:1px solid #e0eaff;border-radius:10px;background:#f7faff;overflow:hidden}.panelhead{padding:10px 14px;background:#f0f5ff}.panelhead h3{font-size:13px;margin:0 0 4px}.panelhead p{font-size:11px;color:var(--muted);margin:0}.tones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:9px 12px 12px}.tone{border:1px solid var(--tone);border-radius:10px;overflow:hidden;text-align:center;background:white;min-width:0}.tonemain{padding:9px 3px 7px;background:var(--tint)}.tonemain strong{display:block;color:var(--tone);font-size:18px}.tonemain small{display:block;font-size:9px;color:var(--tone);margin-top:3px}.tonemain svg{width:90%;height:35px;margin-top:7px}.hanzi{font-size:21px;margin-top:5px}.translation{font-size:10px;padding:0 3px 9px}.chars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:10px 12px}.char{text-align:center;border:1px solid #dbe8fb;border-radius:9px;background:white;padding:9px 3px}.char strong{display:block;font-size:12px;margin:4px}.char .hanzi{font-size:27px;color:var(--c);font-weight:800}.char small{font-size:10px}.tip{margin:5px 12px 10px;padding:10px;background:#eef5ff;border:1px solid #e0eaff;border-radius:9px;font-size:10px;color:#42618f;line-height:1.5}.ytgrid{display:grid;grid-template-columns:2fr .85fr;gap:16px}.teachers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.teacher{border:1px solid #dce8fa;border-radius:10px;padding:13px;display:grid;grid-template-columns:52px 1fr;gap:10px;min-width:0}.avatar{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#f6c18e,#e6a67e);display:grid;place-items:center;font-size:25px}.teacher h3{font-size:12px;margin:0 0 3px}.teacher p{font-size:10px;color:var(--muted);margin:0 0 8px}.teacher ul{margin:0;padding-left:13px;color:#2758bd;font-size:10px;line-height:1.7}.teacher .desc{font-size:9px;color:#58739e;margin-top:8px}.tips{background:#f5f3ff;border:1px solid #e4e0ff;border-radius:10px;padding:14px}.tips h3{font-size:12px;color:#3439be;margin:0 0 12px}.tips p{font-size:10px;line-height:1.55;color:#405b8c}.footer{text-align:center;padding:18px 10px 28px;background:linear-gradient(#fff,#f1f7ff);color:#2b4b8a}.footer strong{font-family:Georgia,serif;letter-spacing:3px}.footer p{font:11px Georgia,serif;color:#5875a6;margin:6px 0 0}
 @media(max-width:1100px){.top{gap:13px;padding:0 2.5%}.brand{min-width:155px}.nav{gap:12px;font-size:11px}.week{grid-template-columns:repeat(4,minmax(0,1fr))}.contentgrid{grid-template-columns:1fr}.ytgrid{grid-template-columns:1fr}.tips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}.tips h3{grid-column:1/-1}}
 @media(max-width:760px){.top{height:58px;padding:0 14px}.brand{min-width:0;flex:1;font-size:16px}.brand i{font-size:24px}.nav{display:none;position:absolute;top:58px;left:0;right:0;background:#fff;box-shadow:0 8px 24px #1d42891a;padding:8px 14px 14px;grid-template-columns:repeat(2,minmax(0,1fr));white-space:normal}.nav.open{display:grid}.nav a{height:auto;padding:12px 8px;border-bottom:1px solid #edf1fa}.tools .menu{display:block}.hero{padding:25px 20px;min-height:230px}.hero:after{font-size:35px}.hero h1{font-size:29px;max-width:480px}.hero p{font-size:13px}.calligraphy{display:none}.pills{gap:6px}.pills span{padding:8px 10px}.switch{grid-template-columns:repeat(2,minmax(0,1fr));margin:12px;border-radius:16px}.switch button{padding:12px 5px;font-size:12px;border-bottom:1px solid var(--line)}.switch button:nth-child(2){border-right:0}.switch button:nth-child(n+3){border-bottom:0}.wrap{width:calc(100% - 24px)}.section{padding-bottom:18px}.heading{align-items:flex-start;gap:10px;flex-wrap:wrap}.bigicon{font-size:26px}.heading h2,.monthly h2{font-size:18px}.heading p,.monthly p{font-size:11px;line-height:1.45}.spacer{display:none}.prog{width:100%;min-width:0;order:3;margin-left:36px}.pct{margin-left:auto}.week{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.day:last-child{grid-column:1/-1}.tasks{padding:10px;gap:10px}.task{font-size:11px}.monthhead{align-items:flex-start;flex-wrap:wrap}.outline{margin-left:36px}.months{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.mbody{padding:10px}.mbody p{min-height:0;font-size:11px}.monthtop{padding:10px}.num{width:25px;height:25px}.tones{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:9px}.tonemain strong{font-size:21px}.tonemain svg{height:42px}.chars{gap:7px;padding:8px}.char .hanzi{font-size:25px}.teachers{grid-template-columns:1fr}.teacher{padding:12px}.tips{display:block}.footer{margin-top:12px}}
 @media(max-width:390px){.hero h1{font-size:25px}.pills span{font-size:9px}.switch button{font-size:11px}.week{gap:7px}.dayname{font-size:10px}.tasks{padding:8px 6px}.task{font-size:10px;gap:5px}.months{grid-template-columns:1fr}.mbody p{font-size:12px}.tones{gap:7px}.chars{gap:5px}.char .hanzi{font-size:22px}}
@@ -70,22 +70,185 @@ body.night .routine-list,body.night .routine-note{color:#f2f5f8}
   #contato .heading { padding:8px 10px; }
 }
 
-</style></head><body>
-<header class="top" id="home"><div class="top-inner"><a class="brand" href="#home"><i>🏯</i><span>Mandarim<small>Do Zero à Fluência</small></span></a><nav class="nav" id="nav"><a href="#home">Home</a><a href="#calendario">Rotina</a><a href="#conteudo">Conteúdo</a><a href="#tons">Tons</a><a href="#recursos">Recursos</a><a href="#youtube">Aulas no YouTube</a><a href="#contato">Contato</a></nav><div class="tools"><button aria-label="Alternar tema" id="theme">☼ ◉</button><button class="menu" id="hamb" aria-expanded="false" aria-label="Abrir menu">☰</button></div></div></header>
+</style>
+<style id="fix-conteudo-layout-dark">
+/* Conteúdo do curso — mesma largura dos outros blocos */
+#conteudo {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 16px 0 24px !important;
+}
+#conteudo .heading {
+  display: flex !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  flex-direction: row !important;
+}
+#conteudo .months {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  width: 100% !important;
+}
+#conteudo .monthcard {
+  width: 100% !important;
+  min-width: 0 !important;
+  border-radius: 14px !important;
+}
+#conteudo .mbody h3 { font-size: 16px !important; }
+#conteudo .mbody p { font-size: 13px !important; min-height: 0 !important; }
+
+@media (max-width: 900px) {
+  #conteudo .months { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 520px) {
+  #conteudo .months { grid-template-columns: 1fr !important; }
+  #conteudo .heading {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* ===== Modo noturno mais próximo do claro ===== */
+body.night {
+  background: #0c0c0e !important;
+  color: #e8eaf0 !important;
+}
+body.night header.top,
+body.night .top {
+  background: rgba(18,18,22,0.96) !important;
+  border-bottom-color: #2a2a32 !important;
+}
+body.night .hero {
+  background: linear-gradient(105deg, #151520, #1a1a28 55%, #12121a) !important;
+}
+body.night .hero h1,
+body.night .calligraphy,
+body.night .calligraphy-hanzi,
+body.night .calligraphy-text small {
+  color: #f0f2f8 !important;
+}
+body.night .hero p,
+body.night .heading p,
+body.night .monthly p {
+  color: #9aa3b5 !important;
+}
+body.night .tag {
+  background: #1e1e2e !important;
+  border-color: #3d3d5c !important;
+  color: #a5b4fc !important;
+}
+body.night .pills span {
+  background: #1a1a24 !important;
+  border-color: #2e2e3a !important;
+  color: #b0b8cc !important;
+}
+body.night .switch {
+  background: #16161c !important;
+  border-color: #2e2e38 !important;
+}
+body.night .switch button {
+  color: #c8cdd8 !important;
+  border-color: #2e2e38 !important;
+}
+body.night .switch button.active {
+  background: linear-gradient(105deg, #5548e7, #6d5ef0) !important;
+  color: #fff !important;
+}
+body.night .section,
+body.night .monthcard,
+body.night .panel,
+body.night .teacher,
+body.night .day,
+body.night .tips-improved,
+body.night .tips-wrapper .tips {
+  background: #16161c !important;
+  border-color: #2c2c36 !important;
+  color: #e8eaf0 !important;
+  border-radius: 14px !important;
+}
+body.night .monthtop,
+body.night .daytop,
+body.night .panelhead {
+  background: #1e1e28 !important;
+  color: #d4d4de !important;
+  border-color: #2c2c36 !important;
+}
+body.night .monthtop { color: inherit !important; }
+body.night h2, body.night h3,
+body.night .mbody h3,
+body.night .teacher-info h3 {
+  color: #f0f2f8 !important;
+}
+body.night .mbody p,
+body.night .routine-list,
+body.night .routine-list li,
+body.night .teacher p,
+body.night .teacher .desc,
+body.night .task,
+body.night .status {
+  color: #a8b0c0 !important;
+}
+body.night .teacher-links a {
+  background: #1e1e28 !important;
+  border-color: #333340 !important;
+  color: #93c5fd !important;
+}
+body.night .teacher-links a:hover {
+  background: #252532 !important;
+  color: #bfdbfe !important;
+}
+body.night #plano-mensal .week-page-button,
+body.night .btn-primary {
+  background: linear-gradient(105deg, #5548e7, #6d5ef0) !important;
+  color: #fff !important;
+  border: none !important;
+}
+body.night .footer {
+  background: linear-gradient(#0c0c0e, #12121a) !important;
+  color: #9aa3b5 !important;
+}
+body.night .num {
+  box-shadow: inset 0 0 0 3px rgba(255,255,255,0.12) !important;
+}
+body.night #conteudo .monthcard {
+  background: #16161c !important;
+  border-width: 1px !important;
+}
+/* Preserve accent borders on course cards in night mode */
+body.night #conteudo .monthcard[style*="4d5ee5"] { border-color: #4d5ee5 !important; }
+body.night #conteudo .monthcard[style*="1e9b70"] { border-color: #1e9b70 !important; }
+body.night #conteudo .monthcard[style*="d77b16"] { border-color: #d77b16 !important; }
+body.night #conteudo .monthcard[style*="c4478d"] { border-color: #c4478d !important; }
+
+body.night .track { background: #2a2a35 !important; }
+body.night .pct {
+  background: #1e1e2e !important;
+  color: #a5b4fc !important;
+}
+body.night header.top .nav a { color: #c8cdd8 !important; }
+body.night header.top .nav.open { background: #16161c !important; }
+body.night .tools button {
+  background: #1e1e2e !important;
+  color: #a5b4fc !important;
+}
+</style>
+
+</head><body>
+<header class="top" id="home"><div class="top-inner"><a class="brand" href="#home"><i>🏯</i><span>Mandarim<small>Do Zero à Fluência</small></span></a><nav class="nav" id="nav"><a href="#home">Home</a><a href="#calendario">Rotina</a><a href="#conteudo">Conteúdo</a><a href="#recursos">Recursos</a><a href="#youtube">Aulas no YouTube</a><a href="#contato">Contato</a></nav><div class="tools"><button aria-label="Alternar tema" id="theme">☼ ◉</button><button class="menu" id="hamb" aria-expanded="false" aria-label="Abrir menu">☰</button></div></div></header>
 <section class="hero"><div class="hero-copy"><span class="tag">ROTINA DE APRENDIZAGEM</span><h1>Seu plano de estudos de Mandarim</h1><p>Organize sua rotina, acompanhe seu progresso e tenha acesso a todo o conteúdo necessário para evoluir no mandarim, do zero à fluência.</p><div class="pills"><span>♧ &nbsp; Planejamento completo</span><span>☷ &nbsp; Conteúdo organizado</span><span>▦ &nbsp; Aulas recomendadas</span><span>◉ &nbsp; Progresso real</span></div></div><div class="calligraphy"><div class="calligraphy-text"><div class="calligraphy-main"><span class="calligraphy-hanzi">加油！</span></div><small>Jiāyóu!</small><small>Você consegue!</small></div><div class="calligraphy-sakura-box" aria-label="Sakura">🌸</div></div></section>
-<div class="wrap course-wrap"><section class="section" id="conteudo"><div class="heading"><div class="bigicon">▤</div><div><h2>Conteúdo do curso</h2><p>Vocabulário, gramática, pinyin e caracteres distribuídos ao longo do mês.</p></div></div><div class="months"><article class="monthcard" style="--tone:#4d5ee5;--tint:#f0f0ff"><div class="monthtop">Pinyin</div><div class="mbody"><h3>Sons e iniciais</h3><p>Pratique iniciais, finais, vogais e reconhecimento dos sons.</p></div></article><article class="monthcard" style="--tone:#1e9b70;--tint:#eafaf4"><div class="monthtop">Vocabulário</div><div class="mbody"><h3>Palavras essenciais</h3><p>Aprenda cumprimentos, números, pronomes e informações pessoais.</p></div></article><article class="monthcard" style="--tone:#d77b16;--tint:#fff4e5"><div class="monthtop">Gramática</div><div class="mbody"><h3>Frases simples</h3><p>Construa perguntas, negativas e frases para o cotidiano.</p></div></article><article class="monthcard" style="--tone:#c4478d;--tint:#fff0f8"><div class="monthtop">Revisão</div><div class="mbody"><h3>Consolidar o aprendizado</h3><p>Revise caracteres, escuta guiada e pronúncia semanalmente.</p></div></article></div></section></div>
-<div class="switch" role="tablist"><button class="active" data-target="calendario">📅 &nbsp; Calendário Semanal</button><button data-target="plano-mensal">📅 &nbsp; Plano Mensal (30 dias)</button><button data-target="rotina-estudos">◷ &nbsp; Rotina de Estudos</button><button data-target="tons">♬ &nbsp; Tons</button></div>
+<div class="switch" role="tablist"><button class="active" data-target="calendario">📅 &nbsp; Calendário Semanal</button><button data-target="plano-mensal">📅 &nbsp; Plano Mensal (30 dias)</button><button data-target="rotina-estudos">◷ &nbsp; Rotina de Estudos</button></div>
 <main class="wrap">
 <section class="section" id="calendario"><div class="heading"><div class="bigicon">📅</div><div><h2>Calendário Semanal</h2><p>Acompanhe suas atividades diárias e marque o que já concluiu.</p></div><div class="spacer"></div><div class="prog"><label><span>Progresso da semana</span><span id="days">3/7 dias</span></label><div class="track"><span id="bar"></span></div></div><span class="pct" id="pct">43%</span></div><div class="week" id="week"></div></section>
 <section class="section monthly" id="plano-mensal"><div class="monthhead"><div class="bigicon">📅</div><div><h2>Plano Mensal (30 dias)</h2><p>Veja o roteiro completo do seu primeiro mês de estudos, dividido em 4 semanas.</p></div><button class="outline" onclick="document.querySelector('#conteudo').scrollIntoView({behavior:'smooth'})">Ver detalhes do plano　›</button></div><div class="months"><article class="monthcard" style="--tone:#4d5ee5;--tint:#f0f0ff"><div class="monthtop"><span class="num">1</span>Semana 1 (1–7)</div><div class="mbody"><h3>Pinyin e fundamentos</h3><p>Iniciais, finais, vogais, reconhecimento dos sons e primeira revisão.</p><button class="week-page-button" type="button" data-week-page="1" aria-label="Abrir página da Semana 1">Explorar semana <span aria-hidden="true">→</span></button></div></article><article class="monthcard" style="--tone:#1e9b70;--tint:#eafaf4"><div class="monthtop"><span class="num">2</span>Semana 2 (8–14)</div><div class="mbody"><h3>Os tons e primeiras palavras</h3><p>Quatro tons, tom neutro, cumprimentos e teste da quinzena.</p><button class="week-page-button" type="button" data-week-page="2" aria-label="Abrir página da Semana 2">Explorar semana <span aria-hidden="true">→</span></button></div></article><article class="monthcard" style="--tone:#d77b16;--tint:#fff4e5"><div class="monthtop"><span class="num">3</span>Semana 3 (15–21)</div><div class="mbody"><h3>Apresentações e comunicação</h3><p>Pronomes, perguntas simples, números, informações pessoais e miniavaliação.</p><button class="week-page-button" type="button" data-week-page="3" aria-label="Abrir página da Semana 3">Explorar semana <span aria-hidden="true">→</span></button></div></article><article class="monthcard" style="--tone:#c4478d;--tint:#fff0f8"><div class="monthtop"><span class="num">4</span>Semana 4 (22–30)</div><div class="mbody"><h3>Frases e consolidação</h3><p>是, 不, preferências, vocabulário cotidiano, caracteres, escuta guiada e avaliação final.</p><button class="week-page-button" type="button" data-week-page="4" aria-label="Abrir página da Semana 4">Explorar semana <span aria-hidden="true">→</span></button></div></article></div></section>
-<section class="section" id="tons"><div class="heading"><div class="bigicon">▤</div><div><h2>Conteúdo e Pronúncia</h2><p>Estude o vocabulário, a gramática e pratique os tons com exemplos reais.</p></div></div><div class="contentgrid"><div class="panel"><div class="panelhead"><h3>Os 4 tons do mandarim</h3><p>A mesma sílaba, 4 significados diferentes.</p></div><div class="tones"><article class="tone" style="--tone:#5146d9;--tint:#f1efff"><div class="tonemain"><strong>mā</strong><small>1º tom (alto e plano)</small><svg viewBox="0 0 100 34"><path d="M8 17 L83 17 M77 12 L84 17 L77 22" fill="none" stroke="var(--tone)" stroke-width="2.5"/></svg></div><div class="hanzi">妈</div><div class="translation">(mãe)</div></article><article class="tone" style="--tone:#b96000;--tint:#fff5e9"><div class="tonemain"><strong>má</strong><small>2º tom (ascendente)</small><svg viewBox="0 0 100 34"><path d="M8 27 L82 6 M73 5 L83 6 L79 15" fill="none" stroke="var(--tone)" stroke-width="2.5"/></svg></div><div class="hanzi">麻</div><div class="translation">(cânhamo)</div></article><article class="tone" style="--tone:#147b47;--tint:#eefaf1"><div class="tonemain"><strong>mǎ</strong><small>3º tom (curvado)</small><svg viewBox="0 0 100 34"><path d="M8 7 Q42 42 80 8 M72 9 L81 7 L79 16" fill="none" stroke="var(--tone)" stroke-width="2.5"/></svg></div><div class="hanzi">马</div><div class="translation">(cavalo)</div></article><article class="tone" style="--tone:#d22c78;--tint:#fff0f7"><div class="tonemain"><strong>mà</strong><small>4º tom (descendente)</small><svg viewBox="0 0 100 34"><path d="M8 6 L82 28 M73 28 L83 28 L80 19" fill="none" stroke="var(--tone)" stroke-width="2.5"/></svg></div><div class="hanzi">骂</div><div class="translation">(xingar)</div></article></div></div><aside class="panel"><div class="panelhead"><h3>Exemplo de caracteres</h3></div><div class="chars"><div class="char" style="--c:#2358bf"><div class="hanzi">我</div><strong>wǒ</strong><small>eu / me</small></div><div class="char" style="--c:#168253"><div class="hanzi">你</div><strong>nǐ</strong><small>você</small></div><div class="char" style="--c:#7741d4"><div class="hanzi">好</div><strong>hǎo</strong><small>bom / bem</small></div></div><div class="tip">💡 &nbsp; <b>Dica:</b> pratique os tons em voz alta, repita os exemplos e compare sua pronúncia.</div></aside></div></section>
-
+<section class="section" id="conteudo"><div class="heading"><div class="bigicon">▤</div><div><h2>Conteúdo do curso</h2><p>Vocabulário, gramática, pinyin e caracteres distribuídos ao longo do mês.</p></div></div><div class="months"><article class="monthcard" style="--tone:#4d5ee5;--tint:#f0f0ff"><div class="monthtop">Pinyin</div><div class="mbody"><h3>Sons e iniciais</h3><p>Pratique iniciais, finais, vogais e reconhecimento dos sons.</p></div></article><article class="monthcard" style="--tone:#1e9b70;--tint:#eafaf4"><div class="monthtop">Vocabulário</div><div class="mbody"><h3>Palavras essenciais</h3><p>Aprenda cumprimentos, números, pronomes e informações pessoais.</p></div></article><article class="monthcard" style="--tone:#d77b16;--tint:#fff4e5"><div class="monthtop">Gramática</div><div class="mbody"><h3>Frases simples</h3><p>Construa perguntas, negativas e frases para o cotidiano.</p></div></article><article class="monthcard" style="--tone:#c4478d;--tint:#fff0f8"><div class="monthtop">Revisão</div><div class="mbody"><h3>Consolidar o aprendizado</h3><p>Revise caracteres, escuta guiada e pronúncia semanalmente.</p></div></article></div></section>
 <section class="section" id="rotina-estudos"><div class="heading"><div class="bigicon">◷</div><div><h2>Rotina de Estudos</h2><p>Escolha o tempo disponível e siga uma rotina adequada ao seu ritmo.</p></div></div><div class="months"><article class="monthcard" style="--tone:#4d5ee5;--tint:#f0f0ff"><div class="monthtop">◷ &nbsp; 1 hora</div><div class="mbody"><h3>Rotina de 1 hora</h3><ul class="routine-list"><li><strong>00–10 min:</strong> revisar vocabulário e caracteres.</li><li><strong>10–25 min:</strong> aula principal — um tópico novo.</li><li><strong>25–35 min:</strong> praticar pronúncia e tons.</li><li><strong>35–45 min:</strong> escrever palavras e frases.</li><li><strong>45–55 min:</strong> escuta ativa com áudio ou vídeo curto.</li><li><strong>55–60 min:</strong> anotar dúvidas e revisar.</li></ul></div></article><article class="monthcard" style="--tone:#1e9b70;--tint:#eafaf4"><div class="monthtop">◷ &nbsp; 2 horas</div><div class="mbody"><h3>Rotina de 2 horas</h3><ul class="routine-list"><li><strong>00–10 min:</strong> revisão de vocabulário e caracteres anteriores.</li><li><strong>10–35 min:</strong> aula principal — conteúdo novo de gramática e vocabulário.</li><li><strong>35–55 min:</strong> pronúncia e tons em voz alta.</li><li><strong>55–65 min:</strong> pausa curta.</li><li><strong>65–85 min:</strong> leitura guiada e reconhecimento de caracteres.</li><li><strong>85–105 min:</strong> escuta e conversação com frases do tema.</li><li><strong>105–115 min:</strong> escrita: formar frases e praticar caracteres.</li><li><strong>115–120 min:</strong> anotar dúvidas e revisar os pontos principais.</li></ul></div></article><article class="monthcard" style="--tone:#d77b16;--tint:#fff4e5"><div class="monthtop">◷ &nbsp; 3 a 4 horas</div><div class="mbody"><h3>Rotina intensiva</h3><ul class="routine-list"><li><strong>00–15 min:</strong> revisão espaçada de palavras e caracteres.</li><li><strong>15–55 min:</strong> aula principal — gramática e vocabulário novos.</li><li><strong>55–65 min:</strong> pausa.</li><li><strong>65–95 min:</strong> pronúncia, tons e leitura em voz alta.</li><li><strong>95–125 min:</strong> escuta ativa: áudio ou vídeo, com anotações.</li><li><strong>125–135 min:</strong> pausa maior.</li><li><strong>135–165 min:</strong> leitura guiada e estudo de caracteres.</li><li><strong>165–195 min:</strong> escrita de frases e pequeno texto.</li><li><strong>195–215 min:</strong> conversação ou repetição acompanhada (shadowing).</li><li><strong>215–225 min:</strong> revisar erros e registrar o progresso.</li><li><strong>225–240 min (opcional):</strong> reforço do ponto mais difícil ou revisão leve.</li></ul><p class="routine-note">Para uma sessão de 3 horas, encerre após os primeiros 180 minutos; use o bloco final apenas quando tiver 4 horas disponíveis.</p></div></article><article class="monthcard" style="--tone:#c4478d;--tint:#fff0f8"><div class="monthtop">✓ &nbsp; Constância</div><div class="mbody"><h3>Progresso sustentável</h3><p>Marque as atividades concluídas e revise no fim de cada semana.</p></div></article></div></section>
 
 <section class="section" id="youtube">
   <div class="heading"><div class="bigicon">▶</div><div>
     <h2>Aulas recomendadas no YouTube</h2>
-    <p>Aprenda com duas professoras e siga o conteúdo alinhado com sua rotina.</p>
+    <p>Aprenda com professoras recomendadas e siga o conteúdo alinhado com sua rotina.</p>
   </div></div>
   <div class="ytgrid"><div class="teachers">
     <article class="teacher">
@@ -112,6 +275,18 @@ body.night .routine-list,body.night .routine-note{color:#f2f5f8}
       </ul>
       <div class="desc">Orientações práticas e variedade de conteúdos para aprender o idioma.</div>
     </article>
+    <article class="teacher">
+      <div class="teacher-header">
+        <div class="avatar" style="background:linear-gradient(135deg,#a78bfa,#6366f1);font-size:22px;color:#fff;display:grid;place-items:center;width:68px;height:68px;border-radius:50%;flex-shrink:0">小</div>
+        <div class="teacher-info"><h3>Profª Xiao Mandarim</h3><p class="channel">Xiao Mandarim - Curso de chinês GRATUITO</p></div>
+      </div>
+      <ul class="teacher-links">
+        <li><a href="https://www.youtube.com/results?search_query=Xiao+Mandarim+curso+completo" target="_blank" rel="noopener">▶ Curso gratuito (400+ aulas)</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=Xiao+Mandarim" target="_blank" rel="noopener">📺 Canal no YouTube</a></li>
+      </ul>
+      <p class="desc">Curso completo e gratuito de mandarim com mais de 400 aulas — ideal para acompanhar do zero à fluência.</p>
+    </article>
+
   </div></div>
 </section>
 
@@ -314,7 +489,7 @@ header.top .tools button { border-radius: 10px !important; }
 .ytgrid { display: block !important; width: 100% !important; }
 .teachers {
   display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 20px !important;
   width: 100% !important;
 }
@@ -1736,8 +1911,9 @@ body.night .switch button.active {
 <script id="week-page-placeholder-handler">
 document.querySelectorAll('#plano-mensal .week-page-button').forEach(button => {
   button.addEventListener('click', () => {
-    const week = button.dataset.weekPage;
-    alert('A página dedicada da Semana ' + week + ' poderá ser conectada aqui.');
+    const week = button.dataset.weekPage || '1';
+    // Abre a página de categorias na semana correspondente
+    window.location.href = 'mandarim-categorias.html#cat' + week;
   });
 });
 </script>

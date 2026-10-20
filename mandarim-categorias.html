@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mandarim — Semanas de estudo</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+<style>
+:root{--ink:#10285f;--muted:#506d9d;--line:#dce7fa;--purple:#5b50e8;--green:#1e9b70;--orange:#d77b16;--pink:#c4478d;--blue:#4d5ee5;--soft:#f7faff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;font-size:15px;line-height:1.55;min-height:100vh}
+
+.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);border-bottom:1px solid #e5edfb;backdrop-filter:blur(8px)}
+.top-inner{max-width:900px;margin:0 auto;height:56px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:850;font-size:16px;color:var(--ink);background:none;border:0;cursor:pointer;font-family:inherit}
+.brand i{font-style:normal;font-size:22px}
+.brand small{display:block;font-size:10px;font-weight:600;color:var(--muted);text-align:left}
+.top-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn{border:1px solid #a9b1ff;color:#343fc9;background:#fff;border-radius:11px;padding:8px 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;transition:background .15s,color .15s,border-color .15s,box-shadow .15s}
+.btn:hover{background:#f0f1ff}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:linear-gradient(105deg,#5548e7,#6d5ef0)!important;color:#fff!important;border:none!important;box-shadow:0 2px 8px rgba(85,72,231,.25)}
+.btn-primary:hover{background:linear-gradient(105deg,#4a3fd4,#5f50e0)!important;color:#fff!important;filter:none!important;box-shadow:0 4px 14px rgba(85,72,231,.35)}
+.btn-ghost{background:#eff1ff;border-color:transparent;color:#4448d7}
+.btn-ghost:hover{background:#e0e4ff}
+
+.view{display:none}
+.view.active{display:block}
+
+.hero{background:linear-gradient(105deg,#edf3ff,#f4f7ff 55%,#e6f1ff);padding:26px 16px 22px}
+.hero-inner{max-width:900px;margin:0 auto}
+.tag{display:inline-block;padding:4px 11px;border:1px solid #abbaff;border-radius:20px;background:#eff1ff;color:#2a47b8;font-size:11px;font-weight:800}
+.hero h1{font-size:clamp(22px,4.5vw,30px);line-height:1.2;margin:10px 0 6px;letter-spacing:-.4px}
+.hero p{color:var(--muted);font-size:14px;max-width:540px}
+
+.wrap{max-width:900px;margin:0 auto;padding:20px 16px 48px}
+
+/* Hub cards - match screenshot */
+.weeks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.week-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;min-width:0;transition:transform .15s,box-shadow .15s}
+.week-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(30,50,120,.1)}
+.week-top{padding:12px 14px;font-size:12px;font-weight:800;display:flex;align-items:center;gap:8px;color:var(--tone);background:var(--tint)}
+.week-top .num{width:26px;height:26px;border-radius:50%;background:var(--tone);color:#fff;display:grid;place-items:center;font-size:12px;flex-shrink:0}
+.week-body{padding:14px;flex:1;display:flex;flex-direction:column}
+.week-body h3{font-size:15px;margin:0 0 6px;color:var(--ink)}
+.week-body p{font-size:12.5px;color:var(--muted);line-height:1.45;flex:1;margin:0 0 14px}
+.week-body .go{display:flex;align-items:center;justify-content:center;width:100%;min-height:42px;border:0;border-radius:11px;background:linear-gradient(105deg,#5548e7,#6d5ef0);color:#fff;font:700 13px/1 Inter,system-ui,sans-serif;cursor:pointer;font-family:inherit}
+.week-body .go:hover{filter:brightness(1.05)}
+
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:center}
+.toolbar .spacer{flex:1}
+
+.tabs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:16px;background:#fff}
+.tabs button{border:0;background:transparent;padding:12px 8px;font:700 13px/1.3 Inter,system-ui,sans-serif;color:var(--muted);cursor:pointer}
+.tabs button.active{background:linear-gradient(105deg,#5548e7,#6d5ef0);color:#fff}
+
+.subpanel{display:none}.subpanel.active{display:block}
+.note{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:13.5px;color:var(--muted);line-height:1.55;margin-bottom:16px}
+.note strong{color:var(--ink)}
+
+.group-label{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;padding:5px 11px;border-radius:20px;margin-bottom:10px}
+.g1{background:#f0f0ff;color:#4d5ee5}.g2{background:#eafaf4;color:#1e9b70}.g3{background:#fff4e5;color:#d77b16}.g4{background:#fff0f8;color:#c4478d}.g5{background:#f0f9ff;color:#0284c7}
+
+.section{margin-bottom:22px}
+.section-title{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.section-title h2{font-size:16px;font-weight:800}
+.section-desc{font-size:12.5px;color:var(--muted);margin:-4px 0 12px}
+
+.sound-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:520px){.sound-grid.cols-3{grid-template-columns:repeat(3,1fr)}.sound-grid.cols-4{grid-template-columns:repeat(4,1fr)}}
+.sound{border:1px solid var(--line);border-radius:12px;padding:14px 10px 12px;background:#fff;text-align:center;cursor:pointer;transition:.15s;position:relative}
+.sound:hover,.sound:focus-visible{border-color:#a9b1ff;transform:translateY(-2px);box-shadow:0 6px 16px rgba(85,72,231,.1);outline:none}
+.sound .letter{font-size:22px;font-weight:850;color:var(--blue);line-height:1.1}
+.sound .ex{font-size:12.5px;font-weight:700;margin:2px 0 4px}
+.sound .hint{font-size:11px;color:var(--muted);line-height:1.3}
+.sound .play{position:absolute;top:7px;right:7px;width:24px;height:24px;border-radius:50%;background:#eff1ff;color:var(--purple);font-size:10px;border:none;cursor:pointer;display:grid;place-items:center}
+
+.diagram{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:8px 0}
+@media(min-width:560px){.diagram.cols-4{grid-template-columns:repeat(4,1fr)}}
+.mouth{text-align:center;border:1px solid var(--line);border-radius:12px;padding:12px 8px;background:#fff}
+.mouth svg{width:72px;height:56px;margin:0 auto 4px}
+.mouth .name{font-weight:800;font-size:12px}
+.mouth label{display:block;font-size:10.5px;color:var(--muted)}
+
+.aspir-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 14px}
+.aspir-box{border-radius:12px;padding:12px;text-align:center;border:1px solid var(--line)}
+.aspir-box.low{background:#f6fdf9;border-color:#b8eadb}
+.aspir-box.high{background:#fff8f8;border-color:#f5c2c7}
+.aspir-box .lab{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.aspir-box.low .lab{color:var(--green)}.aspir-box.high .lab{color:#c2410c}
+.aspir-box .pairs{font-size:16px;font-weight:850;margin-bottom:6px}
+.bar{height:7px;background:#e9f0fc;border-radius:20px;overflow:hidden;margin-bottom:5px}
+.bar span{display:block;height:100%;border-radius:20px}
+.bar.low span{width:30%;background:linear-gradient(90deg,#22a77b,#34d399)}
+.bar.high span{width:88%;background:linear-gradient(90deg,#f97316,#ef4444)}
+.aspir-box small{font-size:11px;color:var(--muted)}
+.pairs-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pair{background:#fff;border:1px solid #dce8fa;padding:7px 12px;border-radius:10px;font-weight:750;font-size:13px;cursor:pointer}
+.pair:hover{border-color:#a9b1ff;background:#f8f9ff}
+.pair span{color:var(--muted);font-weight:500;margin:0 3px}
+
+.tip{background:#eef5ff;border:1px solid #e0eaff;border-radius:12px;padding:13px 15px;font-size:13px;color:#42618f;display:flex;gap:10px;align-items:flex-start;line-height:1.5;margin-top:8px}
+.tip strong{color:var(--ink)}
+
+.tones-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tone-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;text-align:center;cursor:pointer;transition:.15s}
+.tone-card:hover{border-color:#a9b1ff;transform:translateY(-2px);box-shadow:0 6px 16px rgba(85,72,231,.08)}
+.tone-main{padding:12px 8px 8px;background:var(--tint)}
+.tone-main strong{display:block;font-size:22px;color:var(--tone)}
+.tone-main small{display:block;font-size:11px;color:var(--tone);margin-top:2px;font-weight:600}
+.tone-main svg{width:85%;height:36px;margin-top:6px}
+.tone-hanzi{font-size:26px;font-weight:800;margin:6px 0 2px}
+.tone-tr{font-size:12px;color:var(--muted);padding-bottom:10px}
+
+.vocab-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vocab{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff;cursor:pointer;transition:.15s;display:flex;align-items:center;gap:12px}
+.vocab:hover{border-color:#a9b1ff;background:#fafbff}
+.vocab .hanzi{font-size:26px;font-weight:800;color:var(--blue);min-width:48px;text-align:center;line-height:1.15}
+.vocab .meta strong{display:block;font-size:14px;margin-bottom:1px}
+.vocab .meta span{font-size:12px;color:var(--muted)}
+
+.cmp{width:100%;border-collapse:collapse;font-size:13px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{background:#f0f5ff;color:#343fc9;font-size:11px;text-transform:uppercase;letter-spacing:.03em;padding:9px 12px;text-align:left}
+.cmp td{padding:9px 12px;border-top:1px solid #eef2fb;color:var(--muted)}
+.cmp td:first-child{font-weight:750;color:var(--purple);white-space:nowrap}
+
+.cat-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:28px;padding-top:18px;border-top:1px solid #e3ebf9;flex-wrap:wrap}
+.cat-nav .info{font-size:12.5px;color:var(--muted)}
+
+footer{text-align:center;padding:16px;background:linear-gradient(#fff,#f1f7ff);color:#2b4b8a}
+footer strong{font-family:Georgia,serif;letter-spacing:2px;font-size:13px}
+footer p{font:11px Georgia,serif;color:#5875a6;margin-top:3px}
+
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-size:13px;font-weight:600;opacity:0;transition:.25s;z-index:80;pointer-events:none;max-width:90%;text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+.capture-area{background:#fff}
+
+@media(max-width:860px){.weeks{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){
+  .weeks{grid-template-columns:1fr}
+  .vocab-grid,.tones-grid,.aspir-row{grid-template-columns:1fr}
+  .top-inner{padding:0 12px}
+  .btn{padding:7px 10px;font-size:11px}
+}
+
+@media (max-width: 860px) {
+  .weeks { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 520px) {
+  .weeks { grid-template-columns: 1fr !important; }
+  .vocab-grid, .tones-grid, .aspir-row { grid-template-columns: 1fr !important; }
+  .sound-grid { grid-template-columns: 1fr 1fr !important; }
+  .top-actions { gap: 6px !important; }
+  .btn { padding: 7px 9px !important; font-size: 11px !important; }
+  .hero h1 { font-size: 22px !important; }
+  .cat-nav { flex-direction: column; align-items: stretch !important; }
+  .cat-nav .btn, .cat-nav .btn-primary { width: 100%; justify-content: center; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <button type="button" class="brand" id="btn-home" title="Início">
+      <i>🏯</i>
+      <span>Mandarim<small id="header-sub">Plano mensal</small></span>
+    </button>
+    <div class="top-actions">
+      <button type="button" class="btn btn-ghost" id="btn-copy" title="Copiar texto">📋 Copiar</button>
+      <button type="button" class="btn btn-ghost" id="btn-img" title="Baixar como imagem">🖼 Imagem</button>
+      <button type="button" class="btn" id="btn-back" style="display:none">← Voltar</button>
+    </div>
+  </div>
+</header>
+
+<!-- HUB -->
+<div class="view active" id="view-hub">
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="tag">PLANO MENSAL · 30 DIAS</span>
+      <h1>Escolha uma semana</h1>
+      <p>Toque em “Explorar semana” para estudar o conteúdo completo com áudio em mandarim.</p>
+    </div>
+  </section>
+  <div class="wrap">
+    <div class="weeks">
+      <article class="week-card" style="--tone:#4d5ee5;--tint:#f0f0ff">
+        <div class="week-top"><span class="num">1</span> Semana 1 (1–7)</div>
+        <div class="week-body">
+          <h3>Pinyin e fundamentos</h3>
+          <p>Iniciais, finais, vogais, reconhecimento dos sons e primeira revisão.</p>
+          <button type="button" class="go" data-go="cat1">Explorar semana →</button>
+        </div>
+      </article>
+      <article class="week-card" style="--tone:#1e9b70;--tint:#eafaf4">
+        <div class="week-top"><span class="num">2</span> Semana 2 (8–14)</div>
+        <div class="week-body">
+          <h3>Os tons e primeiras palavras</h3>
+          <p>Quatro tons, tom neutro, cumprimentos e teste da quinzena.</p>
+          <button type="button" class="go" data-go="cat2">Explorar semana →</button>
+        </div>
+      </article>
+      <article class="week-card" style="--tone:#d77b16;--tint:#fff4e5">
+        <div class="week-top"><span class="num">3</span> Semana 3 (15–21)</div>
+        <div class="week-body">
+          <h3>Apresentações e comunicação</h3>
+          <p>Pronomes, perguntas simples, números, informações pessoais e miniavaliação.</p>
+          <button type="button" class="go" data-go="cat3">Explorar semana →</button>
+        </div>
+      </article>
+      <article class="week-card" style="--tone:#c4478d;--tint:#fff0f8">
+        <div class="week-top"><span class="num">4</span> Semana 4 (22–30)</div>
+        <div class="week-body">
+          <h3>Frases e consolidação</h3>
+          <p>是, 不, preferências, vocabulário cotidiano, caracteres e avaliação final.</p>
+          <button type="button" class="go" data-go="cat4">Explorar semana →</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- CAT1 -->
+<div class="view" id="view-cat1">
+  <section class="hero"><div class="hero-inner">
+    <span class="tag">SEMANA 1 · PINYIN</span>
+    <h1>Pinyin e fundamentos</h1>
+    <p>Toque nos sons para ouvir em mandarim. Use Iniciante ou Avançado.</p>
+  </div></section>
+  <div class="wrap capture-area" id="cap-cat1">
+    <div class="tabs">
+      <button type="button" class="active" data-sub="ini">🌱 Iniciante</button>
+      <button type="button" data-sub="adv">🚀 Avançado</button>
+    </div>
+    <div class="subpanel active" id="sub-ini">
+      <div class="note">A diferença entre <strong>b/p</strong>, <strong>d/t</strong> e <strong>g/k</strong> é a <strong>quantidade de ar</strong> (aspiração), não “sonoro vs surdo”.</div>
+      <div class="section">
+        <div class="group-label g1">Grupo 1 · Lábios</div>
+        <div class="sound-grid cols-4">
+          <div class="sound" data-zh="波" data-label="bō"><span class="play">▶</span><div class="letter">B</div><div class="ex">bo</div><div class="hint">Pouco ar · bilabial</div></div>
+          <div class="sound" data-zh="坡" data-label="pō"><span class="play">▶</span><div class="letter">P</div><div class="ex">po</div><div class="hint">Muito ar</div></div>
+          <div class="sound" data-zh="摸" data-label="mō"><span class="play">▶</span><div class="letter">M</div><div class="ex">mo</div><div class="hint">Como o m</div></div>
+          <div class="sound" data-zh="佛" data-label="fó"><span class="play">▶</span><div class="letter">F</div><div class="ex">fo</div><div class="hint">Lábio + dentes</div></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="group-label g2">Grupo 2 · Ponta da língua</div>
+        <div class="sound-grid cols-4">
+          <div class="sound" data-zh="的" data-label="de"><span class="play">▶</span><div class="letter">D</div><div class="ex">de</div><div class="hint">Pouco ar</div></div>
+          <div class="sound" data-zh="特" data-label="tè"><span class="play">▶</span><div class="letter">T</div><div class="ex">te</div><div class="hint">Muito ar</div></div>
+          <div class="sound" data-zh="呢" data-label="ne"><span class="play">▶</span><div class="letter">N</div><div class="ex">ne</div><div class="hint">Como o n</div></div>
+          <div class="sound" data-zh="了" data-label="le"><span class="play">▶</span><div class="letter">L</div><div class="ex">le</div><div class="hint">Como o l</div></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="group-label g3">Grupo 3 · Fundo da boca</div>
+        <div class="sound-grid cols-3">
+          <div class="sound" data-zh="哥" data-label="gē"><span class="play">▶</span><div class="letter">G</div><div class="ex">ge</div><div class="hint">Pouco ar</div></div>
+          <div class="sound" data-zh="科" data-label="kē"><span class="play">▶</span><div class="letter">K</div><div class="ex">ke</div><div class="hint">Muito ar</div></div>
+          <div class="sound" data-zh="喝" data-label="hē"><span class="play">▶</span><div class="letter">H</div><div class="ex">he</div><div class="hint">Sopro áspero</div></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title"><span>👄</span><h2>Posição da boca</h2></div>
+        <div class="diagram cols-4">
+          <div class="mouth"><svg viewBox="0 0 100 70" fill="none"><ellipse cx="50" cy="38" rx="34" ry="24" stroke="#94a3b8" stroke-width="2"/><path d="M34 40 Q50 48 66 40" stroke="#4d5ee5" stroke-width="3" fill="none"/><circle cx="40" cy="28" r="2" fill="#94a3b8"/><circle cx="60" cy="28" r="2" fill="#94a3b8"/></svg><div class="name">Bilabial</div><label>B P M</label></div>
+          <div class="mouth"><svg viewBox="0 0 100 70" fill="none"><ellipse cx="50" cy="38" rx="34" ry="24" stroke="#94a3b8" stroke-width="2"/><rect x="38" y="32" width="24" height="5" rx="1" fill="#c4478d" opacity=".85"/><path d="M32 42 Q50 50 68 42" stroke="#c4478d" stroke-width="2.5" fill="none"/><circle cx="40" cy="28" r="2" fill="#94a3b8"/><circle cx="60" cy="28" r="2" fill="#94a3b8"/></svg><div class="name">Labiodental</div><label>F</label></div>
+          <div class="mouth"><svg viewBox="0 0 100 70" fill="none"><ellipse cx="50" cy="38" rx="34" ry="24" stroke="#94a3b8" stroke-width="2"/><path d="M36 48 Q50 28 64 48" stroke="#1e9b70" stroke-width="3" fill="none"/><circle cx="40" cy="28" r="2" fill="#94a3b8"/><circle cx="60" cy="28" r="2" fill="#94a3b8"/></svg><div class="name">Alveolar</div><label>D T N L</label></div>
+          <div class="mouth"><svg viewBox="0 0 100 70" fill="none"><ellipse cx="50" cy="38" rx="34" ry="24" stroke="#94a3b8" stroke-width="2"/><path d="M42 50 Q56 26 70 42" stroke="#d77b16" stroke-width="3" fill="none"/><circle cx="40" cy="28" r="2" fill="#94a3b8"/><circle cx="60" cy="28" r="2" fill="#94a3b8"/></svg><div class="name">Velar</div><label>G K H</label></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title"><span>💨</span><h2>Aspiração</h2></div>
+        <div class="aspir-row">
+          <div class="aspir-box low"><div class="lab">Pouco ar</div><div class="pairs">B · D · G</div><div class="bar low"><span></span></div><small>Quase sem vento</small></div>
+          <div class="aspir-box high"><div class="lab">Muito ar</div><div class="pairs">P · T · K</div><div class="bar high"><span></span></div><small>Rajada na mão</small></div>
+        </div>
+        <div class="pairs-row">
+          <div class="pair" data-zh="巴" data-zh2="趴" data-label="ba – pa">ba <span>–</span> pa</div>
+          <div class="pair" data-zh="搭" data-zh2="他" data-label="da – ta">da <span>–</span> ta</div>
+          <div class="pair" data-zh="嘎" data-zh2="卡" data-label="ga – ka">ga <span>–</span> ka</div>
+        </div>
+      </div>
+      <div class="tip"><span>💡</span><div><strong>Dica:</strong> pratique com a mesma vogal para sentir só a diferença de ar.</div></div>
+    </div>
+    <div class="subpanel" id="sub-adv">
+      <div class="note"><strong>zh ch sh r</strong> = língua enrolada · <strong>j q x</strong> = língua no meio · só com i/ü.</div>
+      <div class="section">
+        <div class="group-label g4">zh · ch · sh · r</div>
+        <div class="sound-grid cols-4">
+          <div class="sound" data-zh="这" data-label="zhè"><span class="play">▶</span><div class="letter">ZH</div><div class="ex">zhe</div><div class="hint">Pouco ar</div></div>
+          <div class="sound" data-zh="车" data-label="chē"><span class="play">▶</span><div class="letter">CH</div><div class="ex">che</div><div class="hint">Muito ar</div></div>
+          <div class="sound" data-zh="是" data-label="shì"><span class="play">▶</span><div class="letter">SH</div><div class="ex">shi</div><div class="hint">Enrolado</div></div>
+          <div class="sound" data-zh="日" data-label="rì"><span class="play">▶</span><div class="letter">R</div><div class="ex">ri</div><div class="hint">Não é o r BR</div></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="group-label g5">j · q · x</div>
+        <div class="sound-grid cols-3">
+          <div class="sound" data-zh="机" data-label="jī"><span class="play">▶</span><div class="letter">J</div><div class="ex">ji</div><div class="hint">Pouco ar</div></div>
+          <div class="sound" data-zh="七" data-label="qī"><span class="play">▶</span><div class="letter">Q</div><div class="ex">qi</div><div class="hint">Muito ar</div></div>
+          <div class="sound" data-zh="西" data-label="xī"><span class="play">▶</span><div class="letter">X</div><div class="ex">xi</div><div class="hint">Sopro fino</div></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="group-label g2">z · c · s</div>
+        <div class="sound-grid cols-3">
+          <div class="sound" data-zh="字" data-label="zì"><span class="play">▶</span><div class="letter">Z</div><div class="ex">zi</div><div class="hint">dz</div></div>
+          <div class="sound" data-zh="次" data-label="cì"><span class="play">▶</span><div class="letter">C</div><div class="ex">ci</div><div class="hint">ts + ar</div></div>
+          <div class="sound" data-zh="四" data-label="sì"><span class="play">▶</span><div class="letter">S</div><div class="ex">si</div><div class="hint">como s</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="cat-nav">
+      <span class="info">Semana 1 de 4</span>
+      <button type="button" class="btn btn-primary" data-go="cat2">Próxima semana →</button>
+    </div>
+  </div>
+</div>
+
+<!-- CAT2 -->
+<div class="view" id="view-cat2">
+  <section class="hero"><div class="hero-inner">
+    <span class="tag">SEMANA 2 · TONS</span>
+    <h1>Os 4 tons e cumprimentos</h1>
+    <p>Toque nos cards para ouvir. Observe a curva do tom.</p>
+  </div></section>
+  <div class="wrap capture-area" id="cap-cat2">
+    <div class="section">
+      <div class="section-title"><span>♬</span><h2>Os 4 tons (mā)</h2></div>
+      <div class="tones-grid">
+        <div class="tone-card" data-zh="妈" data-label="mā" style="--tone:#5146d9;--tint:#f1efff"><div class="tone-main"><strong>mā</strong><small>1º · alto e plano</small><svg viewBox="0 0 100 34"><path d="M8 17 L83 17 M77 12 L84 17 L77 22" fill="none" stroke="var(--tone)" stroke-width="2.5"/></svg></div><div class="tone-hanzi">妈</div><div class="tone-tr">mãe</div></div>
+        <div class="tone-card" data-zh="麻" data-label="má" style="--tone:#b96000;--tint:#fff5e9"><div class="tone-main"><strong>má</strong><small>2º · ascendente</small><svg viewBox="0 0 100 34"><path d="M8 27 L82 6 M73 5 L83 6 L79 15" fill="none" stroke="var(--tone)" stroke-width="2.5"/></svg></div><div class="tone-hanzi">麻</div><div class="tone-tr">cânhamo</div></div>
+        <div class="tone-card" data-zh="马" data-label="mǎ" style="--tone:#147b47;--tint:#eefaf1"><div class="tone-main"><strong>mǎ</strong><small>3º · desce e sobe</small><svg viewBox="0 0 100 34"><path d="M8 7 Q42 42 80 8 M72 9 L81 7 L79 16" fill="none" stroke="var(--tone)" stroke-width="2.5"/></svg></div><div class="tone-hanzi">马</div><div class="tone-tr">cavalo</div></div>
+        <div class="tone-card" data-zh="骂" data-label="mà" style="--tone:#d22c78;--tint:#fff0f7"><div class="tone-main"><strong>mà</strong><small>4º · descendente</small><svg viewBox="0 0 100 34"><path d="M8 6 L82 28 M73 28 L83 28 L80 19" fill="none" stroke="var(--tone)" stroke-width="2.5"/></svg></div><div class="tone-hanzi">骂</div><div class="tone-tr">xingar</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title"><span>👋</span><h2>Cumprimentos</h2></div>
+      <div class="vocab-grid">
+        <div class="vocab" data-zh="你好" data-label="nǐ hǎo"><div class="hanzi">你好</div><div class="meta"><strong>nǐ hǎo</strong><span>olá</span></div></div>
+        <div class="vocab" data-zh="您好" data-label="nín hǎo"><div class="hanzi">您好</div><div class="meta"><strong>nín hǎo</strong><span>olá (formal)</span></div></div>
+        <div class="vocab" data-zh="早上好" data-label="zǎo shang hǎo"><div class="hanzi">早上好</div><div class="meta"><strong>zǎoshang hǎo</strong><span>bom dia</span></div></div>
+        <div class="vocab" data-zh="晚上好" data-label="wǎn shang hǎo"><div class="hanzi">晚上好</div><div class="meta"><strong>wǎnshang hǎo</strong><span>boa noite</span></div></div>
+        <div class="vocab" data-zh="再见" data-label="zài jiàn"><div class="hanzi">再见</div><div class="meta"><strong>zàijiàn</strong><span>tchau</span></div></div>
+        <div class="vocab" data-zh="谢谢" data-label="xiè xie"><div class="hanzi">谢谢</div><div class="meta"><strong>xièxie</strong><span>obrigado</span></div></div>
+        <div class="vocab" data-zh="不客气" data-label="bú kè qi"><div class="hanzi">不客气</div><div class="meta"><strong>bú kèqi</strong><span>de nada</span></div></div>
+        <div class="vocab" data-zh="对不起" data-label="duì bu qǐ"><div class="hanzi">对不起</div><div class="meta"><strong>duìbuqǐ</strong><span>desculpa</span></div></div>
+        <div class="vocab" data-zh="没关系" data-label="méi guān xi"><div class="hanzi">没关系</div><div class="meta"><strong>méi guānxi</strong><span>não tem problema</span></div></div>
+        <div class="vocab" data-zh="请" data-label="qǐng"><div class="hanzi">请</div><div class="meta"><strong>qǐng</strong><span>por favor</span></div></div>
+      </div>
+    </div>
+    <div class="tip"><span>💡</span><div><strong>Tom neutro:</strong> em xièxie o segundo “xie” é leve e curto.</div></div>
+    <div class="cat-nav">
+      <button type="button" class="btn" data-go="cat1">← Anterior</button>
+      <span class="info">Semana 2 de 4</span>
+      <button type="button" class="btn btn-primary" data-go="cat3">Próxima semana →</button>
+    </div>
+  </div>
+</div>
+
+<!-- CAT3 -->
+<div class="view" id="view-cat3">
+  <section class="hero"><div class="hero-inner">
+    <span class="tag">SEMANA 3 · COMUNICAÇÃO</span>
+    <h1>Apresentações e números</h1>
+    <p>Pronomes, perguntas, números e frases de apresentação.</p>
+  </div></section>
+  <div class="wrap capture-area" id="cap-cat3">
+    <div class="section">
+      <div class="section-title"><span>👤</span><h2>Pronomes</h2></div>
+      <div class="vocab-grid">
+        <div class="vocab" data-zh="我" data-label="wǒ"><div class="hanzi">我</div><div class="meta"><strong>wǒ</strong><span>eu</span></div></div>
+        <div class="vocab" data-zh="你" data-label="nǐ"><div class="hanzi">你</div><div class="meta"><strong>nǐ</strong><span>você</span></div></div>
+        <div class="vocab" data-zh="他" data-label="tā"><div class="hanzi">他</div><div class="meta"><strong>tā</strong><span>ele</span></div></div>
+        <div class="vocab" data-zh="她" data-label="tā"><div class="hanzi">她</div><div class="meta"><strong>tā</strong><span>ela</span></div></div>
+        <div class="vocab" data-zh="我们" data-label="wǒ men"><div class="hanzi">我们</div><div class="meta"><strong>wǒmen</strong><span>nós</span></div></div>
+        <div class="vocab" data-zh="他们" data-label="tā men"><div class="hanzi">他们</div><div class="meta"><strong>tāmen</strong><span>eles</span></div></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title"><span>❓</span><h2>Perguntas</h2></div>
+      <div class="vocab-grid">
+        <div class="vocab" data-zh="吗" data-label="ma"><div class="hanzi">吗</div><div class="meta"><strong>ma</strong><span>partícula de pergunta</span></div></div>
+        <div class="vocab" data-zh="什么" data-label="shén me"><div class="hanzi">什么</div><div class="meta"><strong>shénme</strong><span>o quê?</span></div></div>
+        <div class="vocab" data-zh="谁" data-label="shéi"><div class="hanzi">谁</div><div class="meta"><strong>shéi</strong><span>quem?</span></div></div>
+        <div class="vocab" data-zh="哪里" data-label="nǎ lǐ"><div class="hanzi">哪里</div><div class="meta"><strong>nǎlǐ</strong><span>onde?</span></div></div>
+        <div class="vocab" data-zh="多少" data-label="duō shao"><div class="hanzi">多少</div><div class="meta"><strong>duōshao</strong><span>quanto?</span></div></div>
+        <div class="vocab" data-zh="几岁" data-label="jǐ suì"><div class="hanzi">几岁</div><div class="meta"><strong>jǐ suì</strong><span>quantos anos?</span></div></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title"><span>🔢</span><h2>Números 1–10</h2></div>
+      <div class="sound-grid cols-4">
+        <div class="sound" data-zh="一" data-label="yī"><div class="letter" style="font-size:20px">一</div><div class="ex">yī</div><div class="hint">1</div></div>
+        <div class="sound" data-zh="二" data-label="èr"><div class="letter" style="font-size:20px">二</div><div class="ex">èr</div><div class="hint">2</div></div>
+        <div class="sound" data-zh="三" data-label="sān"><div class="letter" style="font-size:20px">三</div><div class="ex">sān</div><div class="hint">3</div></div>
+        <div class="sound" data-zh="四" data-label="sì"><div class="letter" style="font-size:20px">四</div><div class="ex">sì</div><div class="hint">4</div></div>
+        <div class="sound" data-zh="五" data-label="wǔ"><div class="letter" style="font-size:20px">五</div><div class="ex">wǔ</div><div class="hint">5</div></div>
+        <div class="sound" data-zh="六" data-label="liù"><div class="letter" style="font-size:20px">六</div><div class="ex">liù</div><div class="hint">6</div></div>
+        <div class="sound" data-zh="七" data-label="qī"><div class="letter" style="font-size:20px">七</div><div class="ex">qī</div><div class="hint">7</div></div>
+        <div class="sound" data-zh="八" data-label="bā"><div class="letter" style="font-size:20px">八</div><div class="ex">bā</div><div class="hint">8</div></div>
+        <div class="sound" data-zh="九" data-label="jiǔ"><div class="letter" style="font-size:20px">九</div><div class="ex">jiǔ</div><div class="hint">9</div></div>
+        <div class="sound" data-zh="十" data-label="shí"><div class="letter" style="font-size:20px">十</div><div class="ex">shí</div><div class="hint">10</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title"><span>💬</span><h2>Frases de apresentação</h2></div>
+      <div class="vocab-grid">
+        <div class="vocab" data-zh="我叫..." data-label="wǒ jiào"><div class="hanzi" style="font-size:18px">我叫…</div><div class="meta"><strong>wǒ jiào…</strong><span>eu me chamo…</span></div></div>
+        <div class="vocab" data-zh="你叫什么名字" data-label="nǐ jiào shénme míngzi"><div class="hanzi" style="font-size:15px">你叫什么名字？</div><div class="meta"><strong>nǐ jiào shénme míngzi?</strong><span>como você se chama?</span></div></div>
+        <div class="vocab" data-zh="我是巴西人" data-label="wǒ shì bāxī rén"><div class="hanzi" style="font-size:16px">我是巴西人</div><div class="meta"><strong>wǒ shì Bāxī rén</strong><span>sou brasileiro(a)</span></div></div>
+        <div class="vocab" data-zh="我是学生" data-label="wǒ shì xuésheng"><div class="hanzi" style="font-size:16px">我是学生</div><div class="meta"><strong>wǒ shì xuésheng</strong><span>sou estudante</span></div></div>
+        <div class="vocab" data-zh="很高兴认识你" data-label="hěn gāoxìng rènshi nǐ"><div class="hanzi" style="font-size:15px">很高兴认识你</div><div class="meta"><strong>hěn gāoxìng rènshi nǐ</strong><span>prazer em conhecer</span></div></div>
+        <div class="vocab" data-zh="你呢" data-label="nǐ ne"><div class="hanzi">你呢？</div><div class="meta"><strong>nǐ ne?</strong><span>e você?</span></div></div>
+      </div>
+    </div>
+    <div class="cat-nav">
+      <button type="button" class="btn" data-go="cat2">← Anterior</button>
+      <span class="info">Semana 3 de 4</span>
+      <button type="button" class="btn btn-primary" data-go="cat4">Próxima semana →</button>
+    </div>
+  </div>
+</div>
+
+<!-- CAT4 -->
+<div class="view" id="view-cat4">
+  <section class="hero"><div class="hero-inner">
+    <span class="tag">SEMANA 4 · FRASES</span>
+    <h1>是、不 e consolidação</h1>
+    <p>Afirmar, negar, preferências e frases do dia a dia.</p>
+  </div></section>
+  <div class="wrap capture-area" id="cap-cat4">
+    <div class="section">
+      <div class="section-title"><span>✅</span><h2>是 e 不</h2></div>
+      <div class="vocab-grid">
+        <div class="vocab" data-zh="是" data-label="shì"><div class="hanzi">是</div><div class="meta"><strong>shì</strong><span>ser / é</span></div></div>
+        <div class="vocab" data-zh="不" data-label="bù"><div class="hanzi">不</div><div class="meta"><strong>bù</strong><span>não</span></div></div>
+        <div class="vocab" data-zh="不是" data-label="bú shì"><div class="hanzi">不是</div><div class="meta"><strong>bú shì</strong><span>não é</span></div></div>
+        <div class="vocab" data-zh="对" data-label="duì"><div class="hanzi">对</div><div class="meta"><strong>duì</strong><span>correto</span></div></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title"><span>❤️</span><h2>Preferências</h2></div>
+      <div class="vocab-grid">
+        <div class="vocab" data-zh="喜欢" data-label="xǐ huan"><div class="hanzi">喜欢</div><div class="meta"><strong>xǐhuan</strong><span>gostar</span></div></div>
+        <div class="vocab" data-zh="不喜欢" data-label="bù xǐ huan"><div class="hanzi" style="font-size:20px">不喜欢</div><div class="meta"><strong>bù xǐhuan</strong><span>não gostar</span></div></div>
+        <div class="vocab" data-zh="要" data-label="yào"><div class="hanzi">要</div><div class="meta"><strong>yào</strong><span>querer</span></div></div>
+        <div class="vocab" data-zh="不要" data-label="bú yào"><div class="hanzi">不要</div><div class="meta"><strong>bú yào</strong><span>não querer</span></div></div>
+        <div class="vocab" data-zh="可以" data-label="kě yǐ"><div class="hanzi">可以</div><div class="meta"><strong>kěyǐ</strong><span>pode / ok</span></div></div>
+        <div class="vocab" data-zh="不可以" data-label="bù kě yǐ"><div class="hanzi" style="font-size:20px">不可以</div><div class="meta"><strong>bù kěyǐ</strong><span>não pode</span></div></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title"><span>🏠</span><h2>Vocabulário</h2></div>
+      <div class="vocab-grid">
+        <div class="vocab" data-zh="水" data-label="shuǐ"><div class="hanzi">水</div><div class="meta"><strong>shuǐ</strong><span>água</span></div></div>
+        <div class="vocab" data-zh="饭" data-label="fàn"><div class="hanzi">饭</div><div class="meta"><strong>fàn</strong><span>comida</span></div></div>
+        <div class="vocab" data-zh="茶" data-label="chá"><div class="hanzi">茶</div><div class="meta"><strong>chá</strong><span>chá</span></div></div>
+        <div class="vocab" data-zh="咖啡" data-label="kā fēi"><div class="hanzi">咖啡</div><div class="meta"><strong>kāfēi</strong><span>café</span></div></div>
+        <div class="vocab" data-zh="家" data-label="jiā"><div class="hanzi">家</div><div class="meta"><strong>jiā</strong><span>casa</span></div></div>
+        <div class="vocab" data-zh="朋友" data-label="péng you"><div class="hanzi">朋友</div><div class="meta"><strong>péngyou</strong><span>amigo</span></div></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title"><span>📝</span><h2>Mais frases</h2></div>
+      <div class="vocab-grid">
+        <div class="vocab" data-zh="我喜欢茶" data-label="wǒ xǐhuan chá"><div class="hanzi" style="font-size:16px">我喜欢茶</div><div class="meta"><strong>wǒ xǐhuan chá</strong><span>eu gosto de chá</span></div></div>
+        <div class="vocab" data-zh="我要水" data-label="wǒ yào shuǐ"><div class="hanzi" style="font-size:16px">我要水</div><div class="meta"><strong>wǒ yào shuǐ</strong><span>eu quero água</span></div></div>
+        <div class="vocab" data-zh="这是什么" data-label="zhè shì shénme"><div class="hanzi" style="font-size:16px">这是什么？</div><div class="meta"><strong>zhè shì shénme?</strong><span>o que é isso?</span></div></div>
+        <div class="vocab" data-zh="多少钱" data-label="duōshao qián"><div class="hanzi" style="font-size:16px">多少钱？</div><div class="meta"><strong>duōshao qián?</strong><span>quanto custa?</span></div></div>
+        <div class="vocab" data-zh="我饿了" data-label="wǒ è le"><div class="hanzi" style="font-size:16px">我饿了</div><div class="meta"><strong>wǒ è le</strong><span>estou com fome</span></div></div>
+        <div class="vocab" data-zh="我渴了" data-label="wǒ kě le"><div class="hanzi" style="font-size:16px">我渴了</div><div class="meta"><strong>wǒ kě le</strong><span>estou com sede</span></div></div>
+        <div class="vocab" data-zh="慢慢说" data-label="màn man shuō"><div class="hanzi" style="font-size:16px">慢慢说</div><div class="meta"><strong>mànman shuō</strong><span>fale devagar</span></div></div>
+        <div class="vocab" data-zh="我不懂" data-label="wǒ bù dǒng"><div class="hanzi" style="font-size:16px">我不懂</div><div class="meta"><strong>wǒ bù dǒng</strong><span>não entendi</span></div></div>
+      </div>
+    </div>
+    <div class="tip"><span>🎉</span><div><strong>Parabéns!</strong> Você concluiu as 4 semanas do primeiro bloco. Revise sons e tons com frequência.</div></div>
+    <div class="cat-nav">
+      <button type="button" class="btn" data-go="cat3">← Anterior</button>
+      <span class="info">Semana 4 de 4</span>
+      <button type="button" class="btn btn-primary" data-go="hub" id="btn-all-cats">← Todas as semanas</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <strong>加油 · JIĀYÓU</strong>
+  <p>Toque para ouvir em mandarim · Copiar ou baixar imagem no topo</p>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+const titles={hub:'Plano mensal',cat1:'Semana 1',cat2:'Semana 2',cat3:'Semana 3',cat4:'Semana 4'};
+let currentView='hub';
+
+function showView(id){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  const el=document.getElementById('view-'+id);
+  if(el) el.classList.add('active');
+  currentView=id;
+  document.getElementById('header-sub').textContent=titles[id]||'Plano mensal';
+  document.getElementById('btn-back').style.display=id==='hub'?'none':'inline-flex';
+  history.replaceState(null,'','#'+id);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+document.getElementById('btn-home').onclick=()=>showView('hub');
+document.getElementById('btn-back').onclick=()=>showView('hub');
+document.querySelectorAll('[data-go]').forEach(btn=>{
+  btn.addEventListener('click',()=>{const g=btn.getAttribute('data-go');if(g)showView(g);});
+});
+
+// hash on load
+(function(){
+  const h=(location.hash||'').replace('#','');
+  if(h&&document.getElementById('view-'+h)) showView(h);
+})();
+
+// tabs
+document.querySelectorAll('.tabs button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.subpanel').forEach(p=>p.classList.remove('active'));
+    document.getElementById('sub-'+btn.dataset.sub).classList.add('active');
+  });
+});
+
+// TTS
+const toast=document.getElementById('toast');
+let toastTimer;
+function showToast(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),1800)}
+
+function loadVoices(){return new Promise(r=>{let v=speechSynthesis.getVoices();if(v.length)return r(v);speechSynthesis.onvoiceschanged=()=>r(speechSynthesis.getVoices());setTimeout(()=>r(speechSynthesis.getVoices()),600)})}
+function pickZh(voices){
+  const tests=[
+    v=>/zh-CN/i.test(v.lang) && /Female|Xiaoxiao|Xiaoyi|Huihui|Google/i.test(v.name),
+    v=>/zh-CN/i.test(v.lang),
+    v=>v.lang==='zh-TW',
+    v=>v.lang.startsWith('zh'),
+    v=>/Chinese|中文|Mandarin|Putonghua/i.test(v.name)
+  ];
+  for(const t of tests){const f=voices.find(t);if(f)return f}return null;
+}
+async function speakZh(hanzi,label){
+  if(!window.speechSynthesis){showToast('Áudio indisponível');return}
+  speechSynthesis.cancel();
+  const voices=await loadVoices();
+  const voice=pickZh(voices);
+  let text=hanzi||label||'';
+  if(!text)return;
+  // Single-character syllables: slightly slower for clearer tones (e.g. 我 wǒ)
+  const isShort = [...text].length <= 2;
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='zh-CN';
+  u.rate = isShort ? 0.75 : 0.88;
+  u.pitch = 1.05;
+  if(voice){u.voice=voice;u.lang=voice.lang.startsWith('zh')?voice.lang:'zh-CN'}
+  else { u.lang = 'zh-CN'; }
+  u.onstart=()=>showToast('▶ '+(label||text));
+  speechSynthesis.speak(u);
+}
+document.querySelectorAll('[data-zh]').forEach(el=>{
+  el.addEventListener('click',()=>{
+    if(el.dataset.zh2){speakZh(el.dataset.zh,el.dataset.label);setTimeout(()=>speakZh(el.dataset.zh2),650)}
+    else speakZh(el.dataset.zh,el.dataset.label);
+  });
+  el.setAttribute('tabindex','0');
+});
+loadVoices();
+
+// Copy
+document.getElementById('btn-copy').onclick=async()=>{
+  const view=document.querySelector('.view.active');
+  if(!view)return;
+  const text=view.innerText.replace(/\s+\n/g,'\n').trim();
+  try{
+    await navigator.clipboard.writeText(text);
+    showToast('Texto copiado!');
+  }catch(e){
+    showToast('Não foi possível copiar');
+  }
+};
+
+// Download image
+document.getElementById('btn-img').onclick=async()=>{
+  const id=currentView==='hub'?null:('cap-'+currentView);
+  const target=id?document.getElementById(id):document.querySelector('.view.active');
+  if(!target||typeof html2canvas!=='function'){showToast('Aguarde o carregamento…');return}
+  showToast('Gerando imagem…');
+  try{
+    const canvas=await html2canvas(target,{scale:2,backgroundColor:'#ffffff',useCORS:true});
+    const a=document.createElement('a');
+    a.download='mandarim-'+(currentView||'hub')+'.png';
+    a.href=canvas.toDataURL('image/png');
+    a.click();
+    showToast('Imagem baixada!');
+  }catch(e){showToast('Erro ao gerar imagem')}
+};
+</script>
+</body>
+</html>
