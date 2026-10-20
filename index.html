@@ -1,0 +1,2198 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mandarim — Do Zero à Fluência</title>
+<style>
+:root{--ink:#10285f;--muted:#506d9d;--line:#dce7fa;--purple:#5b50e8;--green:#22a77b}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:75px}body{margin:0;color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:#fff}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.top{height:62px;display:flex;align-items:center;gap:25px;padding:0 3.5%;position:sticky;top:0;z-index:9;background:#ffffffed;border-bottom:1px solid #e5edfb}.brand{display:flex;align-items:center;gap:9px;min-width:200px;font-size:18px;font-weight:850;line-height:1.05}.brand i{font-style:normal;font-size:28px}.brand small{display:block;font-size:10px}.nav{display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,26px);flex:1;font-size:12px;white-space:nowrap}.nav a{height:62px;display:flex;align-items:center;border-bottom:2px solid transparent}.nav a:hover{border-color:var(--purple)}.tools{display:flex;gap:8px}.tools button{border:0;border-radius:12px;padding:9px 12px;background:#eff1ff;color:#4448d7}.tools .menu{background:var(--purple);color:white;display:none}.hero{padding:30px 3.5%;min-height:220px;position:relative;overflow:hidden;background:linear-gradient(105deg,#edf3ff,#f4f7ff 55%,#e6f1ff)}.hero:after{content:"🌸";position:absolute;right:clamp(18px,5vw,72px);top:24px;font-size:38px;z-index:1}.hero-copy{position:relative;z-index:1;max-width:670px}.tag{display:inline-block;padding:4px 10px;border:1px solid #abbaff;border-radius:20px;background:#eff1ff;color:#2a47b8;font-size:11px;font-weight:800}.hero h1{font-size:clamp(28px,3.4vw,38px);line-height:1.15;letter-spacing:-1px;margin:9px 0}.hero p{max-width:590px;color:var(--muted);margin:0}.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}.pills span{background:#ffffffd9;border:1px solid #edf2ff;border-radius:24px;padding:9px 12px;font-size:10px;color:#3e5a8b}.calligraphy{position:absolute;right:clamp(70px,12vw,180px);top:42px;font-size:25px;font-weight:850;text-align:center;min-width:150px}.calligraphy small{display:block;font-size:15px;margin-top:5px}.switch{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:16px 3%;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fbfcff}.switch button{border:0;border-right:1px solid var(--line);padding:13px 8px;background:transparent;color:var(--ink);font-weight:750}.switch button:last-child{border:0}.switch button.active{background:linear-gradient(100deg,#5548e7,#7656dd);color:#fff}.wrap{width:min(1440px,94%);margin:auto}.section{padding:8px 0 23px;border-bottom:1px solid #e3ebf9;scroll-margin-top:75px}.heading{display:flex;align-items:center;gap:13px;margin:5px 0 20px}.bigicon{font-size:30px;color:#4f5fe7}.heading h2,.monthly h2{font-size:20px;margin:0 0 4px}.heading p,.monthly p{font-size:12px;color:var(--muted);margin:0}.spacer{flex:1}.prog{width:33%;min-width:220px;color:var(--muted);font-size:11px}.prog label{display:flex;justify-content:space-between;margin-bottom:6px}.track{height:11px;background:#e9f0fc;border-radius:20px;overflow:hidden}.track span{display:block;height:100%;width:43%;background:linear-gradient(90deg,#5148e5,#5a83ef);border-radius:20px}.pct{background:#eef0ff;color:#3e43ca;padding:7px 10px;border-radius:20px;font-weight:800}.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}.day{border:1px solid #dce8f6;border-radius:9px;overflow:hidden;min-width:0}.day.done{border-color:#b8eadb}.day.current{border-color:#bad7ff}.daytop{display:flex;gap:7px;padding:10px 8px;min-height:47px;background:#effaf6}.day:nth-child(n+4) .daytop{background:#f5f8fd}.day.current .daytop{background:#eef5ff}.dayname{font-size:12px;font-weight:800}.date{font-size:9px;color:#667da0}.tasks{padding:10px 8px 4px;display:grid;gap:10px}.task{display:flex;align-items:flex-start;gap:6px;font-size:11px;line-height:1.4;color:#344f7e}.task input{appearance:none;width:12px;height:12px;flex:0 0 12px;margin:0;border:1.5px solid #8295b5;border-radius:3px}.task input:checked{background:#299b7a;border-color:#299b7a}.task input:checked:after{content:"✓";display:block;color:#fff;font-size:9px;text-align:center}.status{margin:10px 8px 8px;padding:8px 6px;border-radius:8px;background:#f0f4f9;font-size:10px;display:flex;gap:7px;align-items:center;color:#456084}.done .status{background:#e8faf3;color:#087750}.monthly{padding-top:8px}.monthhead{display:flex;align-items:center;gap:13px;margin-bottom:20px}.monthhead .bigicon{font-size:30px}.outline{margin-left:auto;border:1px solid #a9b1ff;color:#343fc9;background:white;border-radius:13px;padding:10px 14px;font-size:11px;font-weight:750}.months{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.monthcard{border:1px solid var(--tone);border-radius:9px;overflow:hidden;min-width:0}.monthtop{padding:12px;background:var(--tint);display:flex;align-items:center;gap:10px;font-size:11px;color:var(--tone);font-weight:800}.num{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--tone);color:white;box-shadow:inset 0 0 0 4px #ffffff45}.mbody{padding:12px}.mbody h3{font-size:13px;margin:0 0 8px}.mbody p{font:12px/1.5 Georgia,serif;min-height:43px;margin:0 0 14px;color:#3e5d91}.mprogress{display:flex;justify-content:space-between;font-size:9px;color:var(--muted);margin-bottom:7px}.months .track{height:10px}.monthcard .track span{width:0}.contentgrid{display:grid;grid-template-columns:1.45fr 1fr;gap:22px;width:100%;min-width:0}.panel{border:1px solid #e0eaff;border-radius:10px;background:#f7faff;overflow:hidden}.panelhead{padding:10px 14px;background:#f0f5ff}.panelhead h3{font-size:13px;margin:0 0 4px}.panelhead p{font-size:11px;color:var(--muted);margin:0}.tones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:9px 12px 12px}.tone{border:1px solid var(--tone);border-radius:10px;overflow:hidden;text-align:center;background:white;min-width:0}.tonemain{padding:9px 3px 7px;background:var(--tint)}.tonemain strong{display:block;color:var(--tone);font-size:18px}.tonemain small{display:block;font-size:9px;color:var(--tone);margin-top:3px}.tonemain svg{width:90%;height:35px;margin-top:7px}.hanzi{font-size:21px;margin-top:5px}.translation{font-size:10px;padding:0 3px 9px}.chars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:10px 12px}.char{text-align:center;border:1px solid #dbe8fb;border-radius:9px;background:white;padding:9px 3px}.char strong{display:block;font-size:12px;margin:4px}.char .hanzi{font-size:27px;color:var(--c);font-weight:800}.char small{font-size:10px}.tip{margin:5px 12px 10px;padding:10px;background:#eef5ff;border:1px solid #e0eaff;border-radius:9px;font-size:10px;color:#42618f;line-height:1.5}.ytgrid{display:grid;grid-template-columns:2fr .85fr;gap:16px}.teachers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.teacher{border:1px solid #dce8fa;border-radius:10px;padding:13px;display:grid;grid-template-columns:52px 1fr;gap:10px;min-width:0}.avatar{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#f6c18e,#e6a67e);display:grid;place-items:center;font-size:25px}.teacher h3{font-size:12px;margin:0 0 3px}.teacher p{font-size:10px;color:var(--muted);margin:0 0 8px}.teacher ul{margin:0;padding-left:13px;color:#2758bd;font-size:10px;line-height:1.7}.teacher .desc{font-size:9px;color:#58739e;margin-top:8px}.tips{background:#f5f3ff;border:1px solid #e4e0ff;border-radius:10px;padding:14px}.tips h3{font-size:12px;color:#3439be;margin:0 0 12px}.tips p{font-size:10px;line-height:1.55;color:#405b8c}.footer{text-align:center;padding:18px 10px 28px;background:linear-gradient(#fff,#f1f7ff);color:#2b4b8a}.footer strong{font-family:Georgia,serif;letter-spacing:3px}.footer p{font:11px Georgia,serif;color:#5875a6;margin:6px 0 0}
+@media(max-width:1100px){.top{gap:13px;padding:0 2.5%}.brand{min-width:155px}.nav{gap:12px;font-size:11px}.week{grid-template-columns:repeat(4,minmax(0,1fr))}.contentgrid{grid-template-columns:1fr}.ytgrid{grid-template-columns:1fr}.tips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}.tips h3{grid-column:1/-1}}
+@media(max-width:760px){.top{height:58px;padding:0 14px}.brand{min-width:0;flex:1;font-size:16px}.brand i{font-size:24px}.nav{display:none;position:absolute;top:58px;left:0;right:0;background:#fff;box-shadow:0 8px 24px #1d42891a;padding:8px 14px 14px;grid-template-columns:repeat(2,minmax(0,1fr));white-space:normal}.nav.open{display:grid}.nav a{height:auto;padding:12px 8px;border-bottom:1px solid #edf1fa}.tools .menu{display:block}.hero{padding:25px 20px;min-height:230px}.hero:after{font-size:35px}.hero h1{font-size:29px;max-width:480px}.hero p{font-size:13px}.calligraphy{display:none}.pills{gap:6px}.pills span{padding:8px 10px}.switch{grid-template-columns:repeat(2,minmax(0,1fr));margin:12px;border-radius:16px}.switch button{padding:12px 5px;font-size:12px;border-bottom:1px solid var(--line)}.switch button:nth-child(2){border-right:0}.switch button:nth-child(n+3){border-bottom:0}.wrap{width:calc(100% - 24px)}.section{padding-bottom:18px}.heading{align-items:flex-start;gap:10px;flex-wrap:wrap}.bigicon{font-size:26px}.heading h2,.monthly h2{font-size:18px}.heading p,.monthly p{font-size:11px;line-height:1.45}.spacer{display:none}.prog{width:100%;min-width:0;order:3;margin-left:36px}.pct{margin-left:auto}.week{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.day:last-child{grid-column:1/-1}.tasks{padding:10px;gap:10px}.task{font-size:11px}.monthhead{align-items:flex-start;flex-wrap:wrap}.outline{margin-left:36px}.months{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.mbody{padding:10px}.mbody p{min-height:0;font-size:11px}.monthtop{padding:10px}.num{width:25px;height:25px}.tones{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:9px}.tonemain strong{font-size:21px}.tonemain svg{height:42px}.chars{gap:7px;padding:8px}.char .hanzi{font-size:25px}.teachers{grid-template-columns:1fr}.teacher{padding:12px}.tips{display:block}.footer{margin-top:12px}}
+@media(max-width:390px){.hero h1{font-size:25px}.pills span{font-size:9px}.switch button{font-size:11px}.week{gap:7px}.dayname{font-size:10px}.tasks{padding:8px 6px}.task{font-size:10px;gap:5px}.months{grid-template-columns:1fr}.mbody p{font-size:12px}.tones{gap:7px}.chars{gap:5px}.char .hanzi{font-size:22px}}
+.daytop{background:#effaf6!important}
+
+/* Correção de contraste dos cards semanais no modo escuro */
+.daytop, .day:nth-child(n+4) .daytop, .day.current .daytop { background:#effaf6!important; color:#10285f!important; }
+.dayname { color:#10285f!important; }
+body.night .day, body.night .day:nth-child(n+4) { background:#101010!important; border-color:#555!important; }
+body.night .daytop, body.night .day:nth-child(n+4) .daytop, body.night .day.current .daytop { background:#202c28!important; color:#fff!important; border-color:#444!important; }
+body.night .dayname { color:#fff!important; }
+body.night .tasks, body.night .task, body.night .task span { background:transparent!important; color:#f1f5f9!important; }
+body.night .task input { background:#080808!important; border-color:#a8c4df!important; }
+body.night .status, body.night .day .status { background:#242424!important; color:#e5e7eb!important; }
+body.night .status b { color:#fbbf24!important; }
+body.night .day.done .status { background:#12372c!important; color:#b9f6d7!important; }
+body.night .day.done .status b { color:#78e0b5!important; }
+#calendario .bigicon, #plano-mensal .bigicon { font-size:27px; line-height:1.2; }
+
+/* Ajustes finais: cabeçalhos uniformes no modo escuro */
+body.night .day { background:#101010!important; color:#f5f5f5!important; border-color:#444!important; }
+body.night .daytop,
+body.night .day:nth-child(n+4) .daytop,
+body.night .day.current .daytop { background:#24483c!important; color:#f4fff9!important; border-color:#355e50!important; }
+body.night .dayname, body.night .daytop span { color:#f4fff9!important; }
+body.night .tasks, body.night .task, body.night .task span { background:transparent!important; color:#f1f5f3!important; }
+body.night .status { background:#242424!important; color:#f1f5f3!important; }
+body.night .switch button[data-target="calendario"], body.night .switch button[data-target="plano-mensal"] { font-size:inherit; }
+
+.routine-list{margin:8px 0 0;padding-left:19px;display:flex;flex-direction:column;gap:7px;line-height:1.45;font-size:inherit}
+.routine-list li{padding-left:1px}
+.routine-list strong{font-weight:700}
+.routine-note{margin-top:10px;font-size:.92em;line-height:1.45;opacity:.88}
+body.night .routine-list,body.night .routine-note{color:#f2f5f8}
+@media(max-width:650px){.routine-list{gap:9px}}
+
+/* Rotinas: layout mais compacto e cronogramas consistentes */
+#rotina-estudos .months{grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:10px}
+#rotina-estudos .monthcard{display:flex;flex-direction:column}
+#rotina-estudos .monthtop{padding:9px 11px}
+#rotina-estudos .mbody{padding:10px 11px;flex:1}
+#rotina-estudos .mbody h3{font-size:12px;margin-bottom:6px}
+#rotina-estudos .routine-list{margin:5px 0 0;padding-left:16px;gap:4px;font-size:11px;line-height:1.32}
+#rotina-estudos .routine-list li{padding-left:0}
+#rotina-estudos .routine-note{font-size:10px;line-height:1.3;margin-top:6px}
+#rotina-estudos .mbody>p{font-size:11px;line-height:1.35;min-height:0;margin:0}
+@media(max-width:1000px){#rotina-estudos .months{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){#rotina-estudos .months{grid-template-columns:1fr}#rotina-estudos .routine-list{font-size:12px;gap:5px}}
+
+
+/* Alinhamento e legibilidade das dicas e do próximo passo */
+.tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+.tips h3 { width:100%; text-align:center; font-size:15px; margin:0 0 6px; }
+.tips p { width:100%; text-align:center; font-size:13px; line-height:1.65; margin:4px 0; }
+#contato .heading { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; text-align:center; margin:22px auto; }
+#contato .heading .bigicon { font-size:34px; line-height:1.2; margin:0 auto; }
+#contato .heading h2 { text-align:center; }
+#contato .heading p { text-align:center; font-size:14px; line-height:1.6; }
+@media (min-width:761px) {
+  .tips { display:flex; }
+  .tips p { max-width:100%; }
+}
+@media (max-width:760px) {
+  .tips { display:flex; padding:16px; }
+  .tips p { font-size:13px; }
+  #contato .heading { padding:8px 10px; }
+}
+
+</style></head><body>
+<header class="top" id="home"><div class="top-inner"><a class="brand" href="#home"><i>🏯</i><span>Mandarim<small>Do Zero à Fluência</small></span></a><nav class="nav" id="nav"><a href="#home">Home</a><a href="#calendario">Rotina</a><a href="#conteudo">Conteúdo</a><a href="#tons">Tons</a><a href="#recursos">Recursos</a><a href="#youtube">Aulas no YouTube</a><a href="#contato">Contato</a></nav><div class="tools"><button aria-label="Alternar tema" id="theme">☼ ◉</button><button class="menu" id="hamb" aria-expanded="false" aria-label="Abrir menu">☰</button></div></div></header>
+<section class="hero"><div class="hero-copy"><span class="tag">ROTINA DE APRENDIZAGEM</span><h1>Seu plano de estudos de Mandarim</h1><p>Organize sua rotina, acompanhe seu progresso e tenha acesso a todo o conteúdo necessário para evoluir no mandarim, do zero à fluência.</p><div class="pills"><span>♧ &nbsp; Planejamento completo</span><span>☷ &nbsp; Conteúdo organizado</span><span>▦ &nbsp; Aulas recomendadas</span><span>◉ &nbsp; Progresso real</span></div></div><div class="calligraphy"><div class="calligraphy-text"><div class="calligraphy-main"><span class="calligraphy-hanzi">加油！</span></div><small>Jiāyóu!</small><small>Você consegue!</small></div><div class="calligraphy-sakura-box" aria-label="Sakura">🌸</div></div></section>
+<div class="wrap course-wrap"><section class="section" id="conteudo"><div class="heading"><div class="bigicon">▤</div><div><h2>Conteúdo do curso</h2><p>Vocabulário, gramática, pinyin e caracteres distribuídos ao longo do mês.</p></div></div><div class="months"><article class="monthcard" style="--tone:#4d5ee5;--tint:#f0f0ff"><div class="monthtop">Pinyin</div><div class="mbody"><h3>Sons e iniciais</h3><p>Pratique iniciais, finais, vogais e reconhecimento dos sons.</p></div></article><article class="monthcard" style="--tone:#1e9b70;--tint:#eafaf4"><div class="monthtop">Vocabulário</div><div class="mbody"><h3>Palavras essenciais</h3><p>Aprenda cumprimentos, números, pronomes e informações pessoais.</p></div></article><article class="monthcard" style="--tone:#d77b16;--tint:#fff4e5"><div class="monthtop">Gramática</div><div class="mbody"><h3>Frases simples</h3><p>Construa perguntas, negativas e frases para o cotidiano.</p></div></article><article class="monthcard" style="--tone:#c4478d;--tint:#fff0f8"><div class="monthtop">Revisão</div><div class="mbody"><h3>Consolidar o aprendizado</h3><p>Revise caracteres, escuta guiada e pronúncia semanalmente.</p></div></article></div></section></div>
+<div class="switch" role="tablist"><button class="active" data-target="calendario">📅 &nbsp; Calendário Semanal</button><button data-target="plano-mensal">📅 &nbsp; Plano Mensal (30 dias)</button><button data-target="rotina-estudos">◷ &nbsp; Rotina de Estudos</button><button data-target="tons">♬ &nbsp; Tons</button></div>
+<main class="wrap">
+<section class="section" id="calendario"><div class="heading"><div class="bigicon">📅</div><div><h2>Calendário Semanal</h2><p>Acompanhe suas atividades diárias e marque o que já concluiu.</p></div><div class="spacer"></div><div class="prog"><label><span>Progresso da semana</span><span id="days">3/7 dias</span></label><div class="track"><span id="bar"></span></div></div><span class="pct" id="pct">43%</span></div><div class="week" id="week"></div></section>
+<section class="section monthly" id="plano-mensal"><div class="monthhead"><div class="bigicon">📅</div><div><h2>Plano Mensal (30 dias)</h2><p>Veja o roteiro completo do seu primeiro mês de estudos, dividido em 4 semanas.</p></div><button class="outline" onclick="document.querySelector('#conteudo').scrollIntoView({behavior:'smooth'})">Ver detalhes do plano　›</button></div><div class="months"><article class="monthcard" style="--tone:#4d5ee5;--tint:#f0f0ff"><div class="monthtop"><span class="num">1</span>Semana 1 (1–7)</div><div class="mbody"><h3>Pinyin e fundamentos</h3><p>Iniciais, finais, vogais, reconhecimento dos sons e primeira revisão.</p><button class="week-page-button" type="button" data-week-page="1" aria-label="Abrir página da Semana 1">Explorar semana <span aria-hidden="true">→</span></button></div></article><article class="monthcard" style="--tone:#1e9b70;--tint:#eafaf4"><div class="monthtop"><span class="num">2</span>Semana 2 (8–14)</div><div class="mbody"><h3>Os tons e primeiras palavras</h3><p>Quatro tons, tom neutro, cumprimentos e teste da quinzena.</p><button class="week-page-button" type="button" data-week-page="2" aria-label="Abrir página da Semana 2">Explorar semana <span aria-hidden="true">→</span></button></div></article><article class="monthcard" style="--tone:#d77b16;--tint:#fff4e5"><div class="monthtop"><span class="num">3</span>Semana 3 (15–21)</div><div class="mbody"><h3>Apresentações e comunicação</h3><p>Pronomes, perguntas simples, números, informações pessoais e miniavaliação.</p><button class="week-page-button" type="button" data-week-page="3" aria-label="Abrir página da Semana 3">Explorar semana <span aria-hidden="true">→</span></button></div></article><article class="monthcard" style="--tone:#c4478d;--tint:#fff0f8"><div class="monthtop"><span class="num">4</span>Semana 4 (22–30)</div><div class="mbody"><h3>Frases e consolidação</h3><p>是, 不, preferências, vocabulário cotidiano, caracteres, escuta guiada e avaliação final.</p><button class="week-page-button" type="button" data-week-page="4" aria-label="Abrir página da Semana 4">Explorar semana <span aria-hidden="true">→</span></button></div></article></div></section>
+<section class="section" id="tons"><div class="heading"><div class="bigicon">▤</div><div><h2>Conteúdo e Pronúncia</h2><p>Estude o vocabulário, a gramática e pratique os tons com exemplos reais.</p></div></div><div class="contentgrid"><div class="panel"><div class="panelhead"><h3>Os 4 tons do mandarim</h3><p>A mesma sílaba, 4 significados diferentes.</p></div><div class="tones"><article class="tone" style="--tone:#5146d9;--tint:#f1efff"><div class="tonemain"><strong>mā</strong><small>1º tom (alto e plano)</small><svg viewBox="0 0 100 34"><path d="M8 17 L83 17 M77 12 L84 17 L77 22" fill="none" stroke="var(--tone)" stroke-width="2.5"/></svg></div><div class="hanzi">妈</div><div class="translation">(mãe)</div></article><article class="tone" style="--tone:#b96000;--tint:#fff5e9"><div class="tonemain"><strong>má</strong><small>2º tom (ascendente)</small><svg viewBox="0 0 100 34"><path d="M8 27 L82 6 M73 5 L83 6 L79 15" fill="none" stroke="var(--tone)" stroke-width="2.5"/></svg></div><div class="hanzi">麻</div><div class="translation">(cânhamo)</div></article><article class="tone" style="--tone:#147b47;--tint:#eefaf1"><div class="tonemain"><strong>mǎ</strong><small>3º tom (curvado)</small><svg viewBox="0 0 100 34"><path d="M8 7 Q42 42 80 8 M72 9 L81 7 L79 16" fill="none" stroke="var(--tone)" stroke-width="2.5"/></svg></div><div class="hanzi">马</div><div class="translation">(cavalo)</div></article><article class="tone" style="--tone:#d22c78;--tint:#fff0f7"><div class="tonemain"><strong>mà</strong><small>4º tom (descendente)</small><svg viewBox="0 0 100 34"><path d="M8 6 L82 28 M73 28 L83 28 L80 19" fill="none" stroke="var(--tone)" stroke-width="2.5"/></svg></div><div class="hanzi">骂</div><div class="translation">(xingar)</div></article></div></div><aside class="panel"><div class="panelhead"><h3>Exemplo de caracteres</h3></div><div class="chars"><div class="char" style="--c:#2358bf"><div class="hanzi">我</div><strong>wǒ</strong><small>eu / me</small></div><div class="char" style="--c:#168253"><div class="hanzi">你</div><strong>nǐ</strong><small>você</small></div><div class="char" style="--c:#7741d4"><div class="hanzi">好</div><strong>hǎo</strong><small>bom / bem</small></div></div><div class="tip">💡 &nbsp; <b>Dica:</b> pratique os tons em voz alta, repita os exemplos e compare sua pronúncia.</div></aside></div></section>
+
+<section class="section" id="rotina-estudos"><div class="heading"><div class="bigicon">◷</div><div><h2>Rotina de Estudos</h2><p>Escolha o tempo disponível e siga uma rotina adequada ao seu ritmo.</p></div></div><div class="months"><article class="monthcard" style="--tone:#4d5ee5;--tint:#f0f0ff"><div class="monthtop">◷ &nbsp; 1 hora</div><div class="mbody"><h3>Rotina de 1 hora</h3><ul class="routine-list"><li><strong>00–10 min:</strong> revisar vocabulário e caracteres.</li><li><strong>10–25 min:</strong> aula principal — um tópico novo.</li><li><strong>25–35 min:</strong> praticar pronúncia e tons.</li><li><strong>35–45 min:</strong> escrever palavras e frases.</li><li><strong>45–55 min:</strong> escuta ativa com áudio ou vídeo curto.</li><li><strong>55–60 min:</strong> anotar dúvidas e revisar.</li></ul></div></article><article class="monthcard" style="--tone:#1e9b70;--tint:#eafaf4"><div class="monthtop">◷ &nbsp; 2 horas</div><div class="mbody"><h3>Rotina de 2 horas</h3><ul class="routine-list"><li><strong>00–10 min:</strong> revisão de vocabulário e caracteres anteriores.</li><li><strong>10–35 min:</strong> aula principal — conteúdo novo de gramática e vocabulário.</li><li><strong>35–55 min:</strong> pronúncia e tons em voz alta.</li><li><strong>55–65 min:</strong> pausa curta.</li><li><strong>65–85 min:</strong> leitura guiada e reconhecimento de caracteres.</li><li><strong>85–105 min:</strong> escuta e conversação com frases do tema.</li><li><strong>105–115 min:</strong> escrita: formar frases e praticar caracteres.</li><li><strong>115–120 min:</strong> anotar dúvidas e revisar os pontos principais.</li></ul></div></article><article class="monthcard" style="--tone:#d77b16;--tint:#fff4e5"><div class="monthtop">◷ &nbsp; 3 a 4 horas</div><div class="mbody"><h3>Rotina intensiva</h3><ul class="routine-list"><li><strong>00–15 min:</strong> revisão espaçada de palavras e caracteres.</li><li><strong>15–55 min:</strong> aula principal — gramática e vocabulário novos.</li><li><strong>55–65 min:</strong> pausa.</li><li><strong>65–95 min:</strong> pronúncia, tons e leitura em voz alta.</li><li><strong>95–125 min:</strong> escuta ativa: áudio ou vídeo, com anotações.</li><li><strong>125–135 min:</strong> pausa maior.</li><li><strong>135–165 min:</strong> leitura guiada e estudo de caracteres.</li><li><strong>165–195 min:</strong> escrita de frases e pequeno texto.</li><li><strong>195–215 min:</strong> conversação ou repetição acompanhada (shadowing).</li><li><strong>215–225 min:</strong> revisar erros e registrar o progresso.</li><li><strong>225–240 min (opcional):</strong> reforço do ponto mais difícil ou revisão leve.</li></ul><p class="routine-note">Para uma sessão de 3 horas, encerre após os primeiros 180 minutos; use o bloco final apenas quando tiver 4 horas disponíveis.</p></div></article><article class="monthcard" style="--tone:#c4478d;--tint:#fff0f8"><div class="monthtop">✓ &nbsp; Constância</div><div class="mbody"><h3>Progresso sustentável</h3><p>Marque as atividades concluídas e revise no fim de cada semana.</p></div></article></div></section>
+
+<section class="section" id="youtube">
+  <div class="heading"><div class="bigicon">▶</div><div>
+    <h2>Aulas recomendadas no YouTube</h2>
+    <p>Aprenda com duas professoras e siga o conteúdo alinhado com sua rotina.</p>
+  </div></div>
+  <div class="ytgrid"><div class="teachers">
+    <article class="teacher">
+      <div class="teacher-header">
+        <img class="avatar-img" src="data:image/jpeg;base64,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" alt="Profª Chen Xiaofen" width="68" height="68">
+        <div class="teacher-info"><h3>Profª Chen Xiaofen</h3><p class="channel">Aula de Chinês</p></div>
+      </div>
+      <ul class="teacher-links">
+        <li><a href="https://www.youtube.com/results?search_query=Aula+de+Chines+Chen+Xiaofen" target="_blank" rel="noopener">▶ Curso gratuito de mandarim básico</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=Chen+Xiaofen" target="_blank" rel="noopener">📺 Canal e aulas no YouTube</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=pinyin+tons+mandarim" target="_blank" rel="noopener">♬ Aulas de pinyin e tons</a></li>
+      </ul>
+      <div class="desc">Conteúdo do nível iniciante ao avançado, com explicações claras e didáticas.</div>
+    </article>
+    <article class="teacher">
+      <div class="teacher-header">
+        <img class="avatar-img" src="data:image/jpeg;base64,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" alt="Profª Karina Cunha" width="68" height="68">
+        <div class="teacher-info"><h3>Profª Karina Cunha</h3><p class="channel">Dominando o Mandarim</p></div>
+      </div>
+      <ul class="teacher-links">
+        <li><a href="https://www.youtube.com/results?search_query=Dominando+o+Mandarim+Karina" target="_blank" rel="noopener">▶ Vídeos para aprender mandarim</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=Dominando+o+Mandarim" target="_blank" rel="noopener">📺 Canal Dominando o Mandarim</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=pronuncia+mandarim" target="_blank" rel="noopener">♬ Aulas de pronúncia</a></li>
+      </ul>
+      <div class="desc">Orientações práticas e variedade de conteúdos para aprender o idioma.</div>
+    </article>
+  </div></div>
+</section>
+
+
+<section class="section tips-section" id="recursos">
+  <aside class="tips tips-improved">
+    <div class="tips-header"><span class="tips-icon">💡</span><h3>Dicas para aproveitar as aulas</h3></div>
+    <ul class="tips-list">
+      <li><span class="tip-check">✓</span> Assista ao vídeo do tema do dia.</li>
+      <li><span class="tip-check">✓</span> Pause para repetir os exemplos.</li>
+      <li><span class="tip-check">✓</span> Anote o pinyin, os tons e os caracteres.</li>
+      <li><span class="tip-check">✓</span> Tente usar o que aprendeu no dia a dia.</li>
+      <li class="tip-highlight"><span class="tip-star">⭐</span> Procure aulas específicas nos canais indicados.</li>
+    </ul>
+  </aside>
+</section>
+
+
+<section class="section" id="contato"><div class="heading"><div class="bigicon">✉</div><div><h2>Seu próximo passo começa hoje.</h2><p>Escolha uma atividade, marque quando terminar e continue no seu ritmo.</p></div></div></section></main><footer class="footer"><strong>一步一步，你会说中文！</strong><p>Um passo de cada vez, você vai falar chinês!</p></footer>
+<script>
+const days=[['Segunda','🌱'],['Terça','🍃'],['Quarta','✚'],['Quinta','♟'],['Sexta','♬'],['Sábado','🌙'],['Domingo','☀️']];const tasks=['Pronúncia (10 min)','Vocabulário (15 min)','Escuta (10 min)','Revisão (5 min)'];const week=document.querySelector('#week');days.forEach((d,i)=>{let el=document.createElement('article');el.className='day';el.innerHTML=`<div class="daytop"><span aria-hidden="true">${d[1]}</span><div><div class="dayname">${d[0]}</div></div></div><div class="tasks">${tasks.map((t,j)=>`<label class="task"><input type="checkbox" aria-label="${t} — ${d[0]}" ><span>${t}</span></label>`).join('')}</div><div class="status"><b aria-hidden="true">⏳</b><span>Pendente</span></div>`;week.appendChild(el)});function progress(){let cards=[...week.children],all=[...week.querySelectorAll('input')],completed=cards.filter(c=>[...c.querySelectorAll('input')].every(x=>x.checked)).length,pct=Math.round(all.filter(x=>x.checked).length/all.length*100);document.querySelector('#days').textContent=completed+'/7 dias';document.querySelector('#bar').style.width=pct+'%';document.querySelector('#pct').textContent=pct+'%';cards.forEach(c=>{let done=[...c.querySelectorAll('input')].every(x=>x.checked);c.classList.toggle('done',done);c.querySelector('.status').innerHTML=`<b>${done?'✓':'⏳'}</b><span>${done?'Concluído':'Pendente'}</span>`})}week.addEventListener('change',progress);progress();document.querySelector('#hamb').addEventListener('click',()=>{let nav=document.querySelector('#nav'),b=document.querySelector('#hamb');nav.classList.toggle('open');b.setAttribute('aria-expanded',nav.classList.contains('open'))});document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelector('#nav').classList.remove('open');document.querySelector('#hamb').setAttribute('aria-expanded','false')}));document.querySelectorAll('.switch button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.switch button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.target).scrollIntoView({behavior:'smooth',block:'start'})}));document.querySelector('#theme').addEventListener('click',()=>document.body.classList.toggle('night'));document.querySelector('#theme').setAttribute('aria-pressed','false');document.querySelector('#theme').addEventListener('click',()=>document.querySelector('#theme').setAttribute('aria-pressed',document.body.classList.contains('night')?'true':'false'));const style=document.createElement('style');style.textContent=`
+body.night{--ink:#f5f5f5;--muted:#c5c5c5;--line:#444;background:#000;color:#f5f5f5;color-scheme:dark}
+body.night .top,body.night .nav.open{background:#080808;color:#fff;border-color:#333}
+body.night .hero{background:linear-gradient(110deg,#111,#222 55%,#080808);color:#fff}
+body.night .tag,body.night .pills span,body.night .tools button{background:#222;color:#fff;border-color:#555}
+body.night .switch,body.night .section,body.night .day,body.night .monthcard,body.night .month,body.night .tone,body.night .char,body.night .character,body.night .teacher,body.night .panel,body.night .tips,body.night .routine-card{background:#101010;color:#f5f5f5;border-color:#444}
+body.night .daytop,body.night .monthtop,body.night .tone-main,body.night .panel-title,body.night .character,body.night .tip{background:#1b1b1b;color:#fff;border-color:#444}
+body.night .task,body.night .date,body.night .heading p,body.night .monthly p,body.night .teacher p,body.night .teacher li,body.night .desc,body.night .tip{color:#ccc}
+body.night .track{background:#333}body.night .track span{background:#eee}
+body.night .switch button{background:#111;color:#fff;border-color:#444}body.night .switch button.active{background:#fff;color:#000}
+body.night .outline{background:#111;color:#fff;border-color:#777}
+body.night .status,body.night .pct{background:#252525;color:#fff}
+body.night .footer{background:#080808;color:#fff}body.night .footer p{color:#ccc}
+body.night a:hover{color:#fff;text-decoration:underline}
+`;document.head.appendChild(style);
+</script>
+<style>
+/* Ajustes solicitados: cabeçalho centralizado, verde suave no modo escuro e tarefas mais legíveis */
+.daytop { justify-content:center!important; align-items:center!important; text-align:center!important; gap:8px!important; }
+.daytop > span { display:inline-flex; align-items:center; justify-content:center; }
+.daytop > div { text-align:center!important; }
+.dayname { font-size:13px!important; line-height:1.35!important; }
+.task { font-size:13px!important; line-height:1.5!important; gap:8px!important; }
+.task input { width:14px!important; height:14px!important; flex-basis:14px!important; margin-top:2px!important; }
+.status { font-size:11px!important; }
+body.night .daytop, body.night .day:nth-child(n+4) .daytop, body.night .day.current .daytop { background:#24483c!important; color:#f4fff9!important; border-color:#355e50!important; }
+body.night .dayname { color:#f4fff9!important; }
+body.night .task, body.night .task span { color:#f1f5f3!important; }
+@media(max-width:390px) { .task { font-size:12px!important; } .dayname { font-size:12px!important; } }
+
+/* Ajustes finais: cabeçalhos uniformes no modo escuro */
+body.night .day { background:#101010!important; color:#f5f5f5!important; border-color:#444!important; }
+body.night .daytop,
+body.night .day:nth-child(n+4) .daytop,
+body.night .day.current .daytop { background:#24483c!important; color:#f4fff9!important; border-color:#355e50!important; }
+body.night .dayname, body.night .daytop span { color:#f4fff9!important; }
+body.night .tasks, body.night .task, body.night .task span { background:transparent!important; color:#f1f5f3!important; }
+body.night .status { background:#242424!important; color:#f1f5f3!important; }
+body.night .switch button[data-target="calendario"], body.night .switch button[data-target="plano-mensal"] { font-size:inherit; }
+
+
+/* Alinhamento e legibilidade das dicas e do próximo passo */
+.tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+.tips h3 { width:100%; text-align:center; font-size:15px; margin:0 0 6px; }
+.tips p { width:100%; text-align:center; font-size:13px; line-height:1.65; margin:4px 0; }
+#contato .heading { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; text-align:center; margin:22px auto; }
+#contato .heading .bigicon { font-size:34px; line-height:1.2; margin:0 auto; }
+#contato .heading h2 { text-align:center; }
+#contato .heading p { text-align:center; font-size:14px; line-height:1.6; }
+@media (min-width:761px) {
+  .tips { display:flex; }
+  .tips p { max-width:100%; }
+}
+@media (max-width:760px) {
+  .tips { display:flex; padding:16px; }
+  .tips p { font-size:13px; }
+  #contato .heading { padding:8px 10px; }
+}
+
+</style>
+
+
+<style>
+/* Layout compacto para Rotina de Estudos */
+#rotina-estudos .months {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px;
+}
+#rotina-estudos .monthcard { min-width: 0; height: auto; }
+#rotina-estudos .monthcard:nth-child(3),
+#rotina-estudos .monthcard:nth-child(4) { grid-column: 1 / -1; }
+#rotina-estudos .monthcard:nth-child(3) .routine-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 22px;
+  row-gap: 7px;
+  padding-left: 18px;
+  margin: 8px 0;
+}
+#rotina-estudos .monthcard:nth-child(3) .routine-list li { padding-right: 4px; }
+#rotina-estudos .monthcard:nth-child(3) .routine-note { margin-top: 8px; }
+#rotina-estudos .monthcard:nth-child(4) .mbody { padding-top: 10px; padding-bottom: 10px; }
+@media (max-width: 700px) {
+  #rotina-estudos .months { grid-template-columns: 1fr !important; }
+  #rotina-estudos .monthcard:nth-child(3),
+  #rotina-estudos .monthcard:nth-child(4) { grid-column: auto; }
+  #rotina-estudos .monthcard:nth-child(3) .routine-list { grid-template-columns: 1fr; }
+}
+
+
+/* Alinhamento e legibilidade das dicas e do próximo passo */
+.tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+.tips h3 { width:100%; text-align:center; font-size:15px; margin:0 0 6px; }
+.tips p { width:100%; text-align:center; font-size:13px; line-height:1.65; margin:4px 0; }
+#contato .heading { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; text-align:center; margin:22px auto; }
+#contato .heading .bigicon { font-size:34px; line-height:1.2; margin:0 auto; }
+#contato .heading h2 { text-align:center; }
+#contato .heading p { text-align:center; font-size:14px; line-height:1.6; }
+@media (min-width:761px) {
+  .tips { display:flex; }
+  .tips p { max-width:100%; }
+}
+@media (max-width:760px) {
+  .tips { display:flex; padding:16px; }
+  .tips p { font-size:13px; }
+  #contato .heading { padding:8px 10px; }
+}
+
+</style>
+
+</body>
+<style id="design-v27">
+/* V27 — Desktop estável + fix barra progresso calendário mobile */
+
+/* Header */
+header.top {
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+header.top .top-inner {
+  width: min(1440px, 94%);
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+header.top .nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+header.top .nav a {
+  height: 36px !important;
+  padding: 0 12px !important;
+  border-radius: 10px !important;
+  border: 1px solid transparent !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  color: #3a4f7a !important;
+  display: flex !important;
+  align-items: center !important;
+}
+header.top .nav a:hover {
+  background: #f0f1ff !important;
+  border-color: #d4dcff !important;
+}
+header.top .tools { display: flex; gap: 8px; flex-shrink: 0; }
+header.top .tools button { border-radius: 10px !important; }
+
+/* Switch */
+.switch {
+  width: min(1440px, 94%) !important;
+  max-width: 1440px !important;
+  margin: 16px auto !important;
+  box-sizing: border-box !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+.switch button.active {
+  border-radius: 12px !important;
+  margin: 3px !important;
+}
+
+.calligraphy-sakura-box, .calligraphy-sakura, .hero:after {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Teachers */
+.ytgrid { display: block !important; width: 100% !important; }
+.teachers {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  width: 100% !important;
+}
+.teacher {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  padding: 20px !important;
+  border: 1px solid #e4ebf8 !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  box-shadow: 0 4px 18px rgba(30,50,120,0.06);
+  min-width: 0;
+  overflow: hidden !important;
+}
+.teacher-header { display: flex; align-items: center; gap: 14px; }
+.avatar-img {
+  width: 68px !important;
+  height: 68px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 3px solid #eef1ff;
+  flex-shrink: 0;
+}
+.teacher-info h3 {
+  font-size: 16px !important;
+  margin: 0 0 3px !important;
+  color: #152a5e !important;
+  font-weight: 750;
+}
+.teacher-info .channel {
+  font-size: 13px !important;
+  color: #5b6f9e !important;
+  margin: 0 !important;
+}
+.teacher-links {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.teacher-links li { margin: 0 !important; padding: 0 !important; }
+.teacher-links a {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px !important;
+  background: #f0f3ff !important;
+  border: 1px solid #dde4ff !important;
+  border-radius: 12px !important;
+  color: #2a3f9e !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+.teacher .desc {
+  font-size: 13px !important;
+  color: #4a6080 !important;
+  margin: 0 !important;
+  padding-top: 10px;
+  border-top: 1px solid #eef2fb;
+}
+
+/* Tips */
+#youtube { border-bottom: none !important; padding-bottom: 8px !important; }
+.tips-section {
+  width: 100% !important;
+  padding: 6px 0 24px !important;
+  border-bottom: 1px solid #e4ebf8 !important;
+}
+.tips-improved {
+  width: 100% !important;
+  box-sizing: border-box;
+  background: linear-gradient(145deg, #f7f5ff, #eef4ff) !important;
+  border: 1px solid #ddd8ff !important;
+  border-radius: 16px !important;
+  padding: 22px 26px !important;
+  text-align: left !important;
+  display: block !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+.tips-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.tips-icon {
+  font-size: 22px;
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  background: #fff;
+  border-radius: 12px !important;
+}
+.tips-improved h3 {
+  font-size: 17px !important;
+  color: #2a30b0 !important;
+  margin: 0 !important;
+  font-weight: 750;
+  text-align: left !important;
+  width: auto !important;
+}
+.tips-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+}
+.tips-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px !important;
+  color: #3a4f7a !important;
+  margin: 0 !important;
+  padding: 11px 14px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px !important;
+  border: 1px solid #e4e0ff;
+}
+.tip-highlight {
+  background: #fff8e6 !important;
+  border-color: #ffe0a0 !important;
+  font-weight: 600;
+  color: #6b4e00 !important;
+  grid-column: 1 / -1;
+}
+
+.day, .monthcard, .panel, .tone, .char {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+.daytop, .day:nth-child(n+4) .daytop, .day.current .daytop {
+  background: #f0f2f6 !important;
+  color: #1e2a3a !important;
+  border-radius: 14px 14px 0 0 !important;
+}
+.status {
+  font-size: 13px !important;
+  padding: 10px 12px !important;
+  border-radius: 10px !important;
+  font-weight: 600;
+}
+
+#plano-mensal .week-page-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 44px !important;
+  padding: 10px 16px !important;
+  margin-top: auto !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  border: none !important;
+  background: linear-gradient(105deg, #5548e7, #6d5ef0) !important;
+  color: #fff !important;
+  cursor: pointer;
+}
+#plano-mensal .mbody, #plano-mensal .monthcard {
+  display: flex !important;
+  flex-direction: column !important;
+}
+#plano-mensal .mbody { flex: 1 !important; }
+
+/* Dark mode compact */
+body.night .day, body.night .day:nth-child(n+4),
+body.night .monthcard, body.night .panel, body.night .tone,
+body.night .char, body.night .teacher {
+  background: #18181b !important;
+  border-color: #2e2e32 !important;
+  color: #f4f4f5 !important;
+  border-radius: 14px !important;
+}
+body.night .daytop, body.night .day:nth-child(n+4) .daytop {
+  background: #27272a !important;
+  color: #e4e4e7 !important;
+}
+body.night .dayname, body.night .daytop span { color: #e4e4e7 !important; }
+body.night .task, body.night .task span { color: #e4e4e7 !important; background: transparent !important; }
+body.night .status { background: #27272a !important; color: #d4d4d8 !important; border-radius: 10px !important; }
+body.night .day.done .status { background: #14532d !important; color: #86efac !important; }
+body.night .monthtop { background: #27272a !important; color: #f4f4f5 !important; }
+body.night .mbody h3 { color: #fafafa !important; }
+body.night .mbody p, body.night .routine-list li { color: #a1a1aa !important; }
+body.night #plano-mensal .week-page-button {
+  background: linear-gradient(105deg, #6d5ef0, #8b6ef0) !important;
+  color: #fff !important;
+  border: none !important;
+}
+body.night .teacher-info h3 { color: #f4f4f5 !important; }
+body.night .teacher-info .channel { color: #a1a1aa !important; }
+body.night .teacher-links a {
+  background: #27272a !important;
+  border-color: #3f3f46 !important;
+  color: #93c5fd !important;
+}
+body.night .teacher .desc { color: #a1a1aa !important; border-top-color: #2e2e32 !important; }
+body.night .tips-improved { background: #18181b !important; border-color: #2e2e32 !important; }
+body.night .tips-icon { background: #27272a !important; }
+body.night .tips-improved h3 { color: #a5b4fc !important; }
+body.night .tips-list li { background: #27272a !important; border-color: #3f3f46 !important; color: #e4e4e7 !important; }
+body.night .tip-highlight { background: #292524 !important; border-color: #44403c !important; color: #fcd34d !important; }
+body.night .switch { background: #18181b !important; border-color: #2e2e32 !important; }
+body.night .switch button { color: #e4e4e7 !important; }
+body.night .switch button.active {
+  background: linear-gradient(105deg, #6d5ef0, #8b6ef0) !important;
+  color: #fff !important;
+}
+body.night header.top { background: rgba(10,10,10,0.95) !important; border-bottom-color: #27272a !important; }
+body.night header.top .nav a { color: #d4d4d8 !important; }
+body.night .panelhead { background: #27272a !important; }
+body.night .tip { background: #27272a !important; border-color: #3f3f46 !important; color: #d4d4d8 !important; }
+body.night #contato h2, body.night #contato p { color: #e4e4e7 !important; }
+
+/* ========== MOBILE ========== */
+@media (max-width: 760px) {
+  html, body { overflow-x: hidden !important; }
+
+  header.top { height: 56px !important; }
+  header.top .top-inner {
+    width: calc(100% - 20px) !important;
+    height: 56px !important;
+    gap: 8px !important;
+    position: relative !important;
+  }
+  header.top .brand { flex: 1 !important; min-width: 0 !important; font-size: 15px !important; }
+  header.top .nav {
+    display: none !important;
+    position: absolute !important;
+    top: 56px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: #fff !important;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.14) !important;
+    border-radius: 0 0 14px 14px !important;
+    padding: 10px !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+    z-index: 100 !important;
+  }
+  header.top .nav.open { display: grid !important; }
+  header.top .nav a {
+    height: auto !important;
+    padding: 12px 8px !important;
+    border: 1px solid #eef1fa !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  header.top .tools .menu { display: block !important; }
+  body.night header.top .nav { background: #141414 !important; border: 1px solid #2e2e32; }
+  body.night header.top .nav a { border-color: #2e2e32 !important; color: #e4e4e7 !important; }
+
+  .switch {
+    width: calc(100% - 24px) !important;
+    margin: 12px auto !important;
+    grid-template-columns: 1fr 1fr !important;
+    border-radius: 14px !important;
+  }
+  .switch button {
+    font-size: 11.5px !important;
+    padding: 12px 4px !important;
+    white-space: normal !important;
+    line-height: 1.3 !important;
+  }
+  .switch button.active { border-radius: 10px !important; }
+
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 24px 16px !important;
+  }
+  .hero-copy, .hero h1, .hero p { text-align: center !important; max-width: 100% !important; }
+  .pills { justify-content: center !important; }
+  .calligraphy {
+    position: relative !important;
+    inset: auto !important;
+    margin: 8px auto 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .hero:after { display: none !important; }
+
+  /* Headings gerais */
+  .heading, .monthhead, #contato .heading {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    flex-wrap: wrap !important;
+  }
+  .heading h2, .heading p, .monthhead h2, .monthhead p { text-align: center !important; }
+  .heading .spacer { display: none !important; }
+  .monthhead .outline { margin: 10px auto 0 !important; }
+
+  /* === FIX BARRA DE PROGRESSO DO CALENDÁRIO === */
+  #calendario .heading {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  #calendario .heading .bigicon { margin: 0 auto !important; }
+  #calendario .heading > div:not(.spacer):not(.prog) {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  #calendario .prog {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    order: 3 !important;
+    margin: 12px 0 0 !important;
+    box-sizing: border-box !important;
+  }
+  #calendario .prog label {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    font-size: 12px !important;
+    margin-bottom: 6px !important;
+  }
+  #calendario .prog .track {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  #calendario .pct {
+    order: 4 !important;
+    margin: 8px auto 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .wrap, .course-wrap { width: calc(100% - 24px) !important; }
+
+  .months { grid-template-columns: 1fr !important; }
+  #conteudo .months { grid-template-columns: 1fr 1fr !important; }
+  .week { grid-template-columns: 1fr 1fr !important; }
+  .day:last-child { grid-column: 1 / -1 !important; }
+  .teachers { grid-template-columns: 1fr !important; }
+  .tips-list { grid-template-columns: 1fr !important; }
+  .tip-highlight { grid-column: auto !important; }
+  .contentgrid { grid-template-columns: 1fr !important; }
+  .tones { grid-template-columns: 1fr 1fr !important; }
+  #rotina-estudos .months { grid-template-columns: 1fr !important; }
+  #rotina-estudos .monthcard:nth-child(3) .routine-list {
+    column-count: 1 !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #conteudo .months { grid-template-columns: 1fr !important; }
+  .tones { grid-template-columns: 1fr !important; }
+}
+</style>
+
+
+<script id="switch-scroll-fix">
+(function(){
+  function bind(){
+    document.querySelectorAll('.switch button[data-target]').forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelectorAll('.switch button').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        var el = document.getElementById(btn.getAttribute('data-target'));
+        if(el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bind);
+  else bind();
+})();
+</script>
+
+</html>
+<style>
+body.night{background:#000!important;color:#fff!important;--ink:#fff;--muted:#d0d0d0;--line:#333;color-scheme:dark}
+body.night .wrap,body.night main,body.night .section,body.night .switch,body.night .panel,body.night .day,body.night .monthcard,body.night .tone,body.night .char,body.night .teacher,body.night .tips,body.night .routine-card,body.night .character{background:#000!important;color:#fff!important;border-color:#333!important}
+body.night .top,body.night .nav.open,body.night .daytop,body.night .monthtop,body.night .panelhead,body.night .tonemain,body.night .tip,body.night .status,body.night .pct,body.night .footer{background:#000!important;color:#fff!important;border-color:#333!important}
+body.night .prog{color:#ddd!important}
+body.night .track{background:#383838!important;border:1px solid #555!important;min-height:11px}
+body.night .track span{display:block!important;background:#79d8b4!important;min-width:0;height:100%!important}
+body.night .mbody p,body.night .heading p,body.night .monthly p,body.night .task,body.night .date,body.night .teacher p,body.night .teacher li,body.night .desc,body.night .tips p,body.night .footer p{color:#ccc!important}
+body.night .prog .track{background:#383838!important}
+body.night .monthcard .track{background:#383838!important}
+body.night .hero{background:#000!important;color:#fff!important}body.night .hero p{color:#ccc!important}
+body.night .track span{background:#fff!important}body.night .switch button{background:#000!important;color:#fff!important;border-color:#333!important}body.night .switch button.active{background:#fff!important;color:#000!important}
+body.night .outline,body.night .tag,body.night .pills span,body.night .tools button{background:#000!important;color:#fff!important;border:1px solid #555!important}
+body.night .footer{background:#000!important}
+@media(min-width:761px){.week{grid-template-columns:repeat(12,minmax(0,1fr))}.day{grid-column:span 3}.day:nth-child(n+5){grid-column:span 4}}
+@media(max-width:760px){.switch{grid-template-columns:repeat(2,minmax(0,1fr))}.week{grid-template-columns:repeat(2,minmax(0,1fr))}.day,.day:nth-child(n+5){grid-column:auto}.day:last-child{grid-column:1/-1}}
+.daytop{background:#effaf6!important}
+
+/* Ajustes finais: cabeçalhos uniformes no modo escuro */
+body.night .day { background:#101010!important; color:#f5f5f5!important; border-color:#444!important; }
+body.night .daytop,
+body.night .day:nth-child(n+4) .daytop,
+body.night .day.current .daytop { background:#24483c!important; color:#f4fff9!important; border-color:#355e50!important; }
+body.night .dayname, body.night .daytop span { color:#f4fff9!important; }
+body.night .tasks, body.night .task, body.night .task span { background:transparent!important; color:#f1f5f3!important; }
+body.night .status { background:#242424!important; color:#f1f5f3!important; }
+body.night .switch button[data-target="calendario"], body.night .switch button[data-target="plano-mensal"] { font-size:inherit; }
+
+
+/* Alinhamento e legibilidade das dicas e do próximo passo */
+.tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+.tips h3 { width:100%; text-align:center; font-size:15px; margin:0 0 6px; }
+.tips p { width:100%; text-align:center; font-size:13px; line-height:1.65; margin:4px 0; }
+#contato .heading { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; text-align:center; margin:22px auto; }
+#contato .heading .bigicon { font-size:34px; line-height:1.2; margin:0 auto; }
+#contato .heading h2 { text-align:center; }
+#contato .heading p { text-align:center; font-size:14px; line-height:1.6; }
+@media (min-width:761px) {
+  .tips { display:flex; }
+  .tips p { max-width:100%; }
+}
+@media (max-width:760px) {
+  .tips { display:flex; padding:16px; }
+  .tips p { font-size:13px; }
+  #contato .heading { padding:8px 10px; }
+}
+
+</style>
+
+<style>
+/* Ajustes finais de contraste, alinhamento e tipografia */
+#conteudo, #conteudo .heading, #conteudo .months { width:100%; min-width:0; }
+#conteudo .months { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.hero { padding-right:3.5%; }
+.hero-copy { max-width:min(760px,70%); }
+.calligraphy { right:clamp(82px,12vw,180px); }
+.hero:after { right:clamp(18px,4vw,60px); top:32px; }
+.daytop { background:#effaf6!important; }
+.day:nth-child(n+4) .daytop { background:#effaf6!important; }
+.dayname { font-size:12px!important; }
+.task { font-size:11px!important; }
+@media (max-width:760px) {
+  #conteudo .months { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .hero-copy { max-width:100%; }
+  .hero:after { right:14px; top:8px; font-size:30px; opacity:.8; }
+  .calligraphy { display:none; }
+}
+body.night .prog, body.night .prog label { color:#e5e7eb!important; }
+body.night .prog .track, body.night .track { background:#383838!important; border:1px solid #626262!important; }
+body.night .prog .track span, body.night #bar { display:block!important; background:#78e0b5!important; }
+body.night .pct { background:#252525!important; color:#fff!important; border:1px solid #555!important; }
+body.night .mbody, body.night .mbody h3, body.night .monthtop { color:#fff!important; }
+body.night .mbody p { color:#ddd!important; }
+body.night .monthcard, body.night #conteudo .monthcard { background:#080808!important; }
+body.night .monthtop { background:#191919!important; }
+body.night .panelhead, body.night .panel { background:#080808!important; color:#fff!important; }
+body.night .hero:after { filter:none; }
+
+/* Ajustes finais: cabeçalhos uniformes no modo escuro */
+body.night .day { background:#101010!important; color:#f5f5f5!important; border-color:#444!important; }
+body.night .daytop,
+body.night .day:nth-child(n+4) .daytop,
+body.night .day.current .daytop { background:#24483c!important; color:#f4fff9!important; border-color:#355e50!important; }
+body.night .dayname, body.night .daytop span { color:#f4fff9!important; }
+body.night .tasks, body.night .task, body.night .task span { background:transparent!important; color:#f1f5f3!important; }
+body.night .status { background:#242424!important; color:#f1f5f3!important; }
+body.night .switch button[data-target="calendario"], body.night .switch button[data-target="plano-mensal"] { font-size:inherit; }
+
+
+/* Alinhamento e legibilidade das dicas e do próximo passo */
+.tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+.tips h3 { width:100%; text-align:center; font-size:15px; margin:0 0 6px; }
+.tips p { width:100%; text-align:center; font-size:13px; line-height:1.65; margin:4px 0; }
+#contato .heading { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; text-align:center; margin:22px auto; }
+#contato .heading .bigicon { font-size:34px; line-height:1.2; margin:0 auto; }
+#contato .heading h2 { text-align:center; }
+#contato .heading p { text-align:center; font-size:14px; line-height:1.6; }
+@media (min-width:761px) {
+  .tips { display:flex; }
+  .tips p { max-width:100%; }
+}
+@media (max-width:760px) {
+  .tips { display:flex; padding:16px; }
+  .tips p { font-size:13px; }
+  #contato .heading { padding:8px 10px; }
+}
+
+</style>
+
+<style>
+/* Ajustes de layout solicitados */
+.course-wrap { width:min(1440px,94%); margin:0 auto; }
+#conteudo { width:100%; min-width:0; overflow:hidden; }
+#conteudo .months { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; width:100%; }
+#conteudo .monthcard { min-width:0; }
+/* Links do menu com borda arredondada, combinando com o botão de tema */
+.top .nav a { border:1px solid #dce5fb; border-radius:10px; padding:0 10px; height:36px; align-self:center; transition:background .2s,border-color .2s; }
+.top .nav a:hover { border-color:#aebaff; background:#f5f6ff; text-decoration:none; }
+/* Aproxima a sakura da mensagem de incentivo e do título */
+.hero:after { right:clamp(105px,15vw,220px)!important; top:32px!important; }
+.calligraphy { right:clamp(28px,6vw,88px)!important; }
+@media(max-width:1100px) { .top .nav a { padding:0 7px; } }
+@media(max-width:760px) {
+ .course-wrap { width:calc(100% - 24px); }
+ #conteudo .months { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .top .nav a { height:auto; border-radius:8px; padding:10px 8px; align-self:stretch; }
+ .hero:after { right:14px!important; top:8px!important; }
+ .calligraphy { display:none!important; }
+}
+@media(max-width:390px) { #conteudo .months { grid-template-columns:1fr; } }
+
+
+/* Alinhamento e legibilidade das dicas e do próximo passo */
+.tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+.tips h3 { width:100%; text-align:center; font-size:15px; margin:0 0 6px; }
+.tips p { width:100%; text-align:center; font-size:13px; line-height:1.65; margin:4px 0; }
+#contato .heading { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; text-align:center; margin:22px auto; }
+#contato .heading .bigicon { font-size:34px; line-height:1.2; margin:0 auto; }
+#contato .heading h2 { text-align:center; }
+#contato .heading p { text-align:center; font-size:14px; line-height:1.6; }
+@media (min-width:761px) {
+  .tips { display:flex; }
+  .tips p { max-width:100%; }
+}
+@media (max-width:760px) {
+  .tips { display:flex; padding:16px; }
+  .tips p { font-size:13px; }
+  #contato .heading { padding:8px 10px; }
+}
+
+</style>
+<style>
+/* Refinamento visual da seção Rotina de Estudos */
+#rotina-estudos .months{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:stretch!important;
+  gap:12px!important;
+}
+#rotina-estudos .monthcard{min-width:0; height:100%;}
+#rotina-estudos .monthcard:nth-child(1),
+#rotina-estudos .monthcard:nth-child(2){grid-column:auto;}
+#rotina-estudos .monthcard:nth-child(3),
+#rotina-estudos .monthcard:nth-child(4){grid-column:1/-1;}
+#rotina-estudos .monthtop{font-size:12px!important;padding:10px 13px!important;}
+#rotina-estudos .mbody{padding:12px 14px!important;}
+#rotina-estudos .mbody h3{font-size:14px!important;line-height:1.35;margin-bottom:7px!important;}
+#rotina-estudos .routine-list{font-size:12px!important;line-height:1.45!important;gap:6px!important;padding-left:18px!important;}
+#rotina-estudos .routine-note{font-size:11px!important;line-height:1.45!important;}
+#rotina-estudos .monthcard:nth-child(3) .routine-list{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:22px!important;row-gap:7px!important;align-items:start;}
+#rotina-estudos .monthcard:nth-child(4) .monthtop{justify-content:center!important;text-align:center!important;}
+#rotina-estudos .monthcard:nth-child(4) .mbody{text-align:center!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;}
+#rotina-estudos .monthcard:nth-child(4) .mbody h3{font-size:14px!important;}
+#rotina-estudos .monthcard:nth-child(4) .mbody p{font-size:13px!important;line-height:1.5!important;}
+@media(max-width:760px){
+ #rotina-estudos .months{grid-template-columns:1fr!important;}
+ #rotina-estudos .monthcard:nth-child(1),#rotina-estudos .monthcard:nth-child(2),#rotina-estudos .monthcard:nth-child(3),#rotina-estudos .monthcard:nth-child(4){grid-column:1/-1;}
+ #rotina-estudos .monthcard:nth-child(3) .routine-list{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:480px){#rotina-estudos .monthcard:nth-child(3) .routine-list{grid-template-columns:1fr;}}
+body.night #rotina-estudos .monthcard:nth-child(4) .monthtop{background:#3a2634!important;color:#ffd6e9!important;}
+
+
+/* Alinhamento e legibilidade das dicas e do próximo passo */
+.tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+.tips h3 { width:100%; text-align:center; font-size:15px; margin:0 0 6px; }
+.tips p { width:100%; text-align:center; font-size:13px; line-height:1.65; margin:4px 0; }
+#contato .heading { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; text-align:center; margin:22px auto; }
+#contato .heading .bigicon { font-size:34px; line-height:1.2; margin:0 auto; }
+#contato .heading h2 { text-align:center; }
+#contato .heading p { text-align:center; font-size:14px; line-height:1.6; }
+@media (min-width:761px) {
+  .tips { display:flex; }
+  .tips p { max-width:100%; }
+}
+@media (max-width:760px) {
+  .tips { display:flex; padding:16px; }
+  .tips p { font-size:13px; }
+  #contato .heading { padding:8px 10px; }
+}
+
+</style>
+
+
+<style id="ajustes-tipografia-banner">
+/* Conteúdo do curso: tipografia mais legível e proporcional ao restante da página */
+#conteudo .monthtop { font-size: 13px !important; padding: 13px 12px !important; }
+#conteudo .mbody { padding: 14px 12px 16px !important; }
+#conteudo .mbody h3 { font-size: 16px !important; line-height: 1.4 !important; margin-bottom: 8px !important; }
+#conteudo .mbody p { font: 14px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif !important; min-height: 0 !important; margin: 0 !important; }
+
+/* Banner: agrupa título e incentivo, remove elementos decorativos soltos nos cantos */
+.hero { display: flex; align-items: center; }
+.hero-copy { max-width: 760px !important; }
+.hero:after { content: none !important; }
+.calligraphy {
+  position: relative !important;
+  inset: auto !important;
+  margin-left: clamp(24px, 5vw, 72px) !important;
+  min-width: 155px;
+  flex: 0 0 auto;
+  align-self: center;
+  padding: 15px 20px;
+  border: 1px solid #d7e2ff;
+  border-radius: 18px;
+  background: #ffffffb8;
+  color: #2a47b8;
+  font-size: 27px !important;
+  line-height: 1.3;
+}
+.calligraphy small { font-size: 14px !important; line-height: 1.5; }
+body.night .calligraphy { background: #151515 !important; border-color: #444 !important; color: #f5f5f5 !important; }
+
+@media (max-width: 900px) {
+  .hero { align-items: flex-start; }
+  .calligraphy { margin-left: 18px !important; }
+}
+@media (max-width: 760px) {
+  .hero { display: block; }
+  .hero-copy { max-width: 100% !important; }
+  .calligraphy {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    width: fit-content;
+    min-width: 0;
+    margin: 18px 0 0 !important;
+    padding: 9px 14px;
+    font-size: 21px !important;
+    border-radius: 14px;
+  }
+  .calligraphy small { display: inline-block; margin-top: 0 !important; font-size: 12px !important; }
+  #conteudo .months { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  #conteudo .mbody h3 { font-size: 15px !important; }
+  #conteudo .mbody p { font-size: 13px !important; }
+}
+@media (max-width: 390px) {
+  #conteudo .months { grid-template-columns: 1fr !important; }
+}
+</style>
+
+
+<style id="ajuste-final-incentivo">
+/* Incentivo sem moldura, um pouco mais afastado do título e com sakura ao lado */
+.calligraphy {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  margin-left: clamp(38px, 6vw, 88px) !important;
+  padding: 8px 0 !important;
+  position: relative !important;
+  color: #2a47b8;
+}
+.calligraphy::before {
+  content: "🌸";
+  display: inline-block;
+  margin-right: 9px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+body.night .calligraphy {
+  background: transparent !important;
+  border: 0 !important;
+  color: #f5f5f5 !important;
+}
+@media (max-width: 900px) {
+  .calligraphy { margin-left: 28px !important; }
+}
+@media (max-width: 760px) {
+  .calligraphy {
+    margin: 18px 0 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  .calligraphy::before { font-size: 20px; margin-right: 7px; }
+}
+</style>
+
+
+<style id="ajuste-banner-centralizado-v3">
+/* Mantém o conteúdo do cabeçalho equilibrado e centraliza o bloco de incentivo */
+.hero {
+  justify-content: center !important;
+  gap: clamp(34px, 6vw, 88px) !important;
+}
+.hero-copy {
+  flex: 0 1 650px !important;
+  max-width: 650px !important;
+}
+.calligraphy {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin-left: 0 !important;
+  min-width: 175px;
+  gap: 3px;
+  align-self: center !important;
+  line-height: 1.35 !important;
+}
+.calligraphy::before {
+  content: none !important;
+}
+.calligraphy .chinese,
+.calligraphy .hanzi,
+.calligraphy strong {
+  line-height: 1.3 !important;
+  vertical-align: middle;
+}
+.calligraphy::after {
+  content: none !important;
+}
+.calligraphy .chinese::after,
+.calligraphy .hanzi::after {
+  content: " 🌸";
+  font-size: 1em;
+  vertical-align: middle;
+}
+.calligraphy small {
+  display: block;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+@media (max-width: 760px) {
+  .hero {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
+  }
+  .hero-copy {
+    flex: none !important;
+    max-width: 100% !important;
+  }
+  .calligraphy {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px 12px;
+    min-width: 0;
+    width: fit-content;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+}
+</style>
+
+
+<style id="sakura-fallback">
+.calligraphy { position: relative !important; }
+.calligraphy > :first-child { order: 1; }
+.calligraphy > :first-child::after { content: " 🌸"; font-size: 1em; vertical-align: middle; }
+.calligraphy > :nth-child(2) { order: 2; }
+.calligraphy > :nth-child(3) { order: 3; }
+</style>
+
+
+<style id="banner-centralizado-v4">
+.hero {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: clamp(36px, 5.5vw, 82px) !important;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+.hero-copy {
+  flex: 0 1 650px !important;
+  max-width: 650px !important;
+}
+.calligraphy {
+  position: relative !important;
+  inset: auto !important;
+  flex: 0 0 205px;
+  min-width: 205px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 3px !important;
+  text-align: center !important;
+  line-height: 1.4 !important;
+}
+.calligraphy-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  line-height: 1.25;
+}
+.calligraphy-hanzi {
+  display: inline-block;
+  line-height: 1.25;
+}
+.calligraphy-sakura {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.25;
+}
+.calligraphy small {
+  display: block !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+.hero:after { content: none !important; }
+@media (max-width: 760px) {
+  .hero {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    padding: 25px 20px !important;
+  }
+  .hero-copy {
+    flex: none !important;
+    max-width: 100% !important;
+  }
+  .calligraphy {
+    display: flex !important;
+    flex: none;
+    min-width: 0 !important;
+    width: 100%;
+    align-items: center !important;
+  }
+  .calligraphy-main { gap: 8px; }
+}
+</style>
+
+
+<style id="ajustes-tipografia-sakura-v5">
+/* Um único emoji de sakura, à direita dos caracteres chineses */
+.calligraphy-main::after,
+.calligraphy > :first-child::after,
+.calligraphy-hanzi::after,
+.calligraphy .hanzi::after,
+.calligraphy .chinese::after {
+  content: none !important;
+}
+.calligraphy-main {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+.calligraphy-hanzi {
+  font-size: 34px !important;
+  line-height: 1.2 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+.calligraphy-sakura {
+  font-size: 34px !important;
+  line-height: 1.2 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Aumenta a fonte das etiquetas/botões da primeira imagem */
+.pills span {
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+  padding: 10px 13px !important;
+}
+.pills {
+  gap: 10px !important;
+}
+@media (max-width: 760px) {
+  .calligraphy-hanzi,
+  .calligraphy-sakura {
+    font-size: 29px !important;
+  }
+  .pills span {
+    font-size: 12px !important;
+    padding: 9px 11px !important;
+  }
+}
+</style>
+
+
+<style id="correcao-calligraphy-v6">
+.calligraphy {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 22px !important;
+  min-width: 0 !important;
+  width: auto !important;
+  text-align: center !important;
+}
+.calligraphy-text {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 3px !important;
+  text-align: center !important;
+  white-space: nowrap;
+}
+.calligraphy-main {
+  display: block !important;
+  width: auto !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+}
+.calligraphy-hanzi {
+  display: block !important;
+  font-size: 34px !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+}
+.calligraphy-text small {
+  display: block !important;
+  margin: 0 !important;
+  line-height: 1.45 !important;
+  text-align: center !important;
+}
+.calligraphy-sakura-box {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 82px !important;
+  height: 82px !important;
+  flex: 0 0 82px !important;
+  border-radius: 18px !important;
+  background: rgba(255,255,255,.72) !important;
+  border: 1px solid #d8e1ff !important;
+  box-shadow: none !important;
+  font-size: 58px !important;
+  line-height: 1 !important;
+}
+body.night .calligraphy-sakura-box {
+  background: #1b1b1b !important;
+  border-color: #444 !important;
+}
+@media (max-width: 760px) {
+  .calligraphy {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 14px !important;
+    width: 100% !important;
+  }
+  .calligraphy-hanzi { font-size: 29px !important; }
+  .calligraphy-sakura-box {
+    width: 66px !important;
+    height: 66px !important;
+    flex-basis: 66px !important;
+    font-size: 46px !important;
+    border-radius: 15px !important;
+  }
+}
+</style>
+
+
+<style id="ajuste-final-cores-v7">
+/* Remove o fundo e a borda da caixa da sakura, mantendo o emoji grande */
+.calligraphy-sakura-box {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+/* Usa no bloco de incentivo o mesmo azul-marinho do título principal */
+.calligraphy,
+.calligraphy-text,
+.calligraphy-main,
+.calligraphy-hanzi,
+.calligraphy-text small {
+  color: #102f70 !important;
+}
+body.night .calligraphy,
+body.night .calligraphy-text,
+body.night .calligraphy-main,
+body.night .calligraphy-hanzi,
+body.night .calligraphy-text small {
+  color: #f5f5f5 !important;
+}
+</style>
+
+
+<style id="ajustes-semanas-v9">
+/* Cartões do plano mensal: tipografia mais legível e sem barras de progresso inoperantes */
+#plano-mensal .monthtop {
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+  padding: 14px 15px !important;
+}
+#plano-mensal .monthtop .num {
+  font-size: 14px !important;
+  width: 28px !important;
+  height: 28px !important;
+}
+#plano-mensal .mbody {
+  padding: 17px 16px 18px !important;
+}
+#plano-mensal .mbody h3 {
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  margin: 0 0 9px !important;
+}
+#plano-mensal .mbody p {
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  margin: 0 0 16px !important;
+}
+#plano-mensal .week-page-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  min-height: 42px !important;
+  padding: 10px 15px !important;
+  border: 1px solid var(--tone, #5b50e8) !important;
+  border-radius: 11px !important;
+  background: var(--tint, #f0f0ff) !important;
+  color: var(--tone, #4d5ee5) !important;
+  font: 700 14px/1.3 Inter, system-ui, sans-serif !important;
+  transition: transform .15s ease, filter .15s ease !important;
+}
+#plano-mensal .week-page-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(.97);
+}
+body.night #plano-mensal .week-page-button {
+  background: #171717 !important;
+  color: #f5f5f5 !important;
+  border-color: var(--tone, #777) !important;
+}
+@media (max-width: 760px) {
+  #plano-mensal .mbody h3 { font-size: 16px !important; }
+  #plano-mensal .mbody p { font-size: 14px !important; }
+  #plano-mensal .monthtop { font-size: 14px !important; }
+}
+</style>
+
+<!-- NOVOS AJUSTES SOLICITADOS -->
+<style id="ajustes-botoes-e-dicas">
+/* 1. Botões "Explorar semana" uniformes */
+#plano-mensal .week-page-button {
+  width: 100% !important;
+  height: 42px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: auto !important;
+}
+#plano-mensal .mbody {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* 2. Container de dicas movido */
+.tips-wrapper {
+  width: min(1440px, 94%);
+  margin: 24px auto 40px;
+}
+.tips-wrapper .tips {
+  background: #f5f3ff;
+  border: 1px solid #e4e0ff;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.tips-wrapper .tips h3 {
+  font-size: 16px;
+  color: #3439be;
+  margin: 0 0 8px;
+}
+.tips-wrapper .tips p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #405b8c;
+  margin: 2px 0;
+}
+body.night .tips-wrapper .tips {
+  background: #111;
+  border-color: #333;
+}
+body.night .tips-wrapper .tips h3 {
+  color: #a5b4fc;
+}
+body.night .tips-wrapper .tips p {
+  color: #ccc;
+}
+</style>
+
+<!-- AJUSTES DA ÚLTIMA SOLICITAÇÃO (Fontes e Espaçamentos) -->
+<style id="ajustes-finais-tipografia">
+/* --- 1. Exemplo de Caracteres e Dicas --- */
+.chars .hanzi { font-size: 38px !important; }
+.chars strong { font-size: 16px !important; }
+.chars small { font-size: 14px !important; }
+.tip { font-size: 14px !important; padding: 12px 15px !important; line-height: 1.6 !important; }
+
+/* --- 2. Aulas no YouTube (Exceto o título principal) --- */
+.teacher h3 { font-size: 16px !important; }
+.teacher p { font-size: 13px !important; }
+.teacher ul { font-size: 14px !important; line-height: 1.8 !important; }
+.teacher .desc { font-size: 13px !important; line-height: 1.5 !important; margin-top: 10px !important; }
+
+/* --- 3. Rotinas de Estudo (Aumento de Fonte) --- */
+#rotina-estudos .monthtop { font-size: 16px !important; padding: 14px 16px !important; }
+#rotina-estudos .mbody h3 { font-size: 18px !important; margin-bottom: 12px !important; }
+#rotina-estudos .routine-list { font-size: 15px !important; gap: 10px !important; }
+#rotina-estudos .routine-note { font-size: 13px !important; margin-top: 14px !important; }
+
+/* --- 4. Melhoria no espaçamento da Rotina Intensiva (3 a 4 horas) --- */
+#rotina-estudos .monthcard:nth-child(3) .routine-list {
+  /* Altera de 3 para 2 colunas para evitar quebras de linha estranhas */
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important; 
+  column-gap: 40px !important;
+  row-gap: 16px !important; /* Maior respiro entre as linhas */
+  padding-left: 20px !important;
+}
+#rotina-estudos .monthcard:nth-child(3) .mbody {
+  padding: 20px !important;
+}
+
+/* Ajustes adicionais para telas menores */
+@media (max-width: 760px) {
+  #rotina-estudos .monthcard:nth-child(3) .routine-list { grid-template-columns: 1fr !important; }
+  #rotina-estudos .mbody h3 { font-size: 16px !important; }
+  #rotina-estudos .routine-list { font-size: 14px !important; }
+}
+</style>
+
+<!-- AJUSTES FINAIS V10 (Ajustes da sua última imagem) -->
+<style id="ajustes-finais-v10">
+/* 1. Rodapé (1ª foto) */
+.footer strong { font-size: 22px !important; line-height: 1.4 !important; }
+.footer p { font-size: 15px !important; margin-top: 8px !important; }
+
+/* 2. Espaçamento da Rotina Intensiva (2ª foto) */
+#rotina-estudos .monthcard:nth-child(3) .routine-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  column-gap: 40px !important;
+  row-gap: 20px !important; /* Aumenta o espaço entre as linhas */
+  align-items: start !important; /* Alinha os itens ao topo para não "flutuarem" */
+}
+#rotina-estudos .monthcard:nth-child(3) .routine-list li {
+  padding-bottom: 6px !important;
+}
+
+/* 3. Alinhamento e Fonte do Plano Mensal (3ª e 4ª fotos) */
+#plano-mensal .monthcard {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+#plano-mensal .mbody {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+}
+#plano-mensal .monthtop {
+  font-size: 16px !important;
+  padding: 16px !important;
+}
+#plano-mensal .mbody h3 {
+  font-size: 20px !important;
+  line-height: 1.3 !important;
+}
+#plano-mensal .mbody p {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  flex-grow: 1 !important; /* Empurra o botão para o final */
+}
+#plano-mensal .week-page-button {
+  margin-top: 20px !important; /* Garante o alinhamento na base */
+  font-size: 15px !important;
+  height: 46px !important;
+}
+
+/* 4. Modo Noturno (Conserto de itens escuros) */
+body.night .section, 
+body.night .monthcard, 
+body.night .panel, 
+body.night .teacher, 
+body.night .tips-wrapper .tips {
+  background: #121212 !important;
+  border-color: #333 !important;
+}
+body.night .monthtop,
+body.night .daytop {
+  background: #1f1f1f !important;
+  color: #fff !important;
+}
+body.night h2, body.night h3, body.night strong, 
+body.night .heading p, body.night .mbody p,
+body.night .teacher p, body.night .teacher ul,
+body.night .routine-list, body.night .routine-list strong {
+  color: #f1f5f9 !important; /* Branco acinzentado para melhor leitura */
+}
+body.night .routine-note {
+  color: #94a3b8 !important;
+}
+body.night .tip {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+body.night .teacher ul li a {
+  color: #93c5fd !important; /* Azul claro para links noturnos */
+}
+body.night .teacher ul li a:hover {
+  color: #bfdbfe !important;
+}
+body.night .status { background: #27272a !important; }
+body.night .day.done .status { background: #064e3b !important; color: #a7f3d0 !important; }
+body.night .daytop span, body.night .dayname { color: #fff !important; }
+
+/* 5. Responsividade Mobile */
+@media (max-width: 760px) {
+  #plano-mensal .months {
+    grid-template-columns: 1fr !important;
+  }
+  #plano-mensal .monthcard { margin-bottom: 20px; }
+  #rotina-estudos .monthcard:nth-child(3) .routine-list {
+    grid-template-columns: 1fr !important; /* Volta a 1 coluna no mobile */
+    row-gap: 14px !important;
+  }
+  .footer strong { font-size: 18px !important; }
+  .footer p { font-size: 13px !important; }
+  #plano-mensal .mbody h3 { font-size: 18px !important; }
+  #plano-mensal .mbody p { font-size: 14px !important; }
+}
+</style>
+
+<!-- AJUSTES V11 (Fonte do conteúdo/tradução e dias da semana) -->
+<style id="ajustes-fonte-v11">
+/* 1. Tons do Mandarim (Aumentar pinyin, tradução e título) */
+.tonemain strong { 
+  font-size: 22px !important; 
+}
+.tonemain small { 
+  font-size: 11px !important; 
+}
+.translation { 
+  font-size: 13px !important; 
+  padding-bottom: 12px !important; 
+}
+
+/* 2. Dias da Semana (Aumentar um pouco o conteúdo das tarefas) */
+.task {
+  font-size: 14px !important;
+  gap: 8px !important;
+}
+@media(max-width: 760px) {
+  .tonemain strong { font-size: 20px !important; }
+  .translation { font-size: 12px !important; }
+  .task { font-size: 13px !important; }
+}
+</style>
+
+<!-- AJUSTES V12 (Correção do Grid da Rotina Intensiva e Fonte das Dicas) -->
+<style id="ajustes-v12">
+/* 1. Aumentar fonte do bloco "Constância" e "Dicas" */
+#rotina-estudos .monthcard:nth-child(4) .mbody h3 {
+  font-size: 18px !important;
+}
+#rotina-estudos .monthcard:nth-child(4) .mbody p {
+  font-size: 15px !important;
+}
+.tips-wrapper .tips h3 {
+  font-size: 18px !important;
+}
+.tips-wrapper .tips p {
+  font-size: 15px !important;
+}
+
+/* 2. Corrigir o espaçamento estranho da Rotina Intensiva */
+/* Substitui o Grid por um Column-count para o texto fluir naturalmente */
+#rotina-estudos .monthcard:nth-child(3) .routine-list {
+  display: block !important; 
+  column-count: 2 !important;
+  column-gap: 40px !important;
+  padding-left: 20px !important;
+  margin-top: 10px !important;
+}
+#rotina-estudos .monthcard:nth-child(3) .routine-list li {
+  margin-bottom: 16px !important; /* Espaçamento uniforme entre os itens */
+  break-inside: avoid; /* Evita que um item seja cortado entre colunas */
+  padding-bottom: 0 !important;
+}
+
+/* Responsividade Mobile para a Rotina Intensiva */
+@media (max-width: 760px) {
+  #rotina-estudos .monthcard:nth-child(3) .routine-list {
+    column-count: 1 !important; /* Volta a 1 coluna */
+  }
+}
+</style>
+
+<!-- CORREÇÃO DO MODO ESCURO (Bordas, espaçamento e formato pontudo) -->
+<style id="fix-dark-mode">
+/* Ajuste geral dos cards no modo escuro para não colar nas bordas */
+body.night .monthcard {
+  background: #18181b !important;
+  border: 1px solid #27272a !important;
+  border-radius: 12px !important; /* Arredonda os cards */
+  overflow: hidden !important;
+}
+body.night .monthtop {
+  padding: 14px 18px !important; /* Mais respiro na parte de cima */
+  border-bottom: 1px solid #27272a !important;
+}
+body.night .mbody {
+  padding: 20px 18px !important; /* Mais respiro no conteúdo */
+}
+
+/* Corrige a barra de navegação (switch) que estava pontuda */
+body.night .switch {
+  border-radius: 24px !important; /* Arredonda a barra */
+  border: 1px solid #333 !important; /* Borda suave em vez de ponta reta */
+  background: #121212 !important;
+  overflow: hidden !important; /* Garante que nada vaze */
+}
+body.night .switch button {
+  border-right: 1px solid #333 !important;
+}
+body.night .switch button:last-child {
+  border-right: none !important;
+}
+body.night .switch button.active {
+  background: #f1f5f9 !important; 
+  color: #000 !important;
+  border-radius: 24px !important; /* Arredonda o botão ativo */
+}
+
+/* Ajustes específicos para telas menores */
+@media (max-width: 760px) {
+  body.night .switch {
+    border-radius: 16px !important;
+  }
+  body.night .switch button {
+    border-bottom: 1px solid #333 !important;
+  }
+}
+</style>
+
+<!-- AJUSTES FINAIS DE LAYOUT DO MODO ESCURO (Espaçamento, Sakura e Arredondamento) -->
+<style id="ajustes-finais-layout-escuro">
+/* 1. Respiro do conteúdo e bordas arredondadas nos containers escuros */
+body.night .section {
+  padding: 24px 20px !important; /* Dá respiro ao conteúdo geral das seções */
+  border-radius: 16px !important;
+  border: 1px solid #27272a !important;
+  background: #0a0a0a !important; /* Fundo ligeiramente distinto do body preto puro */
+  margin-bottom: 16px !important;
+}
+body.night .monthcard, 
+body.night .panel, 
+body.night .teacher, 
+body.night .tips-wrapper .tips {
+  padding: 20px !important; /* Respiro interno para os cards */
+  border-radius: 12px !important;
+  border: 1px solid #27272a !important;
+  background: #121212 !important;
+}
+
+/* Remove o padding duplo dos sub-elementos dos cards */
+body.night .monthcard .mbody, 
+body.night .monthcard .monthtop {
+  padding: 0 0 12px 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+body.night .monthcard .monthtop {
+  padding-bottom: 16px !important;
+}
+
+/* 2. Remove DEFINITIVAMENTE a borda do emoji de sakura no modo escuro */
+body.night .calligraphy-sakura-box,
+body.night .calligraphy-sakura,
+body.night .calligraphy {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+body.night .calligraphy-sakura-box::after,
+body.night .calligraphy-sakura-box::before {
+  display: none !important;
+}
+
+/* 3. Conserta o formato pontudo da barra de navegação (switch) */
+body.night .switch {
+  border-radius: 24px !important;
+  border: 1px solid #333 !important;
+  background: #121212 !important;
+}
+body.night .switch button.active {
+  border-radius: 20px !important; /* Arredonda o botão ativo interno */
+}
+</style>
+
+<script id="week-page-placeholder-handler">
+document.querySelectorAll('#plano-mensal .week-page-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const week = button.dataset.weekPage;
+    alert('A página dedicada da Semana ' + week + ' poderá ser conectada aqui.');
+  });
+});
+</script>
+
+<style id="design-v27">
+/* V27 — Desktop estável + fix barra progresso calendário mobile */
+
+/* Header */
+header.top {
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+header.top .top-inner {
+  width: min(1440px, 94%);
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+header.top .nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+header.top .nav a {
+  height: 36px !important;
+  padding: 0 12px !important;
+  border-radius: 10px !important;
+  border: 1px solid transparent !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  color: #3a4f7a !important;
+  display: flex !important;
+  align-items: center !important;
+}
+header.top .nav a:hover {
+  background: #f0f1ff !important;
+  border-color: #d4dcff !important;
+}
+header.top .tools { display: flex; gap: 8px; flex-shrink: 0; }
+header.top .tools button { border-radius: 10px !important; }
+
+/* Switch */
+.switch {
+  width: min(1440px, 94%) !important;
+  max-width: 1440px !important;
+  margin: 16px auto !important;
+  box-sizing: border-box !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+.switch button.active {
+  border-radius: 12px !important;
+  margin: 3px !important;
+}
+
+.calligraphy-sakura-box, .calligraphy-sakura, .hero:after {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Teachers */
+.ytgrid { display: block !important; width: 100% !important; }
+.teachers {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  width: 100% !important;
+}
+.teacher {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  padding: 20px !important;
+  border: 1px solid #e4ebf8 !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  box-shadow: 0 4px 18px rgba(30,50,120,0.06);
+  min-width: 0;
+  overflow: hidden !important;
+}
+.teacher-header { display: flex; align-items: center; gap: 14px; }
+.avatar-img {
+  width: 68px !important;
+  height: 68px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 3px solid #eef1ff;
+  flex-shrink: 0;
+}
+.teacher-info h3 {
+  font-size: 16px !important;
+  margin: 0 0 3px !important;
+  color: #152a5e !important;
+  font-weight: 750;
+}
+.teacher-info .channel {
+  font-size: 13px !important;
+  color: #5b6f9e !important;
+  margin: 0 !important;
+}
+.teacher-links {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.teacher-links li { margin: 0 !important; padding: 0 !important; }
+.teacher-links a {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px !important;
+  background: #f0f3ff !important;
+  border: 1px solid #dde4ff !important;
+  border-radius: 12px !important;
+  color: #2a3f9e !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+.teacher .desc {
+  font-size: 13px !important;
+  color: #4a6080 !important;
+  margin: 0 !important;
+  padding-top: 10px;
+  border-top: 1px solid #eef2fb;
+}
+
+/* Tips */
+#youtube { border-bottom: none !important; padding-bottom: 8px !important; }
+.tips-section {
+  width: 100% !important;
+  padding: 6px 0 24px !important;
+  border-bottom: 1px solid #e4ebf8 !important;
+}
+.tips-improved {
+  width: 100% !important;
+  box-sizing: border-box;
+  background: linear-gradient(145deg, #f7f5ff, #eef4ff) !important;
+  border: 1px solid #ddd8ff !important;
+  border-radius: 16px !important;
+  padding: 22px 26px !important;
+  text-align: left !important;
+  display: block !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+.tips-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.tips-icon {
+  font-size: 22px;
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  background: #fff;
+  border-radius: 12px !important;
+}
+.tips-improved h3 {
+  font-size: 17px !important;
+  color: #2a30b0 !important;
+  margin: 0 !important;
+  font-weight: 750;
+  text-align: left !important;
+  width: auto !important;
+}
+.tips-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+}
+.tips-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px !important;
+  color: #3a4f7a !important;
+  margin: 0 !important;
+  padding: 11px 14px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px !important;
+  border: 1px solid #e4e0ff;
+}
+.tip-highlight {
+  background: #fff8e6 !important;
+  border-color: #ffe0a0 !important;
+  font-weight: 600;
+  color: #6b4e00 !important;
+  grid-column: 1 / -1;
+}
+
+.day, .monthcard, .panel, .tone, .char {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+.daytop, .day:nth-child(n+4) .daytop, .day.current .daytop {
+  background: #f0f2f6 !important;
+  color: #1e2a3a !important;
+  border-radius: 14px 14px 0 0 !important;
+}
+.status {
+  font-size: 13px !important;
+  padding: 10px 12px !important;
+  border-radius: 10px !important;
+  font-weight: 600;
+}
+
+#plano-mensal .week-page-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 44px !important;
+  padding: 10px 16px !important;
+  margin-top: auto !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  border: none !important;
+  background: linear-gradient(105deg, #5548e7, #6d5ef0) !important;
+  color: #fff !important;
+  cursor: pointer;
+}
+#plano-mensal .mbody, #plano-mensal .monthcard {
+  display: flex !important;
+  flex-direction: column !important;
+}
+#plano-mensal .mbody { flex: 1 !important; }
+
+/* Dark mode compact */
+body.night .day, body.night .day:nth-child(n+4),
+body.night .monthcard, body.night .panel, body.night .tone,
+body.night .char, body.night .teacher {
+  background: #18181b !important;
+  border-color: #2e2e32 !important;
+  color: #f4f4f5 !important;
+  border-radius: 14px !important;
+}
+body.night .daytop, body.night .day:nth-child(n+4) .daytop {
+  background: #27272a !important;
+  color: #e4e4e7 !important;
+}
+body.night .dayname, body.night .daytop span { color: #e4e4e7 !important; }
+body.night .task, body.night .task span { color: #e4e4e7 !important; background: transparent !important; }
+body.night .status { background: #27272a !important; color: #d4d4d8 !important; border-radius: 10px !important; }
+body.night .day.done .status { background: #14532d !important; color: #86efac !important; }
+body.night .monthtop { background: #27272a !important; color: #f4f4f5 !important; }
+body.night .mbody h3 { color: #fafafa !important; }
+body.night .mbody p, body.night .routine-list li { color: #a1a1aa !important; }
+body.night #plano-mensal .week-page-button {
+  background: linear-gradient(105deg, #6d5ef0, #8b6ef0) !important;
+  color: #fff !important;
+  border: none !important;
+}
+body.night .teacher-info h3 { color: #f4f4f5 !important; }
+body.night .teacher-info .channel { color: #a1a1aa !important; }
+body.night .teacher-links a {
+  background: #27272a !important;
+  border-color: #3f3f46 !important;
+  color: #93c5fd !important;
+}
+body.night .teacher .desc { color: #a1a1aa !important; border-top-color: #2e2e32 !important; }
+body.night .tips-improved { background: #18181b !important; border-color: #2e2e32 !important; }
+body.night .tips-icon { background: #27272a !important; }
+body.night .tips-improved h3 { color: #a5b4fc !important; }
+body.night .tips-list li { background: #27272a !important; border-color: #3f3f46 !important; color: #e4e4e7 !important; }
+body.night .tip-highlight { background: #292524 !important; border-color: #44403c !important; color: #fcd34d !important; }
+body.night .switch { background: #18181b !important; border-color: #2e2e32 !important; }
+body.night .switch button { color: #e4e4e7 !important; }
+body.night .switch button.active {
+  background: linear-gradient(105deg, #6d5ef0, #8b6ef0) !important;
+  color: #fff !important;
+}
+body.night header.top { background: rgba(10,10,10,0.95) !important; border-bottom-color: #27272a !important; }
+body.night header.top .nav a { color: #d4d4d8 !important; }
+body.night .panelhead { background: #27272a !important; }
+body.night .tip { background: #27272a !important; border-color: #3f3f46 !important; color: #d4d4d8 !important; }
+body.night #contato h2, body.night #contato p { color: #e4e4e7 !important; }
+
+/* ========== MOBILE ========== */
+@media (max-width: 760px) {
+  html, body { overflow-x: hidden !important; }
+
+  header.top { height: 56px !important; }
+  header.top .top-inner {
+    width: calc(100% - 20px) !important;
+    height: 56px !important;
+    gap: 8px !important;
+    position: relative !important;
+  }
+  header.top .brand { flex: 1 !important; min-width: 0 !important; font-size: 15px !important; }
+  header.top .nav {
+    display: none !important;
+    position: absolute !important;
+    top: 56px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: #fff !important;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.14) !important;
+    border-radius: 0 0 14px 14px !important;
+    padding: 10px !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+    z-index: 100 !important;
+  }
+  header.top .nav.open { display: grid !important; }
+  header.top .nav a {
+    height: auto !important;
+    padding: 12px 8px !important;
+    border: 1px solid #eef1fa !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  header.top .tools .menu { display: block !important; }
+  body.night header.top .nav { background: #141414 !important; border: 1px solid #2e2e32; }
+  body.night header.top .nav a { border-color: #2e2e32 !important; color: #e4e4e7 !important; }
+
+  .switch {
+    width: calc(100% - 24px) !important;
+    margin: 12px auto !important;
+    grid-template-columns: 1fr 1fr !important;
+    border-radius: 14px !important;
+  }
+  .switch button {
+    font-size: 11.5px !important;
+    padding: 12px 4px !important;
+    white-space: normal !important;
+    line-height: 1.3 !important;
+  }
+  .switch button.active { border-radius: 10px !important; }
+
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 24px 16px !important;
+  }
+  .hero-copy, .hero h1, .hero p { text-align: center !important; max-width: 100% !important; }
+  .pills { justify-content: center !important; }
+  .calligraphy {
+    position: relative !important;
+    inset: auto !important;
+    margin: 8px auto 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .hero:after { display: none !important; }
+
+  /* Headings gerais */
+  .heading, .monthhead, #contato .heading {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    flex-wrap: wrap !important;
+  }
+  .heading h2, .heading p, .monthhead h2, .monthhead p { text-align: center !important; }
+  .heading .spacer { display: none !important; }
+  .monthhead .outline { margin: 10px auto 0 !important; }
+
+  /* === FIX BARRA DE PROGRESSO DO CALENDÁRIO === */
+  #calendario .heading {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  #calendario .heading .bigicon { margin: 0 auto !important; }
+  #calendario .heading > div:not(.spacer):not(.prog) {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  #calendario .prog {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    order: 3 !important;
+    margin: 12px 0 0 !important;
+    box-sizing: border-box !important;
+  }
+  #calendario .prog label {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    font-size: 12px !important;
+    margin-bottom: 6px !important;
+  }
+  #calendario .prog .track {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  #calendario .pct {
+    order: 4 !important;
+    margin: 8px auto 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .wrap, .course-wrap { width: calc(100% - 24px) !important; }
+
+  .months { grid-template-columns: 1fr !important; }
+  #conteudo .months { grid-template-columns: 1fr 1fr !important; }
+  .week { grid-template-columns: 1fr 1fr !important; }
+  .day:last-child { grid-column: 1 / -1 !important; }
+  .teachers { grid-template-columns: 1fr !important; }
+  .tips-list { grid-template-columns: 1fr !important; }
+  .tip-highlight { grid-column: auto !important; }
+  .contentgrid { grid-template-columns: 1fr !important; }
+  .tones { grid-template-columns: 1fr 1fr !important; }
+  #rotina-estudos .months { grid-template-columns: 1fr !important; }
+  #rotina-estudos .monthcard:nth-child(3) .routine-list {
+    column-count: 1 !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #conteudo .months { grid-template-columns: 1fr !important; }
+  .tones { grid-template-columns: 1fr !important; }
+}
+</style>
+
+
+<script id="switch-scroll-fix">
+(function(){
+  function bind(){
+    document.querySelectorAll('.switch button[data-target]').forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelectorAll('.switch button').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        var el = document.getElementById(btn.getAttribute('data-target'));
+        if(el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bind);
+  else bind();
+})();
+</script>
+
+</html>
