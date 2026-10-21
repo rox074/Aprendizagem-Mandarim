@@ -159,6 +159,27 @@ footer p{font:11px Georgia,serif;color:#5875a6;margin-top:3px}
   .cat-nav .btn, .cat-nav .btn-primary { width: 100%; justify-content: center; }
 }
 
+
+body.night{background:#0c0c0e!important;color:#e8eaf0!important}
+body.night .top{background:rgba(18,18,22,.96)!important;border-bottom-color:#2a2a32!important}
+body.night .brand{color:#f0f2f8!important}
+body.night .brand small{color:#9aa3b5!important}
+body.night .hero{background:linear-gradient(105deg,#151520,#1a1a28 55%,#12121a)!important}
+body.night .hero h1{color:#f0f2f8!important}
+body.night .hero p,body.night .hint,body.night .section-desc,body.night .meta span,body.night .week-body p{color:#9aa3b5!important}
+body.night .tag{background:#1e1e2e!important;border-color:#3d3d5c!important;color:#a5b4fc!important}
+body.night .week-card,body.night .sound,body.night .vocab,body.night .tone-card,body.night .mouth,body.night .note,body.night .tip,body.night .pair,body.night .aspir-box{background:#16161c!important;border-color:#2c2c36!important;color:#e8eaf0!important}
+body.night .week-body h3,body.night .section-title h2,body.night .note strong,body.night .tip strong,body.night .vocab .meta strong,body.night .sound .ex{color:#f0f2f8!important}
+body.night .tabs{background:#16161c!important;border-color:#2c2c36!important}
+body.night .tabs button{color:#a8b0c0!important}
+body.night .tabs button.active{background:linear-gradient(105deg,#5548e7,#6d5ef0)!important;color:#fff!important}
+body.night .btn{background:#1e1e28!important;border-color:#3d3d5c!important;color:#c8cdd8!important}
+body.night .btn-ghost{background:#1e1e28!important;color:#a5b4fc!important}
+body.night footer{background:linear-gradient(#0c0c0e,#12121a)!important;color:#9aa3b5!important}
+body.night .letter{color:#a5b4fc!important}
+body.night .cmp th{background:#1e1e28!important;color:#a5b4fc!important}
+body.night .cmp td{border-color:#2c2c36!important;color:#a8b0c0!important}
+
 </style>
 </head>
 <body>
@@ -495,6 +516,7 @@ footer p{font:11px Georgia,serif;color:#5875a6;margin-top:3px}
 <div class="toast" id="toast"></div>
 
 <script>
+(function(){try{if(localStorage.getItem('mandarim-theme')==='night')document.body.classList.add('night');}catch(e){}})();
 const titles={hub:'Plano mensal',cat1:'Semana 1',cat2:'Semana 2',cat3:'Semana 3',cat4:'Semana 4'};
 let currentView='hub';
 
@@ -509,16 +531,26 @@ function showView(id){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-document.getElementById('btn-home').onclick=()=>showView('hub');
-document.getElementById('btn-back').onclick=()=>showView('hub');
+document.getElementById('btn-home').onclick=()=>{ window.location.href='index.html'; };
+document.getElementById('btn-back').onclick=()=>{ window.location.href='index.html'; };
 document.querySelectorAll('[data-go]').forEach(btn=>{
-  btn.addEventListener('click',()=>{const g=btn.getAttribute('data-go');if(g)showView(g);});
+  btn.addEventListener('click',()=>{
+    const g=btn.getAttribute('data-go');
+    if(!g) return;
+    if(g==='hub' || g==='index'){ window.location.href='index.html'; return; }
+    showView(g);
+  });
 });
 
 // hash on load
 (function(){
   const h=(location.hash||'').replace('#','');
-  if(h&&document.getElementById('view-'+h)) showView(h);
+  if(h && h !== 'hub' && document.getElementById('view-'+h)) {
+    showView(h);
+  } else if(!h || h === 'hub') {
+    // Sem hash ou hub: volta ao index (o plano mensal fica no index)
+    window.location.replace('index.html#plano-mensal');
+  }
 })();
 
 // tabs
