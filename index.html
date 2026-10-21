@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mandarim — Do Zero à Fluência</title>
 <style>
+
 :root{--ink:#10285f;--muted:#506d9d;--line:#dce7fa;--purple:#5b50e8;--green:#22a77b}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:75px}body{margin:0;color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:#fff}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.top{height:62px;display:flex;align-items:center;gap:25px;padding:0 3.5%;position:sticky;top:0;z-index:9;background:#ffffffed;border-bottom:1px solid #e5edfb}.brand{display:flex;align-items:center;gap:9px;min-width:200px;font-size:18px;font-weight:850;line-height:1.05}.brand i{font-style:normal;font-size:28px}.brand small{display:block;font-size:10px}.nav{display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,26px);flex:1;font-size:12px;white-space:nowrap}.nav a{height:62px;display:flex;align-items:center;border-bottom:2px solid transparent}.nav a:hover{border-color:var(--purple)}.tools{display:flex;gap:8px}.tools button{border:0;border-radius:12px;padding:9px 12px;background:#eff1ff;color:#4448d7}.tools .menu{background:var(--purple);color:white;display:none}.hero{padding:30px 3.5%;min-height:220px;position:relative;overflow:hidden;background:linear-gradient(105deg,#edf3ff,#f4f7ff 55%,#e6f1ff)}.hero:after{content:"🌸";position:absolute;right:clamp(18px,5vw,72px);top:24px;font-size:38px;z-index:1}.hero-copy{position:relative;z-index:1;max-width:670px}.tag{display:inline-block;padding:4px 10px;border:1px solid #abbaff;border-radius:20px;background:#eff1ff;color:#2a47b8;font-size:11px;font-weight:800}.hero h1{font-size:clamp(28px,3.4vw,38px);line-height:1.15;letter-spacing:-1px;margin:9px 0}.hero p{max-width:590px;color:var(--muted);margin:0}.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}.pills span{background:#ffffffd9;border:1px solid #edf2ff;border-radius:24px;padding:9px 12px;font-size:10px;color:#3e5a8b}.calligraphy{position:absolute;right:clamp(70px,12vw,180px);top:42px;font-size:25px;font-weight:850;text-align:center;min-width:150px}.calligraphy small{display:block;font-size:15px;margin-top:5px}.switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:16px 3%;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fbfcff}.switch button{border:0;border-right:1px solid var(--line);padding:13px 8px;background:transparent;color:var(--ink);font-weight:750}.switch button:last-child{border:0}.switch button.active{background:linear-gradient(100deg,#5548e7,#7656dd);color:#fff}.wrap{width:min(1440px,94%);margin:auto}.section{padding:8px 0 23px;border-bottom:1px solid #e3ebf9;scroll-margin-top:75px}.heading{display:flex;align-items:center;gap:13px;margin:5px 0 20px}.bigicon{font-size:30px;color:#4f5fe7}.heading h2,.monthly h2{font-size:20px;margin:0 0 4px}.heading p,.monthly p{font-size:12px;color:var(--muted);margin:0}.spacer{flex:1}.prog{width:33%;min-width:220px;color:var(--muted);font-size:11px}.prog label{display:flex;justify-content:space-between;margin-bottom:6px}.track{height:11px;background:#e9f0fc;border-radius:20px;overflow:hidden}.track span{display:block;height:100%;width:43%;background:linear-gradient(90deg,#5148e5,#5a83ef);border-radius:20px}.pct{background:#eef0ff;color:#3e43ca;padding:7px 10px;border-radius:20px;font-weight:800}.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}.day{border:1px solid #dce8f6;border-radius:9px;overflow:hidden;min-width:0}.day.done{border-color:#b8eadb}.day.current{border-color:#bad7ff}.daytop{display:flex;gap:7px;padding:10px 8px;min-height:47px;background:#effaf6}.day:nth-child(n+4) .daytop{background:#f5f8fd}.day.current .daytop{background:#eef5ff}.dayname{font-size:12px;font-weight:800}.date{font-size:9px;color:#667da0}.tasks{padding:10px 8px 4px;display:grid;gap:10px}.task{display:flex;align-items:flex-start;gap:6px;font-size:11px;line-height:1.4;color:#344f7e}.task input{appearance:none;width:12px;height:12px;flex:0 0 12px;margin:0;border:1.5px solid #8295b5;border-radius:3px}.task input:checked{background:#299b7a;border-color:#299b7a}.task input:checked:after{content:"✓";display:block;color:#fff;font-size:9px;text-align:center}.status{margin:10px 8px 8px;padding:8px 6px;border-radius:8px;background:#f0f4f9;font-size:10px;display:flex;gap:7px;align-items:center;color:#456084}.done .status{background:#e8faf3;color:#087750}.monthly{padding-top:8px}.monthhead{display:flex;align-items:center;gap:13px;margin-bottom:20px}.monthhead .bigicon{font-size:30px}.outline{margin-left:auto;border:1px solid #a9b1ff;color:#343fc9;background:white;border-radius:13px;padding:10px 14px;font-size:11px;font-weight:750}.months{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.monthcard{border:1px solid var(--tone);border-radius:9px;overflow:hidden;min-width:0}.monthtop{padding:12px;background:var(--tint);display:flex;align-items:center;gap:10px;font-size:11px;color:var(--tone);font-weight:800}.num{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--tone);color:white;box-shadow:inset 0 0 0 4px #ffffff45}.mbody{padding:12px}.mbody h3{font-size:13px;margin:0 0 8px}.mbody p{font:12px/1.5 Georgia,serif;min-height:43px;margin:0 0 14px;color:#3e5d91}.mprogress{display:flex;justify-content:space-between;font-size:9px;color:var(--muted);margin-bottom:7px}.months .track{height:10px}.monthcard .track span{width:0}.contentgrid{display:grid;grid-template-columns:1.45fr 1fr;gap:22px;width:100%;min-width:0}.panel{border:1px solid #e0eaff;border-radius:10px;background:#f7faff;overflow:hidden}.panelhead{padding:10px 14px;background:#f0f5ff}.panelhead h3{font-size:13px;margin:0 0 4px}.panelhead p{font-size:11px;color:var(--muted);margin:0}.tones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:9px 12px 12px}.tone{border:1px solid var(--tone);border-radius:10px;overflow:hidden;text-align:center;background:white;min-width:0}.tonemain{padding:9px 3px 7px;background:var(--tint)}.tonemain strong{display:block;color:var(--tone);font-size:18px}.tonemain small{display:block;font-size:9px;color:var(--tone);margin-top:3px}.tonemain svg{width:90%;height:35px;margin-top:7px}.hanzi{font-size:21px;margin-top:5px}.translation{font-size:10px;padding:0 3px 9px}.chars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:10px 12px}.char{text-align:center;border:1px solid #dbe8fb;border-radius:9px;background:white;padding:9px 3px}.char strong{display:block;font-size:12px;margin:4px}.char .hanzi{font-size:27px;color:var(--c);font-weight:800}.char small{font-size:10px}.tip{margin:5px 12px 10px;padding:10px;background:#eef5ff;border:1px solid #e0eaff;border-radius:9px;font-size:10px;color:#42618f;line-height:1.5}.ytgrid{display:grid;grid-template-columns:2fr .85fr;gap:16px}.teachers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.teacher{border:1px solid #dce8fa;border-radius:10px;padding:13px;display:grid;grid-template-columns:52px 1fr;gap:10px;min-width:0}.avatar{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#f6c18e,#e6a67e);display:grid;place-items:center;font-size:25px}.teacher h3{font-size:12px;margin:0 0 3px}.teacher p{font-size:10px;color:var(--muted);margin:0 0 8px}.teacher ul{margin:0;padding-left:13px;color:#2758bd;font-size:10px;line-height:1.7}.teacher .desc{font-size:9px;color:#58739e;margin-top:8px}.tips{background:#f5f3ff;border:1px solid #e4e0ff;border-radius:10px;padding:14px}.tips h3{font-size:12px;color:#3439be;margin:0 0 12px}.tips p{font-size:10px;line-height:1.55;color:#405b8c}.footer{text-align:center;padding:18px 10px 28px;background:linear-gradient(#fff,#f1f7ff);color:#2b4b8a}.footer strong{font-family:Georgia,serif;letter-spacing:3px}.footer p{font:11px Georgia,serif;color:#5875a6;margin:6px 0 0}
 @media(max-width:1100px){.top{gap:13px;padding:0 2.5%}.brand{min-width:155px}.nav{gap:12px;font-size:11px}.week{grid-template-columns:repeat(4,minmax(0,1fr))}.contentgrid{grid-template-columns:1fr}.ytgrid{grid-template-columns:1fr}.tips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}.tips h3{grid-column:1/-1}}
 @media(max-width:760px){.top{height:58px;padding:0 14px}.brand{min-width:0;flex:1;font-size:16px}.brand i{font-size:24px}.nav{display:none;position:absolute;top:58px;left:0;right:0;background:#fff;box-shadow:0 8px 24px #1d42891a;padding:8px 14px 14px;grid-template-columns:repeat(2,minmax(0,1fr));white-space:normal}.nav.open{display:grid}.nav a{height:auto;padding:12px 8px;border-bottom:1px solid #edf1fa}.tools .menu{display:block}.hero{padding:25px 20px;min-height:230px}.hero:after{font-size:35px}.hero h1{font-size:29px;max-width:480px}.hero p{font-size:13px}.calligraphy{display:none}.pills{gap:6px}.pills span{padding:8px 10px}.switch{grid-template-columns:repeat(2,minmax(0,1fr));margin:12px;border-radius:16px}.switch button{padding:12px 5px;font-size:12px;border-bottom:1px solid var(--line)}.switch button:nth-child(2){border-right:0}.switch button:nth-child(n+3){border-bottom:0}.wrap{width:calc(100% - 24px)}.section{padding-bottom:18px}.heading{align-items:flex-start;gap:10px;flex-wrap:wrap}.bigicon{font-size:26px}.heading h2,.monthly h2{font-size:18px}.heading p,.monthly p{font-size:11px;line-height:1.45}.spacer{display:none}.prog{width:100%;min-width:0;order:3;margin-left:36px}.pct{margin-left:auto}.week{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.day:last-child{grid-column:1/-1}.tasks{padding:10px;gap:10px}.task{font-size:11px}.monthhead{align-items:flex-start;flex-wrap:wrap}.outline{margin-left:36px}.months{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.mbody{padding:10px}.mbody p{min-height:0;font-size:11px}.monthtop{padding:10px}.num{width:25px;height:25px}.tones{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:9px}.tonemain strong{font-size:21px}.tonemain svg{height:42px}.chars{gap:7px;padding:8px}.char .hanzi{font-size:25px}.teachers{grid-template-columns:1fr}.teacher{padding:12px}.tips{display:block}.footer{margin-top:12px}}
@@ -14,32 +15,16 @@
 /* Correção de contraste dos cards semanais no modo escuro */
 .daytop, .day:nth-child(n+4) .daytop, .day.current .daytop { background:#effaf6!important; color:#10285f!important; }
 .dayname { color:#10285f!important; }
-body.night .day, body.night .day:nth-child(n+4) { background:#101010!important; border-color:#555!important; }
-body.night .daytop, body.night .day:nth-child(n+4) .daytop, body.night .day.current .daytop { background:#202c28!important; color:#fff!important; border-color:#444!important; }
-body.night .dayname { color:#fff!important; }
-body.night .tasks, body.night .task, body.night .task span { background:transparent!important; color:#f1f5f9!important; }
-body.night .task input { background:#080808!important; border-color:#a8c4df!important; }
-body.night .status, body.night .day .status { background:#242424!important; color:#e5e7eb!important; }
-body.night .status b { color:#fbbf24!important; }
-body.night .day.done .status { background:#12372c!important; color:#b9f6d7!important; }
-body.night .day.done .status b { color:#78e0b5!important; }
+
 #calendario .bigicon, #plano-mensal .bigicon { font-size:27px; line-height:1.2; }
 
 /* Ajustes finais: cabeçalhos uniformes no modo escuro */
-body.night .day { background:#101010!important; color:#f5f5f5!important; border-color:#444!important; }
-body.night .daytop,
-body.night .day:nth-child(n+4) .daytop,
-body.night .day.current .daytop { background:#24483c!important; color:#f4fff9!important; border-color:#355e50!important; }
-body.night .dayname, body.night .daytop span { color:#f4fff9!important; }
-body.night .tasks, body.night .task, body.night .task span { background:transparent!important; color:#f1f5f3!important; }
-body.night .status { background:#242424!important; color:#f1f5f3!important; }
-body.night .switch button[data-target="calendario"], body.night .switch button[data-target="plano-mensal"] { font-size:inherit; }
 
 .routine-list{margin:8px 0 0;padding-left:19px;display:flex;flex-direction:column;gap:7px;line-height:1.45;font-size:inherit}
 .routine-list li{padding-left:1px}
 .routine-list strong{font-weight:700}
 .routine-note{margin-top:10px;font-size:.92em;line-height:1.45;opacity:.88}
-body.night .routine-list,body.night .routine-note{color:#f2f5f8}
+
 @media(max-width:650px){.routine-list{gap:9px}}
 
 /* Rotinas: layout mais compacto e cronogramas consistentes */
@@ -54,7 +39,6 @@ body.night .routine-list,body.night .routine-note{color:#f2f5f8}
 #rotina-estudos .mbody>p{font-size:11px;line-height:1.35;min-height:0;margin:0}
 @media(max-width:1000px){#rotina-estudos .months{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){#rotina-estudos .months{grid-template-columns:1fr}#rotina-estudos .routine-list{font-size:12px;gap:5px}}
-
 
 /* Alinhamento e legibilidade das dicas e do próximo passo */
 .tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
@@ -113,128 +97,8 @@ body.night .routine-list,body.night .routine-note{color:#f2f5f8}
 }
 
 /* ===== Modo noturno mais próximo do claro ===== */
-body.night {
-  background: #0c0c0e !important;
-  color: #e8eaf0 !important;
-}
-body.night header.top,
-body.night .top {
-  background: rgba(18,18,22,0.96) !important;
-  border-bottom-color: #2a2a32 !important;
-}
-body.night .hero {
-  background: linear-gradient(105deg, #151520, #1a1a28 55%, #12121a) !important;
-}
-body.night .hero h1,
-body.night .calligraphy,
-body.night .calligraphy-hanzi,
-body.night .calligraphy-text small {
-  color: #f0f2f8 !important;
-}
-body.night .hero p,
-body.night .heading p,
-body.night .monthly p {
-  color: #9aa3b5 !important;
-}
-body.night .tag {
-  background: #1e1e2e !important;
-  border-color: #3d3d5c !important;
-  color: #a5b4fc !important;
-}
-body.night .pills span {
-  background: #1a1a24 !important;
-  border-color: #2e2e3a !important;
-  color: #b0b8cc !important;
-}
-body.night .switch {
-  background: #16161c !important;
-  border-color: #2e2e38 !important;
-}
-body.night .switch button {
-  color: #c8cdd8 !important;
-  border-color: #2e2e38 !important;
-}
-body.night .switch button.active {
-  background: linear-gradient(105deg, #5548e7, #6d5ef0) !important;
-  color: #fff !important;
-}
-body.night .section,
-body.night .monthcard,
-body.night .panel,
-body.night .teacher,
-body.night .day,
-body.night .tips-improved,
-body.night .tips-wrapper .tips {
-  background: #16161c !important;
-  border-color: #2c2c36 !important;
-  color: #e8eaf0 !important;
-  border-radius: 14px !important;
-}
-body.night .monthtop,
-body.night .daytop,
-body.night .panelhead {
-  background: #1e1e28 !important;
-  color: #d4d4de !important;
-  border-color: #2c2c36 !important;
-}
-body.night .monthtop { color: inherit !important; }
-body.night h2, body.night h3,
-body.night .mbody h3,
-body.night .teacher-info h3 {
-  color: #f0f2f8 !important;
-}
-body.night .mbody p,
-body.night .routine-list,
-body.night .routine-list li,
-body.night .teacher p,
-body.night .teacher .desc,
-body.night .task,
-body.night .status {
-  color: #a8b0c0 !important;
-}
-body.night .teacher-links a {
-  background: #1e1e28 !important;
-  border-color: #333340 !important;
-  color: #93c5fd !important;
-}
-body.night .teacher-links a:hover {
-  background: #252532 !important;
-  color: #bfdbfe !important;
-}
-body.night #plano-mensal .week-page-button,
-body.night .btn-primary {
-  background: linear-gradient(105deg, #5548e7, #6d5ef0) !important;
-  color: #fff !important;
-  border: none !important;
-}
-body.night .footer {
-  background: linear-gradient(#0c0c0e, #12121a) !important;
-  color: #9aa3b5 !important;
-}
-body.night .num {
-  box-shadow: inset 0 0 0 3px rgba(255,255,255,0.12) !important;
-}
-body.night #conteudo .monthcard {
-  background: #16161c !important;
-  border-width: 1px !important;
-}
-/* Preserve accent borders on course cards in night mode */
-body.night #conteudo .monthcard[style*="4d5ee5"] { border-color: #4d5ee5 !important; }
-body.night #conteudo .monthcard[style*="1e9b70"] { border-color: #1e9b70 !important; }
-body.night #conteudo .monthcard[style*="d77b16"] { border-color: #d77b16 !important; }
-body.night #conteudo .monthcard[style*="c4478d"] { border-color: #c4478d !important; }
 
-body.night .track { background: #2a2a35 !important; }
-body.night .pct {
-  background: #1e1e2e !important;
-  color: #a5b4fc !important;
-}
-body.night header.top .nav a { color: #c8cdd8 !important; }
-body.night header.top .nav.open { background: #16161c !important; }
-body.night .tools button {
-  background: #1e1e2e !important;
-  color: #a5b4fc !important;
-}
+/* Preserve accent borders on course cards in night mode */
 
 .teacher-xiao { grid-column: 1 / -1 !important; }
 @media (max-width: 760px) {
@@ -249,21 +113,10 @@ body.night .tools button {
 .task { font-size:13px!important; line-height:1.5!important; gap:8px!important; }
 .task input { width:14px!important; height:14px!important; flex-basis:14px!important; margin-top:2px!important; }
 .status { font-size:11px!important; }
-body.night .daytop, body.night .day:nth-child(n+4) .daytop, body.night .day.current .daytop { background:#24483c!important; color:#f4fff9!important; border-color:#355e50!important; }
-body.night .dayname { color:#f4fff9!important; }
-body.night .task, body.night .task span { color:#f1f5f3!important; }
+
 @media(max-width:390px) { .task { font-size:12px!important; } .dayname { font-size:12px!important; } }
 
 /* Ajustes finais: cabeçalhos uniformes no modo escuro */
-body.night .day { background:#101010!important; color:#f5f5f5!important; border-color:#444!important; }
-body.night .daytop,
-body.night .day:nth-child(n+4) .daytop,
-body.night .day.current .daytop { background:#24483c!important; color:#f4fff9!important; border-color:#355e50!important; }
-body.night .dayname, body.night .daytop span { color:#f4fff9!important; }
-body.night .tasks, body.night .task, body.night .task span { background:transparent!important; color:#f1f5f3!important; }
-body.night .status { background:#242424!important; color:#f1f5f3!important; }
-body.night .switch button[data-target="calendario"], body.night .switch button[data-target="plano-mensal"] { font-size:inherit; }
-
 
 /* Alinhamento e legibilidade das dicas e do próximo passo */
 .tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
@@ -310,7 +163,6 @@ body.night .switch button[data-target="calendario"], body.night .switch button[d
   #rotina-estudos .monthcard:nth-child(4) { grid-column: auto; }
   #rotina-estudos .monthcard:nth-child(3) .routine-list { grid-template-columns: 1fr; }
 }
-
 
 /* Alinhamento e legibilidade das dicas e do próximo passo */
 .tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
@@ -566,54 +418,6 @@ header.top .tools button { border-radius: 10px !important; }
 #plano-mensal .mbody { flex: 1 !important; }
 
 /* Dark mode compact */
-body.night .day, body.night .day:nth-child(n+4),
-body.night .monthcard, body.night .panel, body.night .tone,
-body.night .char, body.night .teacher {
-  background: #18181b !important;
-  border-color: #2e2e32 !important;
-  color: #f4f4f5 !important;
-  border-radius: 14px !important;
-}
-body.night .daytop, body.night .day:nth-child(n+4) .daytop {
-  background: #27272a !important;
-  color: #e4e4e7 !important;
-}
-body.night .dayname, body.night .daytop span { color: #e4e4e7 !important; }
-body.night .task, body.night .task span { color: #e4e4e7 !important; background: transparent !important; }
-body.night .status { background: #27272a !important; color: #d4d4d8 !important; border-radius: 10px !important; }
-body.night .day.done .status { background: #14532d !important; color: #86efac !important; }
-body.night .monthtop { background: #27272a !important; color: #f4f4f5 !important; }
-body.night .mbody h3 { color: #fafafa !important; }
-body.night .mbody p, body.night .routine-list li { color: #a1a1aa !important; }
-body.night #plano-mensal .week-page-button {
-  background: linear-gradient(105deg, #6d5ef0, #8b6ef0) !important;
-  color: #fff !important;
-  border: none !important;
-}
-body.night .teacher-info h3 { color: #f4f4f5 !important; }
-body.night .teacher-info .channel { color: #a1a1aa !important; }
-body.night .teacher-links a {
-  background: #27272a !important;
-  border-color: #3f3f46 !important;
-  color: #93c5fd !important;
-}
-body.night .teacher .desc { color: #a1a1aa !important; border-top-color: #2e2e32 !important; }
-body.night .tips-improved { background: #18181b !important; border-color: #2e2e32 !important; }
-body.night .tips-icon { background: #27272a !important; }
-body.night .tips-improved h3 { color: #a5b4fc !important; }
-body.night .tips-list li { background: #27272a !important; border-color: #3f3f46 !important; color: #e4e4e7 !important; }
-body.night .tip-highlight { background: #292524 !important; border-color: #44403c !important; color: #fcd34d !important; }
-body.night .switch { background: #18181b !important; border-color: #2e2e32 !important; }
-body.night .switch button { color: #e4e4e7 !important; }
-body.night .switch button.active {
-  background: linear-gradient(105deg, #6d5ef0, #8b6ef0) !important;
-  color: #fff !important;
-}
-body.night header.top { background: rgba(10,10,10,0.95) !important; border-bottom-color: #27272a !important; }
-body.night header.top .nav a { color: #d4d4d8 !important; }
-body.night .panelhead { background: #27272a !important; }
-body.night .tip { background: #27272a !important; border-color: #3f3f46 !important; color: #d4d4d8 !important; }
-body.night #contato h2, body.night #contato p { color: #e4e4e7 !important; }
 
 /* ========== MOBILE ========== */
 @media (max-width: 760px) {
@@ -651,8 +455,8 @@ body.night #contato h2, body.night #contato p { color: #e4e4e7 !important; }
     text-align: center !important;
   }
   header.top .tools .menu { display: block !important; }
-  body.night header.top .nav { background: #141414 !important; border: 1px solid #2e2e32; }
-  body.night header.top .nav a { border-color: #2e2e32 !important; color: #e4e4e7 !important; }
+  
+  
 
   .switch {
     width: calc(100% - 24px) !important;
@@ -762,33 +566,11 @@ body.night #contato h2, body.night #contato p { color: #e4e4e7 !important; }
   .tones { grid-template-columns: 1fr !important; }
 }
 
-body.night{background:#000!important;color:#fff!important;--ink:#fff;--muted:#d0d0d0;--line:#333;color-scheme:dark}
-body.night .wrap,body.night main,body.night .section,body.night .switch,body.night .panel,body.night .day,body.night .monthcard,body.night .tone,body.night .char,body.night .teacher,body.night .tips,body.night .routine-card,body.night .character{background:#000!important;color:#fff!important;border-color:#333!important}
-body.night .top,body.night .nav.open,body.night .daytop,body.night .monthtop,body.night .panelhead,body.night .tonemain,body.night .tip,body.night .status,body.night .pct,body.night .footer{background:#000!important;color:#fff!important;border-color:#333!important}
-body.night .prog{color:#ddd!important}
-body.night .track{background:#383838!important;border:1px solid #555!important;min-height:11px}
-body.night .track span{display:block!important;background:#79d8b4!important;min-width:0;height:100%!important}
-body.night .mbody p,body.night .heading p,body.night .monthly p,body.night .task,body.night .date,body.night .teacher p,body.night .teacher li,body.night .desc,body.night .tips p,body.night .footer p{color:#ccc!important}
-body.night .prog .track{background:#383838!important}
-body.night .monthcard .track{background:#383838!important}
-body.night .hero{background:#000!important;color:#fff!important}body.night .hero p{color:#ccc!important}
-body.night .track span{background:#fff!important}body.night .switch button{background:#000!important;color:#fff!important;border-color:#333!important}body.night .switch button.active{background:#fff!important;color:#000!important}
-body.night .outline,body.night .tag,body.night .pills span,body.night .tools button{background:#000!important;color:#fff!important;border:1px solid #555!important}
-body.night .footer{background:#000!important}
 @media(min-width:761px){.week{grid-template-columns:repeat(12,minmax(0,1fr))}.day{grid-column:span 3}.day:nth-child(n+5){grid-column:span 4}}
 @media(max-width:760px){.switch{grid-template-columns:repeat(2,minmax(0,1fr))}.week{grid-template-columns:repeat(2,minmax(0,1fr))}.day,.day:nth-child(n+5){grid-column:auto}.day:last-child{grid-column:1/-1}}
 .daytop{background:#effaf6!important}
 
 /* Ajustes finais: cabeçalhos uniformes no modo escuro */
-body.night .day { background:#101010!important; color:#f5f5f5!important; border-color:#444!important; }
-body.night .daytop,
-body.night .day:nth-child(n+4) .daytop,
-body.night .day.current .daytop { background:#24483c!important; color:#f4fff9!important; border-color:#355e50!important; }
-body.night .dayname, body.night .daytop span { color:#f4fff9!important; }
-body.night .tasks, body.night .task, body.night .task span { background:transparent!important; color:#f1f5f3!important; }
-body.night .status { background:#242424!important; color:#f1f5f3!important; }
-body.night .switch button[data-target="calendario"], body.night .switch button[data-target="plano-mensal"] { font-size:inherit; }
-
 
 /* Alinhamento e legibilidade das dicas e do próximo passo */
 .tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
@@ -825,27 +607,8 @@ body.night .switch button[data-target="calendario"], body.night .switch button[d
   .hero:after { right:14px; top:8px; font-size:30px; opacity:.8; }
   .calligraphy { display:none; }
 }
-body.night .prog, body.night .prog label { color:#e5e7eb!important; }
-body.night .prog .track, body.night .track { background:#383838!important; border:1px solid #626262!important; }
-body.night .prog .track span, body.night #bar { display:block!important; background:#78e0b5!important; }
-body.night .pct { background:#252525!important; color:#fff!important; border:1px solid #555!important; }
-body.night .mbody, body.night .mbody h3, body.night .monthtop { color:#fff!important; }
-body.night .mbody p { color:#ddd!important; }
-body.night .monthcard, body.night #conteudo .monthcard { background:#080808!important; }
-body.night .monthtop { background:#191919!important; }
-body.night .panelhead, body.night .panel { background:#080808!important; color:#fff!important; }
-body.night .hero:after { filter:none; }
 
 /* Ajustes finais: cabeçalhos uniformes no modo escuro */
-body.night .day { background:#101010!important; color:#f5f5f5!important; border-color:#444!important; }
-body.night .daytop,
-body.night .day:nth-child(n+4) .daytop,
-body.night .day.current .daytop { background:#24483c!important; color:#f4fff9!important; border-color:#355e50!important; }
-body.night .dayname, body.night .daytop span { color:#f4fff9!important; }
-body.night .tasks, body.night .task, body.night .task span { background:transparent!important; color:#f1f5f3!important; }
-body.night .status { background:#242424!important; color:#f1f5f3!important; }
-body.night .switch button[data-target="calendario"], body.night .switch button[data-target="plano-mensal"] { font-size:inherit; }
-
 
 /* Alinhamento e legibilidade das dicas e do próximo passo */
 .tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
@@ -885,7 +648,6 @@ body.night .switch button[data-target="calendario"], body.night .switch button[d
  .calligraphy { display:none!important; }
 }
 @media(max-width:390px) { #conteudo .months { grid-template-columns:1fr; } }
-
 
 /* Alinhamento e legibilidade das dicas e do próximo passo */
 .tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
@@ -933,8 +695,6 @@ body.night .switch button[data-target="calendario"], body.night .switch button[d
  #rotina-estudos .monthcard:nth-child(3) .routine-list{grid-template-columns:repeat(2,minmax(0,1fr));}
 }
 @media(max-width:480px){#rotina-estudos .monthcard:nth-child(3) .routine-list{grid-template-columns:1fr;}}
-body.night #rotina-estudos .monthcard:nth-child(4) .monthtop{background:#3a2634!important;color:#ffd6e9!important;}
-
 
 /* Alinhamento e legibilidade das dicas e do próximo passo */
 .tips { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
@@ -980,7 +740,6 @@ body.night #rotina-estudos .monthcard:nth-child(4) .monthtop{background:#3a2634!
   line-height: 1.3;
 }
 .calligraphy small { font-size: 14px !important; line-height: 1.5; }
-body.night .calligraphy { background: #151515 !important; border-color: #444 !important; color: #f5f5f5 !important; }
 
 @media (max-width: 900px) {
   .hero { align-items: flex-start; }
@@ -1028,11 +787,7 @@ body.night .calligraphy { background: #151515 !important; border-color: #444 !im
   font-size: 24px;
   vertical-align: middle;
 }
-body.night .calligraphy {
-  background: transparent !important;
-  border: 0 !important;
-  color: #f5f5f5 !important;
-}
+
 @media (max-width: 900px) {
   .calligraphy { margin-left: 28px !important; }
 }
@@ -1296,10 +1051,7 @@ body.night .calligraphy {
   font-size: 58px !important;
   line-height: 1 !important;
 }
-body.night .calligraphy-sakura-box {
-  background: #1b1b1b !important;
-  border-color: #444 !important;
-}
+
 @media (max-width: 760px) {
   .calligraphy {
     flex-direction: row !important;
@@ -1330,13 +1082,6 @@ body.night .calligraphy-sakura-box {
 .calligraphy-hanzi,
 .calligraphy-text small {
   color: #102f70 !important;
-}
-body.night .calligraphy,
-body.night .calligraphy-text,
-body.night .calligraphy-main,
-body.night .calligraphy-hanzi,
-body.night .calligraphy-text small {
-  color: #f5f5f5 !important;
 }
 
 /* Cartões do plano mensal: tipografia mais legível e sem barras de progresso inoperantes */
@@ -1381,11 +1126,7 @@ body.night .calligraphy-text small {
   transform: translateY(-1px);
   filter: brightness(.97);
 }
-body.night #plano-mensal .week-page-button {
-  background: #171717 !important;
-  color: #f5f5f5 !important;
-  border-color: var(--tone, #777) !important;
-}
+
 @media (max-width: 760px) {
   #plano-mensal .mbody h3 { font-size: 16px !important; }
   #plano-mensal .mbody p { font-size: 14px !important; }
@@ -1433,16 +1174,6 @@ body.night #plano-mensal .week-page-button {
   line-height: 1.6;
   color: #405b8c;
   margin: 2px 0;
-}
-body.night .tips-wrapper .tips {
-  background: #111;
-  border-color: #333;
-}
-body.night .tips-wrapper .tips h3 {
-  color: #a5b4fc;
-}
-body.night .tips-wrapper .tips p {
-  color: #ccc;
 }
 
 /* --- 1. Exemplo de Caracteres e Dicas --- */
@@ -1528,42 +1259,6 @@ body.night .tips-wrapper .tips p {
 }
 
 /* 4. Modo Noturno (Conserto de itens escuros) */
-body.night .section, 
-body.night .monthcard, 
-body.night .panel, 
-body.night .teacher, 
-body.night .tips-wrapper .tips {
-  background: #121212 !important;
-  border-color: #333 !important;
-}
-body.night .monthtop,
-body.night .daytop {
-  background: #1f1f1f !important;
-  color: #fff !important;
-}
-body.night h2, body.night h3, body.night strong, 
-body.night .heading p, body.night .mbody p,
-body.night .teacher p, body.night .teacher ul,
-body.night .routine-list, body.night .routine-list strong {
-  color: #f1f5f9 !important; /* Branco acinzentado para melhor leitura */
-}
-body.night .routine-note {
-  color: #94a3b8 !important;
-}
-body.night .tip {
-  background: #1e293b !important;
-  border-color: #334155 !important;
-  color: #e2e8f0 !important;
-}
-body.night .teacher ul li a {
-  color: #93c5fd !important; /* Azul claro para links noturnos */
-}
-body.night .teacher ul li a:hover {
-  color: #bfdbfe !important;
-}
-body.night .status { background: #27272a !important; }
-body.night .day.done .status { background: #064e3b !important; color: #a7f3d0 !important; }
-body.night .daytop span, body.night .dayname { color: #fff !important; }
 
 /* 5. Responsividade Mobile */
 @media (max-width: 760px) {
@@ -1641,101 +1336,22 @@ body.night .daytop span, body.night .dayname { color: #fff !important; }
 }
 
 /* Ajuste geral dos cards no modo escuro para não colar nas bordas */
-body.night .monthcard {
-  background: #18181b !important;
-  border: 1px solid #27272a !important;
-  border-radius: 12px !important; /* Arredonda os cards */
-  overflow: hidden !important;
-}
-body.night .monthtop {
-  padding: 14px 18px !important; /* Mais respiro na parte de cima */
-  border-bottom: 1px solid #27272a !important;
-}
-body.night .mbody {
-  padding: 20px 18px !important; /* Mais respiro no conteúdo */
-}
 
 /* Corrige a barra de navegação (switch) que estava pontuda */
-body.night .switch {
-  border-radius: 24px !important; /* Arredonda a barra */
-  border: 1px solid #333 !important; /* Borda suave em vez de ponta reta */
-  background: #121212 !important;
-  overflow: hidden !important; /* Garante que nada vaze */
-}
-body.night .switch button {
-  border-right: 1px solid #333 !important;
-}
-body.night .switch button:last-child {
-  border-right: none !important;
-}
-body.night .switch button.active {
-  background: #f1f5f9 !important; 
-  color: #000 !important;
-  border-radius: 24px !important; /* Arredonda o botão ativo */
-}
 
 /* Ajustes específicos para telas menores */
 @media (max-width: 760px) {
-  body.night .switch {
-    border-radius: 16px !important;
-  }
-  body.night .switch button {
-    border-bottom: 1px solid #333 !important;
-  }
+  
+  
 }
 
 /* 1. Respiro do conteúdo e bordas arredondadas nos containers escuros */
-body.night .section {
-  padding: 24px 20px !important; /* Dá respiro ao conteúdo geral das seções */
-  border-radius: 16px !important;
-  border: 1px solid #27272a !important;
-  background: #0a0a0a !important; /* Fundo ligeiramente distinto do body preto puro */
-  margin-bottom: 16px !important;
-}
-body.night .monthcard, 
-body.night .panel, 
-body.night .teacher, 
-body.night .tips-wrapper .tips {
-  padding: 20px !important; /* Respiro interno para os cards */
-  border-radius: 12px !important;
-  border: 1px solid #27272a !important;
-  background: #121212 !important;
-}
 
 /* Remove o padding duplo dos sub-elementos dos cards */
-body.night .monthcard .mbody, 
-body.night .monthcard .monthtop {
-  padding: 0 0 12px 0 !important;
-  background: transparent !important;
-  border: none !important;
-}
-body.night .monthcard .monthtop {
-  padding-bottom: 16px !important;
-}
 
 /* 2. Remove DEFINITIVAMENTE a borda do emoji de sakura no modo escuro */
-body.night .calligraphy-sakura-box,
-body.night .calligraphy-sakura,
-body.night .calligraphy {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-body.night .calligraphy-sakura-box::after,
-body.night .calligraphy-sakura-box::before {
-  display: none !important;
-}
 
 /* 3. Conserta o formato pontudo da barra de navegação (switch) */
-body.night .switch {
-  border-radius: 24px !important;
-  border: 1px solid #333 !important;
-  background: #121212 !important;
-}
-body.night .switch button.active {
-  border-radius: 20px !important; /* Arredonda o botão ativo interno */
-}
 
 /* V27 — Desktop estável + fix barra progresso calendário mobile */
 
@@ -1973,54 +1589,6 @@ header.top .tools button { border-radius: 10px !important; }
 #plano-mensal .mbody { flex: 1 !important; }
 
 /* Dark mode compact */
-body.night .day, body.night .day:nth-child(n+4),
-body.night .monthcard, body.night .panel, body.night .tone,
-body.night .char, body.night .teacher {
-  background: #18181b !important;
-  border-color: #2e2e32 !important;
-  color: #f4f4f5 !important;
-  border-radius: 14px !important;
-}
-body.night .daytop, body.night .day:nth-child(n+4) .daytop {
-  background: #27272a !important;
-  color: #e4e4e7 !important;
-}
-body.night .dayname, body.night .daytop span { color: #e4e4e7 !important; }
-body.night .task, body.night .task span { color: #e4e4e7 !important; background: transparent !important; }
-body.night .status { background: #27272a !important; color: #d4d4d8 !important; border-radius: 10px !important; }
-body.night .day.done .status { background: #14532d !important; color: #86efac !important; }
-body.night .monthtop { background: #27272a !important; color: #f4f4f5 !important; }
-body.night .mbody h3 { color: #fafafa !important; }
-body.night .mbody p, body.night .routine-list li { color: #a1a1aa !important; }
-body.night #plano-mensal .week-page-button {
-  background: linear-gradient(105deg, #6d5ef0, #8b6ef0) !important;
-  color: #fff !important;
-  border: none !important;
-}
-body.night .teacher-info h3 { color: #f4f4f5 !important; }
-body.night .teacher-info .channel { color: #a1a1aa !important; }
-body.night .teacher-links a {
-  background: #27272a !important;
-  border-color: #3f3f46 !important;
-  color: #93c5fd !important;
-}
-body.night .teacher .desc { color: #a1a1aa !important; border-top-color: #2e2e32 !important; }
-body.night .tips-improved { background: #18181b !important; border-color: #2e2e32 !important; }
-body.night .tips-icon { background: #27272a !important; }
-body.night .tips-improved h3 { color: #a5b4fc !important; }
-body.night .tips-list li { background: #27272a !important; border-color: #3f3f46 !important; color: #e4e4e7 !important; }
-body.night .tip-highlight { background: #292524 !important; border-color: #44403c !important; color: #fcd34d !important; }
-body.night .switch { background: #18181b !important; border-color: #2e2e32 !important; }
-body.night .switch button { color: #e4e4e7 !important; }
-body.night .switch button.active {
-  background: linear-gradient(105deg, #6d5ef0, #8b6ef0) !important;
-  color: #fff !important;
-}
-body.night header.top { background: rgba(10,10,10,0.95) !important; border-bottom-color: #27272a !important; }
-body.night header.top .nav a { color: #d4d4d8 !important; }
-body.night .panelhead { background: #27272a !important; }
-body.night .tip { background: #27272a !important; border-color: #3f3f46 !important; color: #d4d4d8 !important; }
-body.night #contato h2, body.night #contato p { color: #e4e4e7 !important; }
 
 /* ========== MOBILE ========== */
 @media (max-width: 760px) {
@@ -2058,8 +1626,8 @@ body.night #contato h2, body.night #contato p { color: #e4e4e7 !important; }
     text-align: center !important;
   }
   header.top .tools .menu { display: block !important; }
-  body.night header.top .nav { background: #141414 !important; border: 1px solid #2e2e32; }
-  body.night header.top .nav a { border-color: #2e2e32 !important; color: #e4e4e7 !important; }
+  
+  
 
   .switch {
     width: calc(100% - 24px) !important;
@@ -2174,6 +1742,573 @@ body.night #contato h2, body.night #contato p { color: #e4e4e7 !important; }
 @media (max-width: 760px) {
   .teacher-xiao { grid-column: 1 !important; }
 }
+
+/* ========== SWITCH layout (light + mobile) ========== */
+.switch {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+@media (max-width: 760px) {
+  .switch {
+    grid-template-columns: 1fr !important;
+  }
+  .switch button {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line) !important;
+  }
+  .switch button:last-child { border-bottom: none !important; }
+}
+
+/* ========== MODO ESCURO — mesmas formas, só cores ========== */
+
+/* Header */
+
+/* Hero — mesmo gradiente, versão escura */
+
+/* Switch — espelho do claro */
+
+/* Seções: NÃO muda padding/radius — só borda inferior */
+
+/* Cards = fundo cinza escuro + borda cinza (como branco + borda azul no claro) */
+
+/* Cabeçalhos de card (daytop / monthtop) */
+
+/* Bordas de destaque das semanas (iguais ao claro) */
+
+@media (max-width: 760px) {
+  
+  
+}
+
+/* Reset layout night = igual ao claro (anula regras antigas) */
+
+
+
+/* ===== MODO ESCURO (espelho do claro) ===== */
+body.night {
+  --ink: #f0f0f0;
+  --muted: #a0a0a0;
+  --line: #2e2e2e;
+  background: #0d0d0d;
+  color: #f0f0f0;
+}
+
+body.night .top,
+body.night header.top {
+  background: rgba(13,13,13,0.95);
+  border-bottom-color: #2e2e2e;
+}
+body.night .brand,
+body.night .brand small { color: #f0f0f0; }
+body.night .nav a { color: #d4d4d4; }
+body.night .nav a:hover {
+  background: #1a1a1a;
+  border-color: #333;
+}
+body.night .tools button {
+  background: #1a1a1a;
+  color: #e5e5e5;
+}
+
+body.night .hero {
+  background: linear-gradient(105deg, #151515, #1a1a1a 55%, #121212);
+}
+body.night .hero h1,
+body.night .calligraphy,
+body.night .calligraphy small { color: #f5f5f5; }
+body.night .hero p { color: #a0a0a0; }
+body.night .tag {
+  background: #1a1a1a;
+  border-color: #3a3a3a;
+  color: #d4d4d4;
+}
+body.night .pills span {
+  background: #171717;
+  border-color: #2e2e2e;
+  color: #b0b0b0;
+}
+
+body.night .switch {
+  background: #161616;
+  border-color: #2e2e2e;
+}
+body.night .switch button {
+  color: #e0e0e0;
+  background: transparent;
+  border-right-color: #2e2e2e;
+  border-bottom-color: #2e2e2e;
+}
+body.night .switch button.active {
+  background: linear-gradient(100deg, #5548e7, #7656dd);
+  color: #fff;
+}
+
+body.night .section { border-bottom-color: #2e2e2e; }
+body.night .heading h2,
+body.night .monthly h2,
+body.night h2, body.night h3,
+body.night .mbody h3,
+body.night .teacher-info h3 { color: #f5f5f5; }
+body.night .heading p,
+body.night .monthly p,
+body.night .bigicon { color: #a0a0a0; }
+
+body.night .day,
+body.night .monthcard,
+body.night .panel,
+body.night .teacher,
+body.night .tips-improved,
+body.night .tips,
+body.night .tone,
+body.night .char {
+  background: #161616;
+  border-color: #2e2e2e;
+  color: #f0f0f0;
+  box-shadow: none;
+}
+
+body.night .daytop,
+body.night .day:nth-child(n+4) .daytop,
+body.night .day.current .daytop {
+  background: #1c1c1c !important;
+  color: #f0f0f0 !important;
+}
+body.night .dayname,
+body.night .daytop span { color: #f0f0f0 !important; }
+body.night .date { color: #888; }
+body.night .task,
+body.night .task span {
+  color: #e0e0e0;
+  background: transparent;
+}
+body.night .task input {
+  background: #0d0d0d;
+  border-color: #555;
+}
+body.night .status {
+  background: #1c1c1c;
+  color: #d0d0d0;
+}
+body.night .day.done { border-color: #1a5c45; }
+body.night .day.done .status {
+  background: #0f2e22;
+  color: #6ee7b7;
+}
+body.night .day.done .status b { color: #6ee7b7; }
+body.night .status b { color: #fbbf24; }
+
+body.night .monthtop {
+  background: #1c1c1c;
+  color: inherit;
+}
+body.night .mbody p,
+body.night .routine-list li,
+body.night .teacher .desc,
+body.night .teacher-info .channel { color: #a0a0a0; }
+
+body.night .track { background: #2e2e2e; }
+body.night .pct {
+  background: #1c1c1c;
+  color: #e0e0e0;
+}
+
+body.night #plano-mensal .week-page-button {
+  background: linear-gradient(105deg, #5548e7, #6d5ef0);
+  color: #fff;
+  border: none;
+}
+
+body.night .teacher-links a {
+  background: #1c1c1c;
+  border-color: #333;
+  color: #e5e5e5;
+}
+body.night .teacher-links a:hover {
+  background: #252525;
+  color: #fff;
+}
+
+body.night .tips-improved h3,
+body.night .tips h3 { color: #f5f5f5; }
+body.night .tips-icon { background: #1c1c1c; }
+body.night .tips-list li {
+  background: #1c1c1c;
+  border-color: #333;
+  color: #e0e0e0;
+}
+body.night .tip-highlight {
+  background: #1c1a12;
+  border-color: #4a3f1a;
+  color: #fcd34d;
+}
+body.night .tips p { color: #a0a0a0; }
+
+body.night .footer {
+  background: linear-gradient(#0d0d0d, #121212);
+  color: #a0a0a0;
+}
+body.night .footer strong { color: #f5f5f5; }
+body.night .footer p { color: #888; }
+
+body.night .outline {
+  background: #161616;
+  border-color: #444;
+  color: #e0e0e0;
+}
+body.night .panelhead { background: #1c1c1c; }
+body.night .tip {
+  background: #1c1c1c;
+  border-color: #333;
+  color: #d0d0d0;
+}
+body.night #contato h2 { color: #f5f5f5; }
+body.night #contato p,
+body.night #contato .heading p { color: #a0a0a0; }
+
+body.night #conteudo .monthcard[style*="4d5ee5"],
+body.night #plano-mensal .monthcard[style*="4d5ee5"] { border-color: #4d5ee5; }
+body.night #conteudo .monthcard[style*="1e9b70"],
+body.night #plano-mensal .monthcard[style*="1e9b70"] { border-color: #1e9b70; }
+body.night #conteudo .monthcard[style*="d77b16"],
+body.night #plano-mensal .monthcard[style*="d77b16"] { border-color: #d77b16; }
+body.night #conteudo .monthcard[style*="c4478d"],
+body.night #plano-mensal .monthcard[style*="c4478d"] { border-color: #c4478d; }
+
+@media (max-width: 760px) {
+  body.night header.top .nav {
+    background: #141414;
+    border-color: #2e2e2e;
+  }
+  body.night header.top .nav a {
+    border-color: #2e2e2e;
+    color: #e8e8e8;
+  }
+  .switch { grid-template-columns: 1fr !important; }
+  .switch button {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line) !important;
+  }
+  .switch button:last-child { border-bottom: none !important; }
+}
+
+@media (min-width: 761px) {
+  .switch { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+
+
+
+/* ===== Correções finais modo escuro: sem branco, títulos integrados ===== */
+body.night,
+body.night main,
+body.night .wrap,
+body.night .course-wrap {
+  background: #0d0d0d !important;
+}
+
+/* Títulos e ícones — mesma cor do fundo da página (sem “faixa” diferente) */
+body.night .heading,
+body.night .monthhead,
+body.night #youtube .heading,
+body.night #contato .heading {
+  background: transparent !important;
+  color: #f0f0f0 !important;
+}
+body.night .heading h2,
+body.night .monthhead h2,
+body.night #youtube h2 {
+  color: #f5f5f5 !important;
+}
+body.night .heading p,
+body.night .monthhead p,
+body.night #youtube .heading p {
+  color: #a0a0a0 !important;
+}
+body.night .bigicon {
+  color: #a0a0a0 !important;
+  background: transparent !important;
+}
+
+/* Qualquer fundo branco residual vira cinza escuro */
+body.night .section,
+body.night main.wrap,
+body.night .wrap > .section {
+  background: #0d0d0d !important;
+  background-color: #0d0d0d !important;
+}
+
+body.night [style*="background:#fff"],
+body.night [style*="background: #fff"],
+body.night [style*="background:#ffffff"],
+body.night [style*="background:white"] {
+  background: #161616 !important;
+}
+
+/* Cards e painéis */
+body.night .day,
+body.night .monthcard,
+body.night .panel,
+body.night .teacher,
+body.night .tips-improved,
+body.night .tips,
+body.night .tone,
+body.night .char,
+body.night article,
+body.night .contentgrid .panel {
+  background: #161616 !important;
+  background-color: #161616 !important;
+  border-color: #2e2e2e !important;
+  color: #f0f0f0 !important;
+}
+
+/* Switch / progress / pct */
+body.night .switch { background: #161616 !important; border-color: #2e2e2e !important; }
+body.night .prog { color: #a0a0a0 !important; }
+body.night .track { background: #2e2e2e !important; }
+body.night .pct { background: #1c1c1c !important; color: #e0e0e0 !important; }
+
+/* Footer */
+body.night .footer {
+  background: #0d0d0d !important;
+  color: #a0a0a0 !important;
+}
+
+/* Hero e calligraphy */
+body.night .hero { background: linear-gradient(105deg, #121212, #171717 55%, #101010) !important; }
+
+body.night .mbody p,
+body.night .teacher .desc,
+body.night .teacher-info .channel,
+body.night .routine-list li {
+  color: #a0a0a0 !important;
+}
+
+/* Day headers */
+body.night .daytop {
+  background: #1c1c1c !important;
+  color: #f0f0f0 !important;
+}
+
+/* Month tops — keep tint subtle but dark */
+body.night .monthtop {
+  background: #1c1c1c !important;
+}
+
+/* Teacher link buttons */
+body.night .teacher-links a {
+  background: #1c1c1c !important;
+  border-color: #333 !important;
+  color: #e5e5e5 !important;
+}
+
+/* Outline button */
+body.night .outline {
+  background: #161616 !important;
+  color: #e0e0e0 !important;
+  border-color: #444 !important;
+}
+
+/* Tips list items */
+body.night .tips-list li {
+  background: #1c1c1c !important;
+  border-color: #333 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Remove qualquer faixa clara atrás de headings */
+body.night .heading > div,
+body.night .monthhead > div {
+  background: transparent !important;
+}
+
+
+body.night .switch button.active {
+  background: linear-gradient(100deg, #5548e7, #7656dd) !important;
+  color: #fff !important;
+}
+body.night .teacher,
+body.night .tips-improved,
+body.night .tips,
+body.night .day,
+body.night .monthcard {
+  background: #161616 !important;
+  border-color: #2e2e2e !important;
+  color: #f0f0f0 !important;
+}
+body.night .heading,
+body.night .section,
+body.night main,
+body.night .wrap {
+  background: #0d0d0d !important;
+}
+body.night .heading h2,
+body.night #youtube h2 {
+  color: #f5f5f5 !important;
+}
+body.night .heading p {
+  color: #a0a0a0 !important;
+}
+
+
+
+/* Nomes e títulos em branco no modo escuro */
+body.night .teacher-info h3,
+body.night .teacher h3,
+body.night .teacher-header h3 {
+  color: #ffffff !important;
+}
+body.night .teacher-info .channel {
+  color: #b0b0b0 !important;
+}
+body.night .tips-improved h3,
+body.night .tips h3,
+body.night .tips-header h3,
+body.night .tips-section h3 {
+  color: #ffffff !important;
+}
+body.night .tips-header,
+body.night .tips-improved .tips-header {
+  color: #ffffff !important;
+}
+
+
+
+/* Links e textos azuis → branco/cinza no modo escuro */
+body.night .teacher-links a,
+body.night .teacher ul,
+body.night .teacher ul a,
+body.night .teacher li,
+body.night .teacher li a {
+  color: #ffffff !important;
+  background: #1c1c1c !important;
+  border-color: #333 !important;
+}
+body.night .teacher-links a:hover,
+body.night .teacher ul a:hover {
+  color: #ffffff !important;
+  background: #2a2a2a !important;
+}
+body.night a {
+  color: #e8e8e8 !important;
+}
+body.night a:hover {
+  color: #ffffff !important;
+}
+body.night .nav a {
+  color: #e0e0e0 !important;
+}
+body.night .tips-list li,
+body.night .tips-list li span,
+body.night .tip-check {
+  color: #e8e8e8 !important;
+}
+body.night .routine-list a,
+body.night .mbody a {
+  color: #ffffff !important;
+}
+
+
+
+/* 加油 / calligraphy — branco no modo noturno */
+body.night .calligraphy,
+body.night .calligraphy-text,
+body.night .calligraphy-main,
+body.night .calligraphy-hanzi,
+body.night .calligraphy small,
+body.night .calligraphy-text small {
+  color: #ffffff !important;
+}
+body.night .calligraphy-sakura-box,
+body.night .calligraphy-sakura {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: inherit !important;
+}
+
+/* Footer motivacional também branco */
+body.night .footer strong,
+body.night .footer p {
+  color: #ffffff !important;
+}
+body.night .footer p {
+  color: #d0d0d0 !important;
+}
+
+/* ===== Responsivo mobile reforçado ===== */
+@media (max-width: 760px) {
+  .calligraphy {
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 16px auto 0 !important;
+    text-align: center !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .calligraphy-hanzi {
+    font-size: 28px !important;
+  }
+  .calligraphy small {
+    font-size: 14px !important;
+  }
+  .hero {
+    padding: 24px 16px !important;
+    min-height: auto !important;
+  }
+  .hero h1 {
+    font-size: 26px !important;
+    text-align: center !important;
+  }
+  .hero p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .hero-copy {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+  .pills {
+    justify-content: center !important;
+  }
+  .switch {
+    grid-template-columns: 1fr !important;
+    width: calc(100% - 24px) !important;
+  }
+  .months {
+    grid-template-columns: 1fr !important;
+  }
+  #conteudo .months {
+    grid-template-columns: 1fr !important;
+  }
+  #plano-mensal .months,
+  #plano-mensal .explore-weeks {
+    grid-template-columns: 1fr !important;
+  }
+  .teachers {
+    grid-template-columns: 1fr !important;
+  }
+  .teacher-xiao {
+    grid-column: 1 !important;
+  }
+  .week {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .tips-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 22px !important; }
+  .calligraphy-hanzi { font-size: 24px !important; }
+  .brand { font-size: 14px !important; }
+}
+
 </style>
 </head>
 <body>
@@ -2194,7 +2329,7 @@ body.night #contato h2, body.night #contato p { color: #e4e4e7 !important; }
   <div class="ytgrid"><div class="teachers">
     <article class="teacher">
       <div class="teacher-header">
-        <img class="avatar-img" src="imagens/profchenxiaofen.jpg" alt="Profª Chen Xiaofen" width="68" height="68">
+        <img class="avatar-img" src="profchenxiaofen.jpg" alt="Profª Chen Xiaofen" width="68" height="68">
         <div class="teacher-info"><h3>Profª Chen Xiaofen</h3><p class="channel">Aula de Chinês</p></div>
       </div>
       <ul class="teacher-links">
@@ -2206,7 +2341,7 @@ body.night #contato h2, body.night #contato p { color: #e4e4e7 !important; }
     </article>
     <article class="teacher">
       <div class="teacher-header">
-        <img class="avatar-img" src="imagens/profdominandomandarim.jpg" alt="Profª Karina Cunha" width="68" height="68">
+        <img class="avatar-img" src="profdominandomandarim.jpg" alt="Profª Karina Cunha" width="68" height="68">
         <div class="teacher-info"><h3>Profª Karina Cunha</h3><p class="channel">Dominando o Mandarim</p></div>
       </div>
       <ul class="teacher-links">
@@ -2218,7 +2353,7 @@ body.night #contato h2, body.night #contato p { color: #e4e4e7 !important; }
     </article>
     <article class="teacher teacher-xiao" style="grid-column:1/-1">
       <div class="teacher-header">
-        <img class="avatar-img" src="imagens/xiao-mandarim.jpg" alt="Profª Xiao Mandarim" width="68" height="68">
+        <img class="avatar-img" src="xiao-mandarim.jpg" alt="Profª Xiao Mandarim" width="68" height="68">
         <div class="teacher-info"><h3>Profª Xiao Mandarim</h3><p class="channel">Xiao Mandarim - Curso de chinês GRATUITO</p></div>
       </div>
       <ul class="teacher-links">
@@ -2252,18 +2387,6 @@ body.night #contato h2, body.night #contato p { color: #e4e4e7 !important; }
 <script>
 const days=[['Segunda','🌱'],['Terça','🍃'],['Quarta','✚'],['Quinta','♟'],['Sexta','♬'],['Sábado','🌙'],['Domingo','☀️']];const tasks=['Pronúncia (10 min)','Vocabulário (15 min)','Escuta (10 min)','Revisão (5 min)'];const week=document.querySelector('#week');days.forEach((d,i)=>{let el=document.createElement('article');el.className='day';el.innerHTML=`<div class="daytop"><span aria-hidden="true">${d[1]}</span><div><div class="dayname">${d[0]}</div></div></div><div class="tasks">${tasks.map((t,j)=>`<label class="task"><input type="checkbox" aria-label="${t} — ${d[0]}" ><span>${t}</span></label>`).join('')}</div><div class="status"><b aria-hidden="true">⏳</b><span>Pendente</span></div>`;week.appendChild(el)});function progress(){let cards=[...week.children],all=[...week.querySelectorAll('input')],completed=cards.filter(c=>[...c.querySelectorAll('input')].every(x=>x.checked)).length,pct=Math.round(all.filter(x=>x.checked).length/all.length*100);document.querySelector('#days').textContent=completed+'/7 dias';document.querySelector('#bar').style.width=pct+'%';document.querySelector('#pct').textContent=pct+'%';cards.forEach(c=>{let done=[...c.querySelectorAll('input')].every(x=>x.checked);c.classList.toggle('done',done);c.querySelector('.status').innerHTML=`<b>${done?'✓':'⏳'}</b><span>${done?'Concluído':'Pendente'}</span>`})}week.addEventListener('change',progress);progress();document.querySelector('#hamb').addEventListener('click',()=>{let nav=document.querySelector('#nav'),b=document.querySelector('#hamb');nav.classList.toggle('open');b.setAttribute('aria-expanded',nav.classList.contains('open'))});document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelector('#nav').classList.remove('open');document.querySelector('#hamb').setAttribute('aria-expanded','false')}));document.querySelectorAll('.switch button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.switch button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.target).scrollIntoView({behavior:'smooth',block:'start'})}));document.querySelector('#theme').addEventListener('click',()=>document.body.classList.toggle('night'));document.querySelector('#theme').setAttribute('aria-pressed','false');document.querySelector('#theme').addEventListener('click',()=>document.querySelector('#theme').setAttribute('aria-pressed',document.body.classList.contains('night')?'true':'false'));const style=document.createElement('style');style.textContent=`
 body.night{--ink:#f5f5f5;--muted:#c5c5c5;--line:#444;background:#000;color:#f5f5f5;color-scheme:dark}
-body.night .top,body.night .nav.open{background:#080808;color:#fff;border-color:#333}
-body.night .hero{background:linear-gradient(110deg,#111,#222 55%,#080808);color:#fff}
-body.night .tag,body.night .pills span,body.night .tools button{background:#222;color:#fff;border-color:#555}
-body.night .switch,body.night .section,body.night .day,body.night .monthcard,body.night .month,body.night .tone,body.night .char,body.night .character,body.night .teacher,body.night .panel,body.night .tips,body.night .routine-card{background:#101010;color:#f5f5f5;border-color:#444}
-body.night .daytop,body.night .monthtop,body.night .tone-main,body.night .panel-title,body.night .character,body.night .tip{background:#1b1b1b;color:#fff;border-color:#444}
-body.night .task,body.night .date,body.night .heading p,body.night .monthly p,body.night .teacher p,body.night .teacher li,body.night .desc,body.night .tip{color:#ccc}
-body.night .track{background:#333}body.night .track span{background:#eee}
-body.night .switch button{background:#111;color:#fff;border-color:#444}body.night .switch button.active{background:#fff;color:#000}
-body.night .outline{background:#111;color:#fff;border-color:#777}
-body.night .status,body.night .pct{background:#252525;color:#fff}
-body.night .footer{background:#080808;color:#fff}body.night .footer p{color:#ccc}
-body.night a:hover{color:#fff;text-decoration:underline}
 `;document.head.appendChild(style);
 </script>
 <script id="week-nav-fix">
